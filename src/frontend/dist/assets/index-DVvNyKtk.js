@@ -3287,7 +3287,14 @@ const resources = {
         privacy: "Privacy Policy",
         terms: "Terms of Service",
         refund: "Refund Policy",
-        rights: "All rights reserved."
+        rights: "All rights reserved.",
+        newsletter_badge: "Stay Updated",
+        newsletter_title: "Subscribe to Developer Updates",
+        newsletter_desc: "New endpoints, changelog, and exclusive tips for BabyAPI developers.",
+        subscribe: "Subscribe",
+        subscribed: "Thanks for subscribing!",
+        newsletter_email_invalid: "Enter a valid email address.",
+        newsletter_toast_desc: "You'll receive BabyAPI updates in your inbox."
       },
       auth: {
         email: "Email address",
@@ -3417,7 +3424,9 @@ const resources = {
         recent_activity: "Recent Activity",
         view_all: "View all",
         no_notifications: "No notifications yet",
-        unlimited: "Unlimited"
+        unlimited: "Unlimited",
+        upgrade_pro: "Upgrade to Pro",
+        upgrade_desc: "Get 2,500 API calls/day for just ₹49/month."
       },
       api_keys: {
         title: "API Keys",
@@ -3500,7 +3509,8 @@ const resources = {
         total_for: "total for",
         months: "months",
         money_back: "All plans include 7-day money-back guarantee. Payments processed via Razorpay. For billing questions contact",
-        best: "Best"
+        best: "Best",
+        upgrade_now: "Upgrade Now"
       },
       invoices: {
         title: "Invoices",
@@ -3572,7 +3582,83 @@ const resources = {
         delete: "Delete",
         close: "Close",
         copy: "Copy",
-        copied: "Copied!"
+        copied: "Copied!",
+        manage: "Manage"
+      },
+      home: {
+        trust_free: "Free forever plan",
+        trust_start: "Start in 60 seconds",
+        trust_no_cc: "No credit card",
+        trust_bar_label: "Trusted by developers building with",
+        marquee_label: "Supported languages",
+        how_it_works_eyebrow: "How it works",
+        how_it_works_title: "Three steps to stream anything",
+        how_it_works_subtitle: "From signup to your first API call in under 5 minutes.",
+        step1_title: "Get API Key",
+        step1_desc: "Sign up free. Instant API key — no credit card needed.",
+        step2_title: "Make a Request",
+        step2_desc: "Hit REST endpoints with your key. Search, fetch audio/video URLs.",
+        step3_title: "Stream Media",
+        step3_desc: "Use the stream URL with any player. Apply EQ and seek support.",
+        features_eyebrow: "Everything included",
+        feat1_title: "Search API",
+        feat1_desc: "YouTube search with structured JSON — video IDs, titles, thumbnails.",
+        feat2_title: "Audio Streaming",
+        feat2_desc: "Extract high-quality audio stream URLs with full seek support.",
+        feat3_title: "Video Streaming",
+        feat3_desc: "Direct video stream URLs ready for any player or embed.",
+        feat4_title: "30+ EQ Presets",
+        feat4_desc: "Bass boost, nightcore, 8D, lofi, cinema and many more.",
+        feat5_title: "Seek & Download",
+        feat5_desc: "Start at any time offset. Force download headers on demand.",
+        feat6_title: "Plan-based Limits",
+        feat6_desc: "500 to unlimited requests/day. Upgrade instantly.",
+        stat1_label: "Developers",
+        stat2_label: "Requests Served",
+        stat3_label: "Uptime SLA",
+        stat4_label: "Avg Response",
+        waveform_eyebrow: "Crystal Clear Streaming",
+        waveform_title: "Studio-quality audio,",
+        waveform_title2: "any preset.",
+        wave_f1_label: "30+ EQ Presets",
+        wave_f1_detail: "bass, nightcore, 8D, lofi, cinema & more",
+        wave_f2_label: "Seek to any position",
+        wave_f2_detail: "start streams at an exact time offset",
+        wave_f3_label: "Force download or stream",
+        wave_f3_detail: "Content-Disposition header on demand",
+        wave_f4_label: "Low latency delivery",
+        wave_f4_detail: "chunked transfer with range support",
+        testimonials_eyebrow: "Developer Stories",
+        testimonials_title: "Trusted by developers worldwide",
+        testimonials_subtitle: "Join 300,000+ developers already building with BabyAPI.",
+        t1_role: "Full Stack Developer",
+        t1_quote: "BabyAPI cut our audio integration time from weeks to hours. The EQ presets alone saved us building a whole audio processing pipeline.",
+        t2_role: "Backend Engineer",
+        t2_quote: "We serve 50,000 daily active users with BabyAPI. The 99.9% uptime SLA is real — zero production incidents in 8 months.",
+        t3_role: "Mobile App Developer",
+        t3_quote: "The search API is incredibly fast. Results come back in under 15ms on average. Our users noticed the difference immediately.",
+        trust_badge1: "30-day money back",
+        trust_badge2: "Instant activation",
+        trust_badge3: "No credit card required",
+        trust_badge4: "99.9% uptime SLA",
+        try_it_eyebrow: "Try It Live",
+        try_it_badge: "No signup required",
+        try_it_title: "See the API in action",
+        try_it_subtitle: "Enter your API key and hit Send — get a real response from the BabyAPI servers instantly.",
+        try_it_docs_link: "View full API docs",
+        pricing_eyebrow: "Pricing",
+        plan_feat_1key: "1 API key",
+        plan_feat_all_endpoints: "All endpoints",
+        plan_feat_community: "Community support",
+        plan_feat_email_support: "Email support",
+        plan_feat_priority: "Priority support",
+        plan_feat_seek: "Seek & download",
+        plan_learn_more: "Learn More",
+        see_full_pricing: "See full pricing with comparison table",
+        cta_title: "Ready to start",
+        cta_title2: "streaming?",
+        cta_subtitle: "Get your free API key in 30 seconds — no credit card required.",
+        cta_contact: "Contact Sales"
       }
     }
   },
@@ -3623,16 +3709,6 @@ const resources = {
         get_started: "शुरू करें",
         upgrade: "अभी अपग्रेड करें",
         current_plan: "वर्तमान प्लान"
-      },
-      footer: {
-        tagline: "दुनियाभर के डेवलपर्स के लिए सबसे तेज़ YouTube स्ट्रीमिंग API।",
-        product: "प्रोडक्ट",
-        company: "कंपनी",
-        legal: "कानूनी",
-        privacy: "गोपनीयता नीति",
-        terms: "सेवा की शर्तें",
-        refund: "रिफंड नीति",
-        rights: "सर्वाधिकार सुरक्षित।"
       },
       auth: {
         email: "ईमेल पता",
@@ -3736,34 +3812,6 @@ const resources = {
         could_not_reset: "पासवर्ड रीसेट नहीं हो सका। कृपया पुनः प्रयास करें।",
         could_not_set_pwd: "पासवर्ड सेट नहीं हो सका। कृपया पुनः प्रयास करें।"
       },
-      dashboard: {
-        api_keys: "API Keys",
-        usage: "उपयोग",
-        billing: "बिलिंग",
-        invoices: "चालान",
-        notifications: "सूचनाएं",
-        welcome: "वापस स्वागत है",
-        today_date: "आज",
-        api_requests: "आज की API रिक्वेस्ट",
-        remaining: "शेष",
-        daily_limit: "दैनिक सीमा",
-        current_plan: "वर्तमान प्लान",
-        your_key: "आपकी API की",
-        generate_key: "नई की जनरेट करें",
-        revoke_key: "की रद्द करें",
-        app_name: "एप्लिकेशन का नाम",
-        quick_actions: "त्वरित क्रियाएं",
-        get_api_key: "API की पाएं",
-        get_api_key_desc: "अपनी API की देखें और प्रबंधित करें",
-        upgrade_plan: "प्लान अपग्रेड करें",
-        upgrade_plan_desc: "उच्च दर सीमाएं अनलॉक करें",
-        view_docs: "डॉक्स देखें",
-        view_docs_desc: "API endpoints और उदाहरण",
-        recent_activity: "हाल की गतिविधि",
-        view_all: "सभी देखें",
-        no_notifications: "अभी तक कोई सूचना नहीं",
-        unlimited: "असीमित"
-      },
       api_keys: {
         title: "API Keys",
         subtitle: "अपनी API access keys प्रबंधित करें",
@@ -3823,29 +3871,6 @@ const resources = {
         status_safe: "स्थिति: सुरक्षित",
         status_restricted: "स्थिति: प्रतिबंधित",
         status_banned: "स्थिति: प्रतिबंधित — संपर्क करें"
-      },
-      billing: {
-        title: "बिलिंग",
-        subtitle: "अपना प्लान और सदस्यता प्रबंधित करें",
-        current_plan: "वर्तमान प्लान",
-        api_calls_day: "API कॉल/दिन",
-        active: "सक्रिय",
-        billing_period: "बिलिंग अवधि:",
-        monthly: "मासिक",
-        yearly: "वार्षिक",
-        off: "छूट",
-        duration: "अवधि:",
-        custom_pricing: "कस्टम मूल्य",
-        contact_quote: "कोटेशन के लिए संपर्क करें",
-        most_popular: "सबसे लोकप्रिय",
-        current_plan_btn: "वर्तमान प्लान",
-        contact_us: "हमसे संपर्क करें",
-        per_mo: "/माह",
-        billed_yearly: "वार्षिक बिल",
-        total_for: "कुल",
-        months: "महीनों के लिए",
-        money_back: "सभी प्लान में 7-दिन मनी-बैक गारंटी।",
-        best: "सर्वोत्तम"
       },
       invoices: {
         title: "चालान",
@@ -3917,7 +3942,83 @@ const resources = {
         delete: "हटाएं",
         close: "बंद करें",
         copy: "कॉपी करें",
-        copied: "कॉपी हो गया!"
+        copied: "कॉपी हो गया!",
+        manage: "प्रबंधित करें"
+      },
+      home: {
+        trust_free: "हमेशा के लिए मुफ्त प्लान",
+        trust_start: "60 सेकंड में शुरू करें",
+        trust_no_cc: "क्रेडिट कार्ड नहीं",
+        trust_bar_label: "इन के साथ बनाने वाले डेवलपर्स का भरोसा",
+        marquee_label: "समर्थित भाषाएं",
+        how_it_works_eyebrow: "यह कैसे काम करता है",
+        how_it_works_title: "कुछ भी स्ट्रीम करने के तीन चरण",
+        how_it_works_subtitle: "साइनअप से पहली API कॉल तक 5 मिनट से कम।",
+        step1_title: "API Key पाएं",
+        step1_desc: "मुफ्त साइन अप करें। तुरंत API key — क्रेडिट कार्ड नहीं चाहिए।",
+        step2_title: "रिक्वेस्ट करें",
+        step2_desc: "अपनी key के साथ REST endpoints हिट करें।",
+        step3_title: "मीडिया स्ट्रीम करें",
+        step3_desc: "किसी भी प्लेयर के साथ स्ट्रीम URL उपयोग करें।",
+        features_eyebrow: "सब कुछ शामिल है",
+        feat1_title: "सर्च API",
+        feat1_desc: "YouTube सर्च JSON के साथ — वीडियो ID, शीर्षक, थंबनेल।",
+        feat2_title: "ऑडियो स्ट्रीमिंग",
+        feat2_desc: "उच्च गुणवत्ता ऑडियो स्ट्रीम URLs निकालें।",
+        feat3_title: "वीडियो स्ट्रीमिंग",
+        feat3_desc: "किसी भी प्लेयर के लिए सीधे वीडियो स्ट्रीम URLs।",
+        feat4_title: "30+ EQ प्रीसेट",
+        feat4_desc: "बास बूस्ट, नाइटकोर, 8D, लोफी, सिनेमा और बहुत कुछ।",
+        feat5_title: "Seek और डाउनलोड",
+        feat5_desc: "किसी भी समय से शुरू करें। डाउनलोड हेडर मांग पर।",
+        feat6_title: "प्लान आधारित सीमाएं",
+        feat6_desc: "500 से असीमित रिक्वेस्ट/दिन। तुरंत अपग्रेड करें।",
+        stat1_label: "डेवलपर्स",
+        stat2_label: "रिक्वेस्ट सर्व किए",
+        stat3_label: "अपटाइम SLA",
+        stat4_label: "औसत रिस्पॉन्स",
+        waveform_eyebrow: "क्रिस्टल क्लियर स्ट्रीमिंग",
+        waveform_title: "स्टूडियो गुणवत्ता ऑडियो,",
+        waveform_title2: "कोई भी प्रीसेट।",
+        wave_f1_label: "30+ EQ प्रीसेट",
+        wave_f1_detail: "बास, नाइटकोर, 8D, लोफी, सिनेमा और अधिक",
+        wave_f2_label: "किसी भी पोजिशन पर सीक करें",
+        wave_f2_detail: "सटीक समय ऑफसेट पर स्ट्रीम शुरू करें",
+        wave_f3_label: "डाउनलोड या स्ट्रीम",
+        wave_f3_detail: "मांग पर Content-Disposition हेडर",
+        wave_f4_label: "कम लेटेंसी डिलीवरी",
+        wave_f4_detail: "रेंज सपोर्ट के साथ chunked ट्रांसफर",
+        testimonials_eyebrow: "डेवलपर स्टोरीज",
+        testimonials_title: "दुनियाभर के डेवलपर्स का भरोसा",
+        testimonials_subtitle: "3 लाख+ डेवलपर्स के साथ जुड़ें जो पहले से BabyAPI के साथ बना रहे हैं।",
+        t1_role: "फुल स्टैक डेवलपर",
+        t1_quote: "BabyAPI ने हमारा ऑडियो इंटीग्रेशन समय हफ्तों से घंटों में लाया।",
+        t2_role: "बैकएंड इंजीनियर",
+        t2_quote: "हम BabyAPI के साथ 50,000 दैनिक सक्रिय उपयोगकर्ताओं को सेवा देते हैं। 99.9% अपटाइम SLA असली है।",
+        t3_role: "मोबाइल ऐप डेवलपर",
+        t3_quote: "सर्च API अविश्वसनीय रूप से तेज़ है। औसतन 15ms से कम में परिणाम मिलते हैं।",
+        trust_badge1: "30 दिन मनी बैक",
+        trust_badge2: "तुरंत सक्रियण",
+        trust_badge3: "क्रेडिट कार्ड नहीं चाहिए",
+        trust_badge4: "99.9% अपटाइम SLA",
+        try_it_eyebrow: "लाइव आज़माएं",
+        try_it_badge: "साइनअप की जरूरत नहीं",
+        try_it_title: "API को action में देखें",
+        try_it_subtitle: "अपनी API key डालें और Send दबाएं — BabyAPI सर्वर से तुरंत असली response पाएं।",
+        try_it_docs_link: "पूरी API docs देखें",
+        pricing_eyebrow: "मूल्य निर्धारण",
+        plan_feat_1key: "1 API key",
+        plan_feat_all_endpoints: "सभी endpoints",
+        plan_feat_community: "Community support",
+        plan_feat_email_support: "Email support",
+        plan_feat_priority: "Priority support",
+        plan_feat_seek: "Seek & download",
+        plan_learn_more: "अधिक जानें",
+        see_full_pricing: "तुलना तालिका के साथ पूरी pricing देखें",
+        cta_title: "स्ट्रीमिंग शुरू करने के",
+        cta_title2: "लिए तैयार हैं?",
+        cta_subtitle: "30 सेकंड में अपनी मुफ्त API key पाएं — क्रेडिट कार्ड नहीं चाहिए।",
+        cta_contact: "सेल्स से संपर्क करें"
       }
     }
   },
@@ -3969,16 +4070,6 @@ const resources = {
         upgrade: "Actualizar ahora",
         current_plan: "Plan actual"
       },
-      footer: {
-        tagline: "La API de streaming de YouTube más rápida.",
-        product: "Producto",
-        company: "Empresa",
-        legal: "Legal",
-        privacy: "Política de privacidad",
-        terms: "Términos de servicio",
-        refund: "Política de reembolso",
-        rights: "Todos los derechos reservados."
-      },
       auth: {
         email: "Correo electrónico",
         password: "Contraseña",
@@ -4016,6 +4107,9 @@ const resources = {
         forgot_sent_desc: "Enviamos un código a",
         forgot_sent_note: "¿No lo recibiste? Revisa tu carpeta de spam.",
         back_to_login: "Volver a iniciar sesión",
+        email_placeholder: "tu@ejemplo.com",
+        first_name_placeholder: "Nombre",
+        last_name_placeholder: "Apellido",
         reset_title: "Restablecer contraseña",
         reset_subtitle: "Ingresa el código de tu email y elige una nueva contraseña",
         reset_code: "Código de restablecimiento (8 dígitos)",
@@ -4081,34 +4175,6 @@ const resources = {
         could_not_reset: "No se pudo restablecer la contraseña. Inténtalo de nuevo.",
         could_not_set_pwd: "No se pudo establecer la contraseña. Inténtalo de nuevo."
       },
-      dashboard: {
-        api_keys: "Claves API",
-        usage: "Uso",
-        billing: "Facturación",
-        invoices: "Facturas",
-        notifications: "Notificaciones",
-        welcome: "Bienvenido de nuevo",
-        today_date: "Hoy",
-        api_requests: "Solicitudes API hoy",
-        remaining: "Restantes",
-        daily_limit: "Límite diario",
-        current_plan: "Plan actual",
-        your_key: "Tu clave API",
-        generate_key: "Generar nueva clave",
-        revoke_key: "Revocar clave",
-        app_name: "Nombre de aplicación",
-        quick_actions: "Acciones rápidas",
-        get_api_key: "Obtener clave API",
-        get_api_key_desc: "Ver y gestionar tus claves API",
-        upgrade_plan: "Mejorar plan",
-        upgrade_plan_desc: "Desbloquear límites más altos",
-        view_docs: "Ver documentación",
-        view_docs_desc: "Endpoints y ejemplos",
-        recent_activity: "Actividad reciente",
-        view_all: "Ver todo",
-        no_notifications: "Sin notificaciones aún",
-        unlimited: "Ilimitado"
-      },
       api_keys: {
         title: "Claves API",
         subtitle: "Gestiona tus claves de acceso",
@@ -4169,29 +4235,6 @@ const resources = {
         status_restricted: "Estado: Restringido",
         status_banned: "Estado: Suspendido"
       },
-      billing: {
-        title: "Facturación",
-        subtitle: "Gestiona tu plan y suscripción",
-        current_plan: "Plan actual",
-        api_calls_day: "llamadas API/día",
-        active: "Activo",
-        billing_period: "Período de facturación:",
-        monthly: "Mensual",
-        yearly: "Anual",
-        off: "dto",
-        duration: "Duración:",
-        custom_pricing: "Precio personalizado",
-        contact_quote: "Contáctanos para cotización",
-        most_popular: "Más popular",
-        current_plan_btn: "Plan actual",
-        contact_us: "Contáctanos",
-        per_mo: "/mes",
-        billed_yearly: "facturado anualmente",
-        total_for: "total por",
-        months: "meses",
-        money_back: "Garantía de devolución de 7 días.",
-        best: "Mejor"
-      },
       invoices: {
         title: "Facturas",
         total_invoices: "factura",
@@ -4249,7 +4292,14 @@ const resources = {
         update_password: "Actualizar contraseña",
         updating: "Actualizando…",
         cancel: "Cancelar",
-        upload_avatar: "Subir avatar"
+        upload_avatar: "Subir avatar",
+        change_password_title: "Cambiar contraseña",
+        country_india: "India",
+        country_us: "Estados Unidos",
+        country_uk: "Reino Unido",
+        country_canada: "Canadá",
+        country_australia: "Australia",
+        country_other: "Otro"
       },
       common: {
         and: "y",
@@ -4262,7 +4312,176 @@ const resources = {
         delete: "Eliminar",
         close: "Cerrar",
         copy: "Copiar",
-        copied: "¡Copiado!"
+        copied: "¡Copiado!",
+        manage: "Gestionar"
+      },
+      dashboard: {
+        api_keys: "Claves API",
+        usage: "Uso",
+        billing: "Facturación",
+        invoices: "Facturas",
+        notifications: "Notificaciones",
+        welcome: "Bienvenido de nuevo",
+        today_date: "Hoy",
+        api_requests: "Solicitudes API hoy",
+        remaining: "Restantes",
+        daily_limit: "Límite diario",
+        current_plan: "Plan actual",
+        your_key: "Tu clave API",
+        generate_key: "Generar nueva clave",
+        revoke_key: "Revocar clave",
+        app_name: "Nombre de aplicación",
+        quick_actions: "Acciones rápidas",
+        get_api_key: "Obtener clave API",
+        get_api_key_desc: "Ver y gestionar tus claves API",
+        upgrade_plan: "Mejorar plan",
+        upgrade_plan_desc: "Desbloquear límites más altos",
+        view_docs: "Ver documentación",
+        view_docs_desc: "Endpoints y ejemplos",
+        recent_activity: "Actividad reciente",
+        view_all: "Ver todo",
+        no_notifications: "Sin notificaciones aún",
+        unlimited: "Ilimitado",
+        upgrade_pro: "Actualizar a Pro",
+        upgrade_desc: "Obtén 2,500 llamadas API/día por solo ₹49/mes."
+      },
+      billing: {
+        title: "Facturación",
+        subtitle: "Gestiona tu plan y suscripción",
+        current_plan: "Plan actual",
+        api_calls_day: "llamadas API/día",
+        active: "Activo",
+        billing_period: "Período de facturación:",
+        monthly: "Mensual",
+        yearly: "Anual",
+        off: "dto",
+        duration: "Duración:",
+        custom_pricing: "Precio personalizado",
+        contact_quote: "Contáctanos para cotización",
+        most_popular: "Más popular",
+        current_plan_btn: "Plan actual",
+        contact_us: "Contáctanos",
+        per_mo: "/mes",
+        billed_yearly: "facturado anualmente",
+        total_for: "total por",
+        months: "meses",
+        money_back: "Garantía de devolución de 7 días.",
+        best: "Mejor",
+        upgrade_now: "Actualizar ahora",
+        duration_1_month: "1 Mes",
+        duration_3_months: "3 Meses",
+        duration_6_months: "6 Meses",
+        duration_12_months: "12 Meses"
+      },
+      footer: {
+        tagline: "La API de streaming de YouTube más rápida.",
+        product: "Producto",
+        company: "Empresa",
+        legal: "Legal",
+        privacy: "Política de privacidad",
+        terms: "Términos de servicio",
+        refund: "Política de reembolso",
+        rights: "Todos los derechos reservados.",
+        newsletter_badge: "Mantente actualizado",
+        newsletter_title: "Suscríbete a actualizaciones para desarrolladores",
+        newsletter_desc: "Nuevos endpoints, changelog y consejos exclusivos para desarrolladores de BabyAPI.",
+        subscribe: "Suscribirse",
+        subscribed: "¡Gracias por suscribirte!",
+        newsletter_email_invalid: "Introduce una dirección de correo válida.",
+        newsletter_toast_desc: "Recibirás actualizaciones de BabyAPI en tu bandeja de entrada."
+      },
+      home: {
+        trust_free: "Plan gratuito para siempre",
+        trust_start: "Empieza en 60 segundos",
+        trust_no_cc: "Sin tarjeta de crédito",
+        trust_bar_label: "De confianza para desarrolladores que construyen con",
+        marquee_label: "Idiomas compatibles",
+        how_it_works_eyebrow: "Cómo funciona",
+        how_it_works_title: "Tres pasos para transmitir cualquier cosa",
+        how_it_works_subtitle: "Del registro a tu primera llamada API en menos de 5 minutos.",
+        step1_title: "Obtén clave API",
+        step1_desc: "Regístrate gratis. Clave API instantánea — sin tarjeta de crédito.",
+        step2_title: "Haz una solicitud",
+        step2_desc: "Accede a los endpoints REST con tu clave. Busca, obtén URLs.",
+        step3_title: "Transmite medios",
+        step3_desc: "Usa la URL de stream con cualquier reproductor.",
+        features_eyebrow: "Todo incluido",
+        feat1_title: "API de búsqueda",
+        feat1_desc: "Búsqueda en YouTube con JSON estructurado.",
+        feat2_title: "Transmisión de audio",
+        feat2_desc: "URLs de stream de audio de alta calidad con seek.",
+        feat3_title: "Transmisión de video",
+        feat3_desc: "URLs de stream de video listas para cualquier reproductor.",
+        feat4_title: "30+ presets EQ",
+        feat4_desc: "Bass boost, nightcore, 8D, lofi, cinema y más.",
+        feat5_title: "Seek y descarga",
+        feat5_desc: "Empieza en cualquier offset. Headers de descarga a pedido.",
+        feat6_title: "Límites por plan",
+        feat6_desc: "500 a ilimitadas solicitudes/día. Actualiza al instante.",
+        stat1_label: "Desarrolladores",
+        stat2_label: "Solicitudes servidas",
+        stat3_label: "SLA de uptime",
+        stat4_label: "Respuesta promedio",
+        waveform_eyebrow: "Streaming cristalino",
+        waveform_title: "Audio de calidad estudio,",
+        waveform_title2: "cualquier preset.",
+        wave_f1_label: "30+ presets EQ",
+        wave_f1_detail: "bass, nightcore, 8D, lofi, cinema y más",
+        wave_f2_label: "Seek a cualquier posición",
+        wave_f2_detail: "inicia streams en un offset exacto",
+        wave_f3_label: "Forzar descarga o stream",
+        wave_f3_detail: "Cabecera Content-Disposition a pedido",
+        wave_f4_label: "Entrega de baja latencia",
+        wave_f4_detail: "transferencia en chunks con soporte de rangos",
+        testimonials_eyebrow: "Historias de desarrolladores",
+        testimonials_title: "Confiado por desarrolladores en todo el mundo",
+        testimonials_subtitle: "Únete a 300,000+ desarrolladores construyendo con BabyAPI.",
+        t1_role: "Desarrollador Full Stack",
+        t1_quote: "BabyAPI redujo nuestro tiempo de integración de audio de semanas a horas.",
+        t2_role: "Ingeniero Backend",
+        t2_quote: "Servimos a 50,000 usuarios diarios con BabyAPI. El SLA de 99.9% es real.",
+        t3_role: "Desarrollador de apps móviles",
+        t3_quote: "La API de búsqueda es increíblemente rápida. Los resultados vuelven en menos de 15ms.",
+        trust_badge1: "30 días de reembolso",
+        trust_badge2: "Activación instantánea",
+        trust_badge3: "Sin tarjeta de crédito",
+        trust_badge4: "SLA de 99.9% de uptime",
+        try_it_eyebrow: "Pruébalo en vivo",
+        try_it_badge: "Sin registro requerido",
+        try_it_title: "Ve la API en acción",
+        try_it_subtitle: "Introduce tu clave API y pulsa Enviar — obtén una respuesta real de los servidores de BabyAPI al instante.",
+        try_it_docs_link: "Ver documentación completa",
+        pricing_eyebrow: "Precios",
+        plan_feat_1key: "1 clave API",
+        plan_feat_all_endpoints: "Todos los endpoints",
+        plan_feat_community: "Soporte comunitario",
+        plan_feat_email_support: "Soporte por email",
+        plan_feat_priority: "Soporte prioritario",
+        plan_feat_seek: "Seek y descarga",
+        plan_learn_more: "Saber más",
+        see_full_pricing: "Ver precios completos con tabla comparativa",
+        cta_title: "¿Listo para empezar a",
+        cta_title2: "transmitir?",
+        cta_subtitle: "Obtén tu clave API gratuita en 30 segundos — sin tarjeta de crédito.",
+        cta_contact: "Contactar ventas",
+        docs: {
+          title: "Documentación",
+          subtitle: "Todo lo que necesitas para integrar BabyAPI",
+          nav_overview: "Descripción general",
+          nav_authentication: "Autenticación",
+          nav_endpoints: "Endpoints",
+          nav_rate_limits: "Límites de tasa",
+          nav_eq_presets: "Presets de EQ",
+          nav_code_examples: "Ejemplos de código",
+          nav_try_it_live: "Pruébalo en vivo",
+          section_overview: "Descripción general",
+          section_auth: "Autenticación",
+          section_endpoints: "Endpoints de API",
+          section_rate_limits: "Límites de tasa",
+          section_eq_presets: "Presets de EQ",
+          section_code_examples: "Ejemplos de código",
+          section_try_it: "Pruébalo en vivo"
+        }
       }
     }
   },
@@ -4314,16 +4533,6 @@ const resources = {
         upgrade: "Mettre à niveau",
         current_plan: "Plan actuel"
       },
-      footer: {
-        tagline: "L'API de streaming YouTube la plus rapide.",
-        product: "Produit",
-        company: "Entreprise",
-        legal: "Mentions légales",
-        privacy: "Politique de confidentialité",
-        terms: "Conditions d'utilisation",
-        refund: "Politique de remboursement",
-        rights: "Tous droits réservés."
-      },
       auth: {
         email: "Adresse e-mail",
         password: "Mot de passe",
@@ -4361,6 +4570,9 @@ const resources = {
         forgot_sent_desc: "Nous avons envoyé un code à",
         forgot_sent_note: "Vous ne l'avez pas reçu? Vérifiez vos spams.",
         back_to_login: "Retour à la connexion",
+        email_placeholder: "vous@exemple.com",
+        first_name_placeholder: "Prénom",
+        last_name_placeholder: "Nom",
         reset_title: "Réinitialiser le mot de passe",
         reset_subtitle: "Entrez le code reçu par e-mail et choisissez un nouveau mot de passe",
         reset_code: "Code de réinitialisation (8 chiffres)",
@@ -4426,34 +4638,6 @@ const resources = {
         could_not_reset: "Impossible de réinitialiser. Veuillez réessayer.",
         could_not_set_pwd: "Impossible de définir le mot de passe. Réessayez."
       },
-      dashboard: {
-        api_keys: "Clés API",
-        usage: "Utilisation",
-        billing: "Facturation",
-        invoices: "Factures",
-        notifications: "Notifications",
-        welcome: "Bon retour",
-        today_date: "Aujourd'hui",
-        api_requests: "Requêtes API aujourd'hui",
-        remaining: "Restantes",
-        daily_limit: "Limite quotidienne",
-        current_plan: "Plan actuel",
-        your_key: "Votre clé API",
-        generate_key: "Générer une nouvelle clé",
-        revoke_key: "Révoquer la clé",
-        app_name: "Nom de l'application",
-        quick_actions: "Actions rapides",
-        get_api_key: "Obtenir une clé API",
-        get_api_key_desc: "Voir et gérer vos clés API",
-        upgrade_plan: "Mettre à niveau",
-        upgrade_plan_desc: "Débloquer des limites plus élevées",
-        view_docs: "Voir la documentation",
-        view_docs_desc: "Endpoints et exemples",
-        recent_activity: "Activité récente",
-        view_all: "Voir tout",
-        no_notifications: "Aucune notification",
-        unlimited: "Illimité"
-      },
       api_keys: {
         title: "Clés API",
         subtitle: "Gérez vos clés d'accès API",
@@ -4514,29 +4698,6 @@ const resources = {
         status_restricted: "Statut: Restreint",
         status_banned: "Statut: Suspendu"
       },
-      billing: {
-        title: "Facturation",
-        subtitle: "Gérez votre plan et abonnement",
-        current_plan: "Plan actuel",
-        api_calls_day: "appels API/jour",
-        active: "Actif",
-        billing_period: "Période de facturation:",
-        monthly: "Mensuel",
-        yearly: "Annuel",
-        off: "de réduction",
-        duration: "Durée:",
-        custom_pricing: "Tarif personnalisé",
-        contact_quote: "Contactez-nous pour un devis",
-        most_popular: "Le plus populaire",
-        current_plan_btn: "Plan actuel",
-        contact_us: "Contactez-nous",
-        per_mo: "/mois",
-        billed_yearly: "facturé annuellement",
-        total_for: "total pour",
-        months: "mois",
-        money_back: "Garantie de remboursement 7 jours.",
-        best: "Meilleur"
-      },
       invoices: {
         title: "Factures",
         total_invoices: "facture",
@@ -4594,7 +4755,14 @@ const resources = {
         update_password: "Mettre à jour le mot de passe",
         updating: "Mise à jour…",
         cancel: "Annuler",
-        upload_avatar: "Télécharger l'avatar"
+        upload_avatar: "Télécharger l'avatar",
+        change_password_title: "Changer le mot de passe",
+        country_india: "Inde",
+        country_us: "États-Unis",
+        country_uk: "Royaume-Uni",
+        country_canada: "Canada",
+        country_australia: "Australie",
+        country_other: "Autre"
       },
       common: {
         and: "et",
@@ -4607,7 +4775,176 @@ const resources = {
         delete: "Supprimer",
         close: "Fermer",
         copy: "Copier",
-        copied: "Copié!"
+        copied: "Copié!",
+        manage: "Gérer"
+      },
+      dashboard: {
+        api_keys: "Clés API",
+        usage: "Utilisation",
+        billing: "Facturation",
+        invoices: "Factures",
+        notifications: "Notifications",
+        welcome: "Bon retour",
+        today_date: "Aujourd'hui",
+        api_requests: "Requêtes API aujourd'hui",
+        remaining: "Restantes",
+        daily_limit: "Limite quotidienne",
+        current_plan: "Plan actuel",
+        your_key: "Votre clé API",
+        generate_key: "Générer une nouvelle clé",
+        revoke_key: "Révoquer la clé",
+        app_name: "Nom de l'application",
+        quick_actions: "Actions rapides",
+        get_api_key: "Obtenir une clé API",
+        get_api_key_desc: "Voir et gérer vos clés API",
+        upgrade_plan: "Mettre à niveau",
+        upgrade_plan_desc: "Débloquer des limites plus élevées",
+        view_docs: "Voir la documentation",
+        view_docs_desc: "Endpoints et exemples",
+        recent_activity: "Activité récente",
+        view_all: "Voir tout",
+        no_notifications: "Aucune notification",
+        unlimited: "Illimité",
+        upgrade_pro: "Passer à Pro",
+        upgrade_desc: "Obtenez 2 500 appels API/jour pour seulement ₹49/mois."
+      },
+      billing: {
+        title: "Facturation",
+        subtitle: "Gérez votre plan et abonnement",
+        current_plan: "Plan actuel",
+        api_calls_day: "appels API/jour",
+        active: "Actif",
+        billing_period: "Période de facturation:",
+        monthly: "Mensuel",
+        yearly: "Annuel",
+        off: "de réduction",
+        duration: "Durée:",
+        custom_pricing: "Tarif personnalisé",
+        contact_quote: "Contactez-nous pour un devis",
+        most_popular: "Le plus populaire",
+        current_plan_btn: "Plan actuel",
+        contact_us: "Contactez-nous",
+        per_mo: "/mois",
+        billed_yearly: "facturé annuellement",
+        total_for: "total pour",
+        months: "mois",
+        money_back: "Garantie de remboursement 7 jours.",
+        best: "Meilleur",
+        upgrade_now: "Mettre à niveau",
+        duration_1_month: "1 Mois",
+        duration_3_months: "3 Mois",
+        duration_6_months: "6 Mois",
+        duration_12_months: "12 Mois"
+      },
+      footer: {
+        tagline: "L'API de streaming YouTube la plus rapide.",
+        product: "Produit",
+        company: "Entreprise",
+        legal: "Mentions légales",
+        privacy: "Politique de confidentialité",
+        terms: "Conditions d'utilisation",
+        refund: "Politique de remboursement",
+        rights: "Tous droits réservés.",
+        newsletter_badge: "Restez informé",
+        newsletter_title: "Abonnez-vous aux mises à jour développeur",
+        newsletter_desc: "Nouveaux endpoints, changelog et conseils exclusifs pour les développeurs BabyAPI.",
+        subscribe: "S'abonner",
+        subscribed: "Merci pour votre abonnement!",
+        newsletter_email_invalid: "Entrez une adresse e-mail valide.",
+        newsletter_toast_desc: "Vous recevrez les mises à jour BabyAPI dans votre boîte de réception."
+      },
+      home: {
+        trust_free: "Plan gratuit pour toujours",
+        trust_start: "Démarrez en 60 secondes",
+        trust_no_cc: "Sans carte bancaire",
+        trust_bar_label: "Approuvé par les développeurs qui construisent avec",
+        marquee_label: "Langages supportés",
+        how_it_works_eyebrow: "Comment ça fonctionne",
+        how_it_works_title: "Trois étapes pour tout diffuser",
+        how_it_works_subtitle: "De l'inscription à votre premier appel API en moins de 5 minutes.",
+        step1_title: "Obtenez une clé API",
+        step1_desc: "Inscription gratuite. Clé API instantanée — sans carte bancaire.",
+        step2_title: "Faites une requête",
+        step2_desc: "Accédez aux endpoints REST avec votre clé.",
+        step3_title: "Diffusez des médias",
+        step3_desc: "Utilisez l'URL de stream avec n'importe quel lecteur.",
+        features_eyebrow: "Tout inclus",
+        feat1_title: "API de recherche",
+        feat1_desc: "Recherche YouTube avec JSON structuré.",
+        feat2_title: "Streaming audio",
+        feat2_desc: "URLs de stream audio haute qualité avec seek.",
+        feat3_title: "Streaming vidéo",
+        feat3_desc: "URLs de stream vidéo prêtes pour tout lecteur.",
+        feat4_title: "30+ presets EQ",
+        feat4_desc: "Bass boost, nightcore, 8D, lofi, cinéma et plus.",
+        feat5_title: "Seek et téléchargement",
+        feat5_desc: "Commencez à n'importe quel offset. Headers de téléchargement à la demande.",
+        feat6_title: "Limites par plan",
+        feat6_desc: "500 à illimité requêtes/jour. Mise à niveau instantanée.",
+        stat1_label: "Développeurs",
+        stat2_label: "Requêtes servies",
+        stat3_label: "SLA de disponibilité",
+        stat4_label: "Réponse moyenne",
+        waveform_eyebrow: "Streaming cristal",
+        waveform_title: "Audio qualité studio,",
+        waveform_title2: "n'importe quel preset.",
+        wave_f1_label: "30+ presets EQ",
+        wave_f1_detail: "bass, nightcore, 8D, lofi, cinéma & plus",
+        wave_f2_label: "Seek vers n'importe quelle position",
+        wave_f2_detail: "démarrez les streams à un offset exact",
+        wave_f3_label: "Forcer téléchargement ou stream",
+        wave_f3_detail: "En-tête Content-Disposition à la demande",
+        wave_f4_label: "Livraison basse latence",
+        wave_f4_detail: "transfert chunked avec support de plage",
+        testimonials_eyebrow: "Témoignages de développeurs",
+        testimonials_title: "Approuvé par les développeurs du monde entier",
+        testimonials_subtitle: "Rejoignez 300 000+ développeurs construisant avec BabyAPI.",
+        t1_role: "Développeur Full Stack",
+        t1_quote: "BabyAPI a réduit notre temps d'intégration audio de semaines à heures.",
+        t2_role: "Ingénieur Backend",
+        t2_quote: "Nous servons 50 000 utilisateurs quotidiens avec BabyAPI. Le SLA de 99,9% est réel.",
+        t3_role: "Développeur d'apps mobiles",
+        t3_quote: "L'API de recherche est incroyablement rapide. Les résultats arrivent en moins de 15ms.",
+        trust_badge1: "Remboursement 30 jours",
+        trust_badge2: "Activation instantanée",
+        trust_badge3: "Sans carte bancaire",
+        trust_badge4: "SLA de 99,9%",
+        try_it_eyebrow: "Essayez en direct",
+        try_it_badge: "Sans inscription",
+        try_it_title: "Voyez l'API en action",
+        try_it_subtitle: "Entrez votre clé API et cliquez Envoyer — obtenez une vraie réponse des serveurs BabyAPI instantanément.",
+        try_it_docs_link: "Voir la documentation complète",
+        pricing_eyebrow: "Tarifs",
+        plan_feat_1key: "1 clé API",
+        plan_feat_all_endpoints: "Tous les endpoints",
+        plan_feat_community: "Support communautaire",
+        plan_feat_email_support: "Support par e-mail",
+        plan_feat_priority: "Support prioritaire",
+        plan_feat_seek: "Seek et téléchargement",
+        plan_learn_more: "En savoir plus",
+        see_full_pricing: "Voir les tarifs complets avec tableau comparatif",
+        cta_title: "Prêt à commencer à",
+        cta_title2: "diffuser?",
+        cta_subtitle: "Obtenez votre clé API gratuite en 30 secondes — sans carte bancaire.",
+        cta_contact: "Contacter les ventes",
+        docs: {
+          title: "Documentation",
+          subtitle: "Tout ce dont vous avez besoin pour intégrer BabyAPI",
+          nav_overview: "Aperçu",
+          nav_authentication: "Authentification",
+          nav_endpoints: "Points de terminaison",
+          nav_rate_limits: "Limites de taux",
+          nav_eq_presets: "Préréglages EQ",
+          nav_code_examples: "Exemples de code",
+          nav_try_it_live: "Essayez en direct",
+          section_overview: "Aperçu",
+          section_auth: "Authentification",
+          section_endpoints: "Points de terminaison API",
+          section_rate_limits: "Limites de taux",
+          section_eq_presets: "Préréglages EQ",
+          section_code_examples: "Exemples de code",
+          section_try_it: "Essayez en direct"
+        }
       }
     }
   },
@@ -4659,16 +4996,6 @@ const resources = {
         upgrade: "ترقية الآن",
         current_plan: "الخطة الحالية"
       },
-      footer: {
-        tagline: "أسرع واجهة بث YouTube للمطورين حول العالم.",
-        product: "المنتج",
-        company: "الشركة",
-        legal: "قانوني",
-        privacy: "سياسة الخصوصية",
-        terms: "شروط الخدمة",
-        refund: "سياسة الاسترداد",
-        rights: "جميع الحقوق محفوظة."
-      },
       auth: {
         email: "عنوان البريد الإلكتروني",
         password: "كلمة المرور",
@@ -4706,6 +5033,9 @@ const resources = {
         forgot_sent_desc: "أرسلنا رمزاً إلى",
         forgot_sent_note: "لم تستلمه؟ تحقق من مجلد البريد العشوائي.",
         back_to_login: "العودة إلى تسجيل الدخول",
+        email_placeholder: "you@example.com",
+        first_name_placeholder: "الاسم الأول",
+        last_name_placeholder: "اسم العائلة",
         reset_title: "إعادة تعيين كلمة المرور",
         reset_subtitle: "أدخل الرمز من بريدك واختر كلمة مرور جديدة",
         reset_code: "رمز إعادة التعيين (8 أرقام)",
@@ -4771,34 +5101,6 @@ const resources = {
         could_not_reset: "تعذرت إعادة التعيين. حاول مجدداً.",
         could_not_set_pwd: "تعذر تعيين كلمة المرور. حاول مجدداً."
       },
-      dashboard: {
-        api_keys: "مفاتيح API",
-        usage: "الاستخدام",
-        billing: "الفوترة",
-        invoices: "الفواتير",
-        notifications: "الإشعارات",
-        welcome: "مرحباً بعودتك",
-        today_date: "اليوم",
-        api_requests: "طلبات API اليوم",
-        remaining: "المتبقية",
-        daily_limit: "الحد اليومي",
-        current_plan: "الخطة الحالية",
-        your_key: "مفتاح API الخاص بك",
-        generate_key: "توليد مفتاح جديد",
-        revoke_key: "إلغاء المفتاح",
-        app_name: "اسم التطبيق",
-        quick_actions: "إجراءات سريعة",
-        get_api_key: "احصل على مفتاح API",
-        get_api_key_desc: "عرض وإدارة مفاتيح API",
-        upgrade_plan: "ترقية الخطة",
-        upgrade_plan_desc: "فتح حدود أعلى",
-        view_docs: "عرض التوثيق",
-        view_docs_desc: "نقاط النهاية والأمثلة",
-        recent_activity: "النشاط الأخير",
-        view_all: "عرض الكل",
-        no_notifications: "لا إشعارات بعد",
-        unlimited: "غير محدود"
-      },
       api_keys: {
         title: "مفاتيح API",
         subtitle: "إدارة مفاتيح الوصول",
@@ -4859,29 +5161,6 @@ const resources = {
         status_restricted: "الحالة: مقيّد",
         status_banned: "الحالة: موقوف"
       },
-      billing: {
-        title: "الفواتير",
-        subtitle: "إدارة خطتك واشتراكك",
-        current_plan: "الخطة الحالية",
-        api_calls_day: "استدعاءات API/يوم",
-        active: "نشط",
-        billing_period: "فترة الفوترة:",
-        monthly: "شهري",
-        yearly: "سنوي",
-        off: "خصم",
-        duration: "المدة:",
-        custom_pricing: "تسعير مخصص",
-        contact_quote: "تواصل للحصول على عرض",
-        most_popular: "الأكثر شعبية",
-        current_plan_btn: "الخطة الحالية",
-        contact_us: "تواصل معنا",
-        per_mo: "/شهر",
-        billed_yearly: "يُفوتر سنوياً",
-        total_for: "إجمالي لـ",
-        months: "أشهر",
-        money_back: "ضمان استرداد 7 أيام.",
-        best: "الأفضل"
-      },
       invoices: {
         title: "الفواتير",
         total_invoices: "فاتورة",
@@ -4939,7 +5218,14 @@ const resources = {
         update_password: "تحديث كلمة المرور",
         updating: "جاري التحديث…",
         cancel: "إلغاء",
-        upload_avatar: "رفع صورة"
+        upload_avatar: "رفع صورة",
+        change_password_title: "تغيير كلمة المرور",
+        country_india: "الهند",
+        country_us: "الولايات المتحدة",
+        country_uk: "المملكة المتحدة",
+        country_canada: "كندا",
+        country_australia: "أستراليا",
+        country_other: "أخرى"
       },
       common: {
         and: "و",
@@ -4952,7 +5238,176 @@ const resources = {
         delete: "حذف",
         close: "إغلاق",
         copy: "نسخ",
-        copied: "تم النسخ!"
+        copied: "تم النسخ!",
+        manage: "إدارة"
+      },
+      dashboard: {
+        api_keys: "مفاتيح API",
+        usage: "الاستخدام",
+        billing: "الفوترة",
+        invoices: "الفواتير",
+        notifications: "الإشعارات",
+        welcome: "مرحباً بعودتك",
+        today_date: "اليوم",
+        api_requests: "طلبات API اليوم",
+        remaining: "المتبقية",
+        daily_limit: "الحد اليومي",
+        current_plan: "الخطة الحالية",
+        your_key: "مفتاح API الخاص بك",
+        generate_key: "توليد مفتاح جديد",
+        revoke_key: "إلغاء المفتاح",
+        app_name: "اسم التطبيق",
+        quick_actions: "إجراءات سريعة",
+        get_api_key: "احصل على مفتاح API",
+        get_api_key_desc: "عرض وإدارة مفاتيح API",
+        upgrade_plan: "ترقية الخطة",
+        upgrade_plan_desc: "فتح حدود أعلى",
+        view_docs: "عرض التوثيق",
+        view_docs_desc: "نقاط النهاية والأمثلة",
+        recent_activity: "النشاط الأخير",
+        view_all: "عرض الكل",
+        no_notifications: "لا إشعارات بعد",
+        unlimited: "غير محدود",
+        upgrade_pro: "الترقية إلى Pro",
+        upgrade_desc: "احصل على 2,500 استدعاء API/يوم بـ₹49/شهر."
+      },
+      billing: {
+        title: "الفواتير",
+        subtitle: "إدارة خطتك واشتراكك",
+        current_plan: "الخطة الحالية",
+        api_calls_day: "استدعاءات API/يوم",
+        active: "نشط",
+        billing_period: "فترة الفوترة:",
+        monthly: "شهري",
+        yearly: "سنوي",
+        off: "خصم",
+        duration: "المدة:",
+        custom_pricing: "تسعير مخصص",
+        contact_quote: "تواصل للحصول على عرض",
+        most_popular: "الأكثر شعبية",
+        current_plan_btn: "الخطة الحالية",
+        contact_us: "تواصل معنا",
+        per_mo: "/شهر",
+        billed_yearly: "يُفوتر سنوياً",
+        total_for: "إجمالي لـ",
+        months: "أشهر",
+        money_back: "ضمان استرداد 7 أيام.",
+        best: "الأفضل",
+        upgrade_now: "ترقية الآن",
+        duration_1_month: "شهر واحد",
+        duration_3_months: "3 أشهر",
+        duration_6_months: "6 أشهر",
+        duration_12_months: "12 شهرًا"
+      },
+      footer: {
+        tagline: "أسرع واجهة بث YouTube للمطورين حول العالم.",
+        product: "المنتج",
+        company: "الشركة",
+        legal: "قانوني",
+        privacy: "سياسة الخصوصية",
+        terms: "شروط الخدمة",
+        refund: "سياسة الاسترداد",
+        rights: "جميع الحقوق محفوظة.",
+        newsletter_badge: "ابق على اطلاع",
+        newsletter_title: "اشترك في تحديثات المطورين",
+        newsletter_desc: "نقاط نهاية جديدة، وسجل التغييرات، ونصائح حصرية لمطوري BabyAPI.",
+        subscribe: "اشتراك",
+        subscribed: "شكراً لاشتراكك!",
+        newsletter_email_invalid: "أدخل عنوان بريد إلكتروني صالح.",
+        newsletter_toast_desc: "ستتلقى تحديثات BabyAPI في بريدك الوارد."
+      },
+      home: {
+        trust_free: "خطة مجانية للأبد",
+        trust_start: "ابدأ في 60 ثانية",
+        trust_no_cc: "بدون بطاقة ائتمانية",
+        trust_bar_label: "موثوق به من المطورين الذين يبنون بـ",
+        marquee_label: "اللغات المدعومة",
+        how_it_works_eyebrow: "كيف يعمل",
+        how_it_works_title: "ثلاث خطوات لبث أي شيء",
+        how_it_works_subtitle: "من التسجيل إلى أول استدعاء API في أقل من 5 دقائق.",
+        step1_title: "احصل على مفتاح API",
+        step1_desc: "سجّل مجاناً. مفتاح API فوري — بدون بطاقة ائتمانية.",
+        step2_title: "أرسل طلباً",
+        step2_desc: "اضرب نقاط النهاية REST بمفتاحك.",
+        step3_title: "بث الوسائط",
+        step3_desc: "استخدم رابط البث مع أي مشغل.",
+        features_eyebrow: "كل شيء متضمن",
+        feat1_title: "واجهة البحث",
+        feat1_desc: "بحث YouTube بـ JSON منظم.",
+        feat2_title: "بث الصوت",
+        feat2_desc: "URLs بث صوت عالي الجودة مع دعم الانتقال.",
+        feat3_title: "بث الفيديو",
+        feat3_desc: "URLs بث فيديو جاهزة لأي مشغل.",
+        feat4_title: "30+ إعداد مسبق EQ",
+        feat4_desc: "باس بوست، nightcore، 8D، lofi، سينما والمزيد.",
+        feat5_title: "انتقل وحمّل",
+        feat5_desc: "ابدأ من أي إزاحة. ترويسات تنزيل عند الطلب.",
+        feat6_title: "حدود حسب الخطة",
+        feat6_desc: "من 500 إلى غير محدود طلب/يوم.",
+        stat1_label: "المطورون",
+        stat2_label: "الطلبات المخدومة",
+        stat3_label: "اتفاقية التشغيل",
+        stat4_label: "متوسط الاستجابة",
+        waveform_eyebrow: "بث بجودة كريستالية",
+        waveform_title: "صوت بجودة الاستوديو،",
+        waveform_title2: "أي إعداد مسبق.",
+        wave_f1_label: "30+ إعداد مسبق EQ",
+        wave_f1_detail: "باس، nightcore، 8D، lofi، سينما والمزيد",
+        wave_f2_label: "انتقل لأي موضع",
+        wave_f2_detail: "ابدأ البث من إزاحة زمنية محددة",
+        wave_f3_label: "إجبار التنزيل أو البث",
+        wave_f3_detail: "ترويسة Content-Disposition عند الطلب",
+        wave_f4_label: "توصيل بزمن انتقال منخفض",
+        wave_f4_detail: "نقل chunked مع دعم النطاق",
+        testimonials_eyebrow: "قصص المطورين",
+        testimonials_title: "موثوق به من مطورين حول العالم",
+        testimonials_subtitle: "انضم إلى 300,000+ مطور يبنون بالفعل مع BabyAPI.",
+        t1_role: "مطور Full Stack",
+        t1_quote: "قلّص BabyAPI وقت تكاملنا الصوتي من أسابيع إلى ساعات.",
+        t2_role: "مهندس Backend",
+        t2_quote: "نخدم 50,000 مستخدم يومي مع BabyAPI. اتفاقية 99.9% حقيقية.",
+        t3_role: "مطور تطبيقات موبايل",
+        t3_quote: "واجهة البحث سريعة بشكل لا يُصدق. النتائج تأتي في أقل من 15ms.",
+        trust_badge1: "استرداد 30 يوم",
+        trust_badge2: "تفعيل فوري",
+        trust_badge3: "بدون بطاقة ائتمانية",
+        trust_badge4: "SLA 99.9% تشغيل",
+        try_it_eyebrow: "جرّبه مباشرة",
+        try_it_badge: "بدون تسجيل",
+        try_it_title: "شاهد الـ API في العمل",
+        try_it_subtitle: "أدخل مفتاح API الخاص بك واضغط إرسال — احصل على استجابة حقيقية فورياً.",
+        try_it_docs_link: "عرض وثائق API الكاملة",
+        pricing_eyebrow: "الأسعار",
+        plan_feat_1key: "1 مفتاح API",
+        plan_feat_all_endpoints: "جميع نقاط النهاية",
+        plan_feat_community: "دعم المجتمع",
+        plan_feat_email_support: "دعم البريد الإلكتروني",
+        plan_feat_priority: "دعم ذو أولوية",
+        plan_feat_seek: "انتقال وتنزيل",
+        plan_learn_more: "تعرف أكثر",
+        see_full_pricing: "عرض الأسعار الكاملة مع جدول المقارنة",
+        cta_title: "هل أنت مستعد للبدء في",
+        cta_title2: "البث؟",
+        cta_subtitle: "احصل على مفتاح API المجاني في 30 ثانية — بدون بطاقة ائتمانية.",
+        cta_contact: "تواصل مع المبيعات",
+        docs: {
+          title: "التوثيق",
+          subtitle: "كل ما تحتاجه لدمج BabyAPI",
+          nav_overview: "نظرة عامة",
+          nav_authentication: "المصادقة",
+          nav_endpoints: "نقاط النهاية",
+          nav_rate_limits: "حدود المعدل",
+          nav_eq_presets: "إعدادات EQ",
+          nav_code_examples: "أمثلة على الكود",
+          nav_try_it_live: "جرّبه الآن",
+          section_overview: "نظرة عامة",
+          section_auth: "المصادقة",
+          section_endpoints: "نقاط نهاية API",
+          section_rate_limits: "حدود المعدل",
+          section_eq_presets: "إعدادات EQ",
+          section_code_examples: "أمثلة على الكود",
+          section_try_it: "جرّبه الآن"
+        }
       }
     }
   },
@@ -5004,16 +5459,6 @@ const resources = {
         upgrade: "Atualizar agora",
         current_plan: "Plano atual"
       },
-      footer: {
-        tagline: "A API de streaming do YouTube mais rápida.",
-        product: "Produto",
-        company: "Empresa",
-        legal: "Legal",
-        privacy: "Política de privacidade",
-        terms: "Termos de serviço",
-        refund: "Política de reembolso",
-        rights: "Todos os direitos reservados."
-      },
       auth: {
         email: "Endereço de e-mail",
         password: "Senha",
@@ -5051,6 +5496,9 @@ const resources = {
         forgot_sent_desc: "Enviamos um código para",
         forgot_sent_note: "Não recebeu? Verifique sua pasta de spam.",
         back_to_login: "Voltar ao login",
+        email_placeholder: "voce@exemplo.com",
+        first_name_placeholder: "Primeiro nome",
+        last_name_placeholder: "Sobrenome",
         reset_title: "Redefinir senha",
         reset_subtitle: "Digite o código do e-mail e escolha uma nova senha",
         reset_code: "Código de redefinição (8 dígitos)",
@@ -5116,34 +5564,6 @@ const resources = {
         could_not_reset: "Não foi possível redefinir. Tente novamente.",
         could_not_set_pwd: "Não foi possível definir. Tente novamente."
       },
-      dashboard: {
-        api_keys: "Chaves API",
-        usage: "Uso",
-        billing: "Faturamento",
-        invoices: "Faturas",
-        notifications: "Notificações",
-        welcome: "Bem-vindo de volta",
-        today_date: "Hoje",
-        api_requests: "Requisições API hoje",
-        remaining: "Restantes",
-        daily_limit: "Limite diário",
-        current_plan: "Plano atual",
-        your_key: "Sua chave API",
-        generate_key: "Gerar nova chave",
-        revoke_key: "Revogar chave",
-        app_name: "Nome do aplicativo",
-        quick_actions: "Ações rápidas",
-        get_api_key: "Obter chave API",
-        get_api_key_desc: "Ver e gerenciar suas chaves API",
-        upgrade_plan: "Fazer upgrade",
-        upgrade_plan_desc: "Desbloquear limites mais altos",
-        view_docs: "Ver documentação",
-        view_docs_desc: "Endpoints e exemplos",
-        recent_activity: "Atividade recente",
-        view_all: "Ver tudo",
-        no_notifications: "Sem notificações",
-        unlimited: "Ilimitado"
-      },
       api_keys: {
         title: "Chaves API",
         subtitle: "Gerencie suas chaves de acesso",
@@ -5204,29 +5624,6 @@ const resources = {
         status_restricted: "Status: Restrito",
         status_banned: "Status: Suspenso"
       },
-      billing: {
-        title: "Faturamento",
-        subtitle: "Gerencie seu plano e assinatura",
-        current_plan: "Plano atual",
-        api_calls_day: "chamadas API/dia",
-        active: "Ativo",
-        billing_period: "Período de cobrança:",
-        monthly: "Mensal",
-        yearly: "Anual",
-        off: "desconto",
-        duration: "Duração:",
-        custom_pricing: "Preço personalizado",
-        contact_quote: "Entre em contato para cotação",
-        most_popular: "Mais popular",
-        current_plan_btn: "Plano atual",
-        contact_us: "Entre em contato",
-        per_mo: "/mês",
-        billed_yearly: "cobrado anualmente",
-        total_for: "total por",
-        months: "meses",
-        money_back: "Garantia de reembolso de 7 dias.",
-        best: "Melhor"
-      },
       invoices: {
         title: "Faturas",
         total_invoices: "fatura",
@@ -5284,7 +5681,14 @@ const resources = {
         update_password: "Atualizar senha",
         updating: "Atualizando…",
         cancel: "Cancelar",
-        upload_avatar: "Enviar avatar"
+        upload_avatar: "Enviar avatar",
+        change_password_title: "Alterar senha",
+        country_india: "Índia",
+        country_us: "Estados Unidos",
+        country_uk: "Reino Unido",
+        country_canada: "Canadá",
+        country_australia: "Austrália",
+        country_other: "Outro"
       },
       common: {
         and: "e",
@@ -5297,7 +5701,176 @@ const resources = {
         delete: "Excluir",
         close: "Fechar",
         copy: "Copiar",
-        copied: "Copiado!"
+        copied: "Copiado!",
+        manage: "Gerenciar"
+      },
+      dashboard: {
+        api_keys: "Chaves API",
+        usage: "Uso",
+        billing: "Faturamento",
+        invoices: "Faturas",
+        notifications: "Notificações",
+        welcome: "Bem-vindo de volta",
+        today_date: "Hoje",
+        api_requests: "Requisições API hoje",
+        remaining: "Restantes",
+        daily_limit: "Limite diário",
+        current_plan: "Plano atual",
+        your_key: "Sua chave API",
+        generate_key: "Gerar nova chave",
+        revoke_key: "Revogar chave",
+        app_name: "Nome do aplicativo",
+        quick_actions: "Ações rápidas",
+        get_api_key: "Obter chave API",
+        get_api_key_desc: "Ver e gerenciar suas chaves API",
+        upgrade_plan: "Fazer upgrade",
+        upgrade_plan_desc: "Desbloquear limites mais altos",
+        view_docs: "Ver documentação",
+        view_docs_desc: "Endpoints e exemplos",
+        recent_activity: "Atividade recente",
+        view_all: "Ver tudo",
+        no_notifications: "Sem notificações",
+        unlimited: "Ilimitado",
+        upgrade_pro: "Upgrade para Pro",
+        upgrade_desc: "Obtenha 2.500 chamadas API/dia por apenas ₹49/mês."
+      },
+      billing: {
+        title: "Faturamento",
+        subtitle: "Gerencie seu plano e assinatura",
+        current_plan: "Plano atual",
+        api_calls_day: "chamadas API/dia",
+        active: "Ativo",
+        billing_period: "Período de cobrança:",
+        monthly: "Mensal",
+        yearly: "Anual",
+        off: "desconto",
+        duration: "Duração:",
+        custom_pricing: "Preço personalizado",
+        contact_quote: "Entre em contato para cotação",
+        most_popular: "Mais popular",
+        current_plan_btn: "Plano atual",
+        contact_us: "Entre em contato",
+        per_mo: "/mês",
+        billed_yearly: "cobrado anualmente",
+        total_for: "total por",
+        months: "meses",
+        money_back: "Garantia de reembolso de 7 dias.",
+        best: "Melhor",
+        upgrade_now: "Fazer upgrade agora",
+        duration_1_month: "1 Mês",
+        duration_3_months: "3 Meses",
+        duration_6_months: "6 Meses",
+        duration_12_months: "12 Meses"
+      },
+      footer: {
+        tagline: "A API de streaming do YouTube mais rápida.",
+        product: "Produto",
+        company: "Empresa",
+        legal: "Legal",
+        privacy: "Política de privacidade",
+        terms: "Termos de serviço",
+        refund: "Política de reembolso",
+        rights: "Todos os direitos reservados.",
+        newsletter_badge: "Fique atualizado",
+        newsletter_title: "Assine as atualizações para desenvolvedores",
+        newsletter_desc: "Novos endpoints, changelog e dicas exclusivas para desenvolvedores BabyAPI.",
+        subscribe: "Assinar",
+        subscribed: "Obrigado por assinar!",
+        newsletter_email_invalid: "Digite um endereço de e-mail válido.",
+        newsletter_toast_desc: "Você receberá atualizações do BabyAPI na sua caixa de entrada."
+      },
+      home: {
+        trust_free: "Plano gratuito para sempre",
+        trust_start: "Comece em 60 segundos",
+        trust_no_cc: "Sem cartão de crédito",
+        trust_bar_label: "Confiado por desenvolvedores que constroem com",
+        marquee_label: "Linguagens suportadas",
+        how_it_works_eyebrow: "Como funciona",
+        how_it_works_title: "Três passos para transmitir qualquer coisa",
+        how_it_works_subtitle: "Do cadastro à sua primeira chamada API em menos de 5 minutos.",
+        step1_title: "Obtenha chave API",
+        step1_desc: "Cadastre-se grátis. Chave API instantânea — sem cartão de crédito.",
+        step2_title: "Faça uma requisição",
+        step2_desc: "Acesse os endpoints REST com sua chave.",
+        step3_title: "Transmita mídia",
+        step3_desc: "Use a URL de stream com qualquer player.",
+        features_eyebrow: "Tudo incluído",
+        feat1_title: "API de busca",
+        feat1_desc: "Busca no YouTube com JSON estruturado.",
+        feat2_title: "Streaming de áudio",
+        feat2_desc: "URLs de stream de áudio de alta qualidade.",
+        feat3_title: "Streaming de vídeo",
+        feat3_desc: "URLs de stream de vídeo para qualquer player.",
+        feat4_title: "30+ presets EQ",
+        feat4_desc: "Bass boost, nightcore, 8D, lofi, cinema e mais.",
+        feat5_title: "Seek e download",
+        feat5_desc: "Comece em qualquer offset. Headers de download sob demanda.",
+        feat6_title: "Limites por plano",
+        feat6_desc: "500 a ilimitado requisições/dia.",
+        stat1_label: "Desenvolvedores",
+        stat2_label: "Requisições servidas",
+        stat3_label: "SLA de disponibilidade",
+        stat4_label: "Resposta média",
+        waveform_eyebrow: "Streaming cristalino",
+        waveform_title: "Áudio de qualidade estúdio,",
+        waveform_title2: "qualquer preset.",
+        wave_f1_label: "30+ presets EQ",
+        wave_f1_detail: "bass, nightcore, 8D, lofi, cinema & mais",
+        wave_f2_label: "Seek para qualquer posição",
+        wave_f2_detail: "inicie streams em um offset exato",
+        wave_f3_label: "Forçar download ou stream",
+        wave_f3_detail: "Cabeçalho Content-Disposition sob demanda",
+        wave_f4_label: "Entrega de baixa latência",
+        wave_f4_detail: "transferência chunked com suporte de faixa",
+        testimonials_eyebrow: "Histórias de desenvolvedores",
+        testimonials_title: "Confiado por desenvolvedores no mundo todo",
+        testimonials_subtitle: "Junte-se a 300.000+ desenvolvedores já construindo com BabyAPI.",
+        t1_role: "Desenvolvedor Full Stack",
+        t1_quote: "BabyAPI reduziu nosso tempo de integração de áudio de semanas para horas.",
+        t2_role: "Engenheiro Backend",
+        t2_quote: "Servimos 50.000 usuários diários com BabyAPI. O SLA de 99,9% é real.",
+        t3_role: "Desenvolvedor de apps mobile",
+        t3_quote: "A API de busca é incrivelmente rápida. Resultados em menos de 15ms em média.",
+        trust_badge1: "Reembolso em 30 dias",
+        trust_badge2: "Ativação instantânea",
+        trust_badge3: "Sem cartão de crédito",
+        trust_badge4: "SLA de 99,9% de disponibilidade",
+        try_it_eyebrow: "Experimente ao vivo",
+        try_it_badge: "Sem cadastro necessário",
+        try_it_title: "Veja a API em ação",
+        try_it_subtitle: "Digite sua chave API e clique em Enviar — obtenha uma resposta real dos servidores BabyAPI instantaneamente.",
+        try_it_docs_link: "Ver documentação completa",
+        pricing_eyebrow: "Preços",
+        plan_feat_1key: "1 chave API",
+        plan_feat_all_endpoints: "Todos os endpoints",
+        plan_feat_community: "Suporte comunitário",
+        plan_feat_email_support: "Suporte por e-mail",
+        plan_feat_priority: "Suporte prioritário",
+        plan_feat_seek: "Seek e download",
+        plan_learn_more: "Saiba mais",
+        see_full_pricing: "Ver preços completos com tabela comparativa",
+        cta_title: "Pronto para começar a",
+        cta_title2: "transmitir?",
+        cta_subtitle: "Obtenha sua chave API gratuita em 30 segundos — sem cartão de crédito.",
+        cta_contact: "Falar com vendas",
+        docs: {
+          title: "Documentação",
+          subtitle: "Tudo que você precisa para integrar o BabyAPI",
+          nav_overview: "Visão geral",
+          nav_authentication: "Autenticação",
+          nav_endpoints: "Endpoints",
+          nav_rate_limits: "Limites de taxa",
+          nav_eq_presets: "Predefinições de EQ",
+          nav_code_examples: "Exemplos de código",
+          nav_try_it_live: "Experimente ao vivo",
+          section_overview: "Visão geral",
+          section_auth: "Autenticação",
+          section_endpoints: "Endpoints da API",
+          section_rate_limits: "Limites de taxa",
+          section_eq_presets: "Predefinições de EQ",
+          section_code_examples: "Exemplos de código",
+          section_try_it: "Experimente ao vivo"
+        }
       }
     }
   },
@@ -5348,16 +5921,6 @@ const resources = {
         get_started: "Loslegen",
         upgrade: "Jetzt upgraden",
         current_plan: "Aktueller Plan"
-      },
-      footer: {
-        tagline: "Die schnellste YouTube-Streaming-API weltweit.",
-        product: "Produkt",
-        company: "Unternehmen",
-        legal: "Rechtliches",
-        privacy: "Datenschutz",
-        terms: "Nutzungsbedingungen",
-        refund: "Rückgaberecht",
-        rights: "Alle Rechte vorbehalten."
       },
       auth: {
         email: "E-Mail-Adresse",
@@ -5461,34 +6024,6 @@ const resources = {
         could_not_reset: "Zurücksetzen nicht möglich. Erneut versuchen.",
         could_not_set_pwd: "Passwort konnte nicht gesetzt werden. Erneut versuchen."
       },
-      dashboard: {
-        api_keys: "API-Keys",
-        usage: "Nutzung",
-        billing: "Abrechnung",
-        invoices: "Rechnungen",
-        notifications: "Benachrichtigungen",
-        welcome: "Willkommen zurück",
-        today_date: "Heute",
-        api_requests: "API-Anfragen heute",
-        remaining: "Verbleibend",
-        daily_limit: "Tageslimit",
-        current_plan: "Aktueller Plan",
-        your_key: "Dein API-Key",
-        generate_key: "Neuen Key generieren",
-        revoke_key: "Key widerrufen",
-        app_name: "Anwendungsname",
-        quick_actions: "Schnellaktionen",
-        get_api_key: "API-Key holen",
-        get_api_key_desc: "API-Keys anzeigen und verwalten",
-        upgrade_plan: "Plan upgraden",
-        upgrade_plan_desc: "Höhere Limits freischalten",
-        view_docs: "Dokumentation ansehen",
-        view_docs_desc: "Endpoints und Beispiele",
-        recent_activity: "Letzte Aktivität",
-        view_all: "Alle anzeigen",
-        no_notifications: "Noch keine Benachrichtigungen",
-        unlimited: "Unbegrenzt"
-      },
       api_keys: {
         title: "API-Keys",
         subtitle: "Verwalte deine API-Zugriffsschlüssel",
@@ -5548,29 +6083,6 @@ const resources = {
         status_safe: "Status: Sicher",
         status_restricted: "Status: Eingeschränkt",
         status_banned: "Status: Gesperrt"
-      },
-      billing: {
-        title: "Abrechnung",
-        subtitle: "Plan und Abonnement verwalten",
-        current_plan: "Aktueller Plan",
-        api_calls_day: "API-Aufrufe/Tag",
-        active: "Aktiv",
-        billing_period: "Abrechnungszeitraum:",
-        monthly: "Monatlich",
-        yearly: "Jährlich",
-        off: "Rabatt",
-        duration: "Laufzeit:",
-        custom_pricing: "Individueller Preis",
-        contact_quote: "Kontakt für Angebot",
-        most_popular: "Am beliebtesten",
-        current_plan_btn: "Aktueller Plan",
-        contact_us: "Kontakt",
-        per_mo: "/Monat",
-        billed_yearly: "jährlich abgerechnet",
-        total_for: "Gesamt für",
-        months: "Monate",
-        money_back: "7-Tage-Geld-zurück-Garantie.",
-        best: "Bestes"
       },
       invoices: {
         title: "Rechnungen",
@@ -5642,7 +6154,154 @@ const resources = {
         delete: "Löschen",
         close: "Schließen",
         copy: "Kopieren",
-        copied: "Kopiert!"
+        copied: "Kopiert!",
+        manage: "Verwalten"
+      },
+      dashboard: {
+        api_keys: "API-Keys",
+        usage: "Nutzung",
+        billing: "Abrechnung",
+        invoices: "Rechnungen",
+        notifications: "Benachrichtigungen",
+        welcome: "Willkommen zurück",
+        today_date: "Heute",
+        api_requests: "API-Anfragen heute",
+        remaining: "Verbleibend",
+        daily_limit: "Tageslimit",
+        current_plan: "Aktueller Plan",
+        your_key: "Dein API-Key",
+        generate_key: "Neuen Key generieren",
+        revoke_key: "Key widerrufen",
+        app_name: "Anwendungsname",
+        quick_actions: "Schnellaktionen",
+        get_api_key: "API-Key holen",
+        get_api_key_desc: "API-Keys anzeigen und verwalten",
+        upgrade_plan: "Plan upgraden",
+        upgrade_plan_desc: "Höhere Limits freischalten",
+        view_docs: "Dokumentation ansehen",
+        view_docs_desc: "Endpoints und Beispiele",
+        recent_activity: "Letzte Aktivität",
+        view_all: "Alle anzeigen",
+        no_notifications: "Noch keine Benachrichtigungen",
+        unlimited: "Unbegrenzt",
+        upgrade_pro: "Upgrade auf Pro",
+        upgrade_desc: "Erhalte 2.500 API-Aufrufe/Tag für nur ₹49/Monat."
+      },
+      billing: {
+        title: "Abrechnung",
+        subtitle: "Plan und Abonnement verwalten",
+        current_plan: "Aktueller Plan",
+        api_calls_day: "API-Aufrufe/Tag",
+        active: "Aktiv",
+        billing_period: "Abrechnungszeitraum:",
+        monthly: "Monatlich",
+        yearly: "Jährlich",
+        off: "Rabatt",
+        duration: "Laufzeit:",
+        custom_pricing: "Individueller Preis",
+        contact_quote: "Kontakt für Angebot",
+        most_popular: "Am beliebtesten",
+        current_plan_btn: "Aktueller Plan",
+        contact_us: "Kontakt",
+        per_mo: "/Monat",
+        billed_yearly: "jährlich abgerechnet",
+        total_for: "Gesamt für",
+        months: "Monate",
+        money_back: "7-Tage-Geld-zurück-Garantie.",
+        best: "Bestes",
+        upgrade_now: "Jetzt upgraden"
+      },
+      footer: {
+        tagline: "Die schnellste YouTube-Streaming-API weltweit.",
+        product: "Produkt",
+        company: "Unternehmen",
+        legal: "Rechtliches",
+        privacy: "Datenschutz",
+        terms: "Nutzungsbedingungen",
+        refund: "Rückgaberecht",
+        rights: "Alle Rechte vorbehalten.",
+        newsletter_badge: "Bleib auf dem Laufenden",
+        newsletter_title: "Entwickler-Updates abonnieren",
+        newsletter_desc: "Neue Endpoints, Changelog und exklusive Tipps für BabyAPI-Entwickler.",
+        subscribe: "Abonnieren",
+        subscribed: "Danke für dein Abonnement!",
+        newsletter_email_invalid: "Gib eine gültige E-Mail-Adresse ein.",
+        newsletter_toast_desc: "Du erhältst BabyAPI-Updates in deinem Posteingang."
+      },
+      home: {
+        trust_free: "Kostenloser Plan für immer",
+        trust_start: "In 60 Sekunden starten",
+        trust_no_cc: "Keine Kreditkarte",
+        trust_bar_label: "Vertrauen von Entwicklern, die aufbauen mit",
+        marquee_label: "Unterstützte Sprachen",
+        how_it_works_eyebrow: "Wie es funktioniert",
+        how_it_works_title: "Drei Schritte, um alles zu streamen",
+        how_it_works_subtitle: "Von der Registrierung bis zum ersten API-Aufruf in unter 5 Minuten.",
+        step1_title: "API-Key holen",
+        step1_desc: "Kostenlos registrieren. Sofortiger API-Key — keine Kreditkarte nötig.",
+        step2_title: "Anfrage stellen",
+        step2_desc: "REST-Endpoints mit deinem Key aufrufen.",
+        step3_title: "Medien streamen",
+        step3_desc: "Stream-URL mit jedem Player verwenden.",
+        features_eyebrow: "Alles inklusive",
+        feat1_title: "Such-API",
+        feat1_desc: "YouTube-Suche mit strukturiertem JSON.",
+        feat2_title: "Audio-Streaming",
+        feat2_desc: "Hochwertige Audio-Stream-URLs mit Seek.",
+        feat3_title: "Video-Streaming",
+        feat3_desc: "Video-Stream-URLs für jeden Player.",
+        feat4_title: "30+ EQ-Presets",
+        feat4_desc: "Bass Boost, Nightcore, 8D, Lofi, Kino und mehr.",
+        feat5_title: "Seek & Download",
+        feat5_desc: "Bei beliebigem Offset starten. Download-Header auf Anfrage.",
+        feat6_title: "Planbasierte Limits",
+        feat6_desc: "500 bis unbegrenzte Anfragen/Tag.",
+        stat1_label: "Entwickler",
+        stat2_label: "Anfragen bedient",
+        stat3_label: "Verfügbarkeits-SLA",
+        stat4_label: "Ø Antwortzeit",
+        waveform_eyebrow: "Kristallklares Streaming",
+        waveform_title: "Studioqualität Audio,",
+        waveform_title2: "jedes Preset.",
+        wave_f1_label: "30+ EQ-Presets",
+        wave_f1_detail: "Bass, Nightcore, 8D, Lofi, Kino & mehr",
+        wave_f2_label: "Seek zu jeder Position",
+        wave_f2_detail: "Streams bei exaktem Zeitoffset starten",
+        wave_f3_label: "Download oder Stream erzwingen",
+        wave_f3_detail: "Content-Disposition-Header auf Anfrage",
+        wave_f4_label: "Niedrige Latenzlieferung",
+        wave_f4_detail: "Chunked Transfer mit Range-Unterstützung",
+        testimonials_eyebrow: "Entwicklergeschichten",
+        testimonials_title: "Vertrauen von Entwicklern weltweit",
+        testimonials_subtitle: "Schließe dich 300.000+ Entwicklern an, die bereits mit BabyAPI bauen.",
+        t1_role: "Full-Stack-Entwickler",
+        t1_quote: "BabyAPI hat unsere Audio-Integrationszeit von Wochen auf Stunden reduziert.",
+        t2_role: "Backend-Ingenieur",
+        t2_quote: "Wir bedienen 50.000 tägliche Nutzer mit BabyAPI. Das 99,9% SLA ist real.",
+        t3_role: "Mobile-App-Entwickler",
+        t3_quote: "Die Such-API ist unglaublich schnell. Ergebnisse kommen in unter 15ms.",
+        trust_badge1: "30 Tage Rückgabe",
+        trust_badge2: "Sofortige Aktivierung",
+        trust_badge3: "Keine Kreditkarte nötig",
+        trust_badge4: "99,9% Verfügbarkeits-SLA",
+        try_it_eyebrow: "Live ausprobieren",
+        try_it_badge: "Keine Registrierung nötig",
+        try_it_title: "Die API in Aktion sehen",
+        try_it_subtitle: "Gib deinen API-Key ein und klicke Senden — erhalte sofort eine echte Antwort.",
+        try_it_docs_link: "Vollständige API-Dokumentation anzeigen",
+        pricing_eyebrow: "Preise",
+        plan_feat_1key: "1 API-Key",
+        plan_feat_all_endpoints: "Alle Endpoints",
+        plan_feat_community: "Community-Support",
+        plan_feat_email_support: "E-Mail-Support",
+        plan_feat_priority: "Prioritätssupport",
+        plan_feat_seek: "Seek & Download",
+        plan_learn_more: "Mehr erfahren",
+        see_full_pricing: "Vollständige Preisübersicht mit Vergleichstabelle",
+        cta_title: "Bereit anzufangen zu",
+        cta_title2: "streamen?",
+        cta_subtitle: "Hol dir deinen kostenlosen API-Key in 30 Sekunden — keine Kreditkarte nötig.",
+        cta_contact: "Vertrieb kontaktieren"
       }
     }
   },
@@ -5693,16 +6352,6 @@ const resources = {
         get_started: "始める",
         upgrade: "今すぐアップグレード",
         current_plan: "現在のプラン"
-      },
-      footer: {
-        tagline: "世界中の開発者向け最速YouTubeストリーミングAPI。",
-        product: "プロダクト",
-        company: "会社",
-        legal: "法的情報",
-        privacy: "プライバシーポリシー",
-        terms: "利用規約",
-        refund: "返金ポリシー",
-        rights: "全著作権所有。"
       },
       auth: {
         email: "メールアドレス",
@@ -5806,34 +6455,6 @@ const resources = {
         could_not_reset: "リセットできませんでした。再試行してください。",
         could_not_set_pwd: "パスワードを設定できませんでした。再試行してください。"
       },
-      dashboard: {
-        api_keys: "APIキー",
-        usage: "使用状況",
-        billing: "請求",
-        invoices: "請求書",
-        notifications: "通知",
-        welcome: "おかえりなさい",
-        today_date: "今日",
-        api_requests: "本日のAPIリクエスト",
-        remaining: "残り",
-        daily_limit: "1日の上限",
-        current_plan: "現在のプラン",
-        your_key: "あなたのAPIキー",
-        generate_key: "新しいキーを生成",
-        revoke_key: "キーを無効化",
-        app_name: "アプリケーション名",
-        quick_actions: "クイックアクション",
-        get_api_key: "APIキーを取得",
-        get_api_key_desc: "APIキーを表示・管理",
-        upgrade_plan: "プランをアップグレード",
-        upgrade_plan_desc: "より高い制限を解除",
-        view_docs: "ドキュメントを見る",
-        view_docs_desc: "エンドポイントと例",
-        recent_activity: "最近のアクティビティ",
-        view_all: "すべて表示",
-        no_notifications: "通知はまだありません",
-        unlimited: "無制限"
-      },
       api_keys: {
         title: "APIキー",
         subtitle: "APIアクセスキーを管理",
@@ -5893,29 +6514,6 @@ const resources = {
         status_safe: "状態: 安全",
         status_restricted: "状態: 制限",
         status_banned: "状態: 停止"
-      },
-      billing: {
-        title: "請求",
-        subtitle: "プランとサブスクリプションを管理",
-        current_plan: "現在のプラン",
-        api_calls_day: "API呼び出し/日",
-        active: "有効",
-        billing_period: "請求期間:",
-        monthly: "月次",
-        yearly: "年次",
-        off: "割引",
-        duration: "期間:",
-        custom_pricing: "カスタム価格",
-        contact_quote: "見積もりはお問い合わせください",
-        most_popular: "最も人気",
-        current_plan_btn: "現在のプラン",
-        contact_us: "お問い合わせ",
-        per_mo: "/月",
-        billed_yearly: "年間請求",
-        total_for: "合計",
-        months: "ヶ月分",
-        money_back: "7日間返金保証。",
-        best: "ベスト"
       },
       invoices: {
         title: "請求書",
@@ -5987,7 +6585,154 @@ const resources = {
         delete: "削除",
         close: "閉じる",
         copy: "コピー",
-        copied: "コピーしました！"
+        copied: "コピーしました！",
+        manage: "管理"
+      },
+      dashboard: {
+        api_keys: "APIキー",
+        usage: "使用状況",
+        billing: "請求",
+        invoices: "請求書",
+        notifications: "通知",
+        welcome: "おかえりなさい",
+        today_date: "今日",
+        api_requests: "本日のAPIリクエスト",
+        remaining: "残り",
+        daily_limit: "1日の上限",
+        current_plan: "現在のプラン",
+        your_key: "あなたのAPIキー",
+        generate_key: "新しいキーを生成",
+        revoke_key: "キーを無効化",
+        app_name: "アプリケーション名",
+        quick_actions: "クイックアクション",
+        get_api_key: "APIキーを取得",
+        get_api_key_desc: "APIキーを表示・管理",
+        upgrade_plan: "プランをアップグレード",
+        upgrade_plan_desc: "より高い制限を解除",
+        view_docs: "ドキュメントを見る",
+        view_docs_desc: "エンドポイントと例",
+        recent_activity: "最近のアクティビティ",
+        view_all: "すべて表示",
+        no_notifications: "通知はまだありません",
+        unlimited: "無制限",
+        upgrade_pro: "Proにアップグレード",
+        upgrade_desc: "月額₹49で2,500 API呼び出し/日を取得。"
+      },
+      billing: {
+        title: "請求",
+        subtitle: "プランとサブスクリプションを管理",
+        current_plan: "現在のプラン",
+        api_calls_day: "API呼び出し/日",
+        active: "有効",
+        billing_period: "請求期間:",
+        monthly: "月次",
+        yearly: "年次",
+        off: "割引",
+        duration: "期間:",
+        custom_pricing: "カスタム価格",
+        contact_quote: "見積もりはお問い合わせください",
+        most_popular: "最も人気",
+        current_plan_btn: "現在のプラン",
+        contact_us: "お問い合わせ",
+        per_mo: "/月",
+        billed_yearly: "年間請求",
+        total_for: "合計",
+        months: "ヶ月分",
+        money_back: "7日間返金保証。",
+        best: "ベスト",
+        upgrade_now: "今すぐアップグレード"
+      },
+      footer: {
+        tagline: "世界中の開発者向け最速YouTubeストリーミングAPI。",
+        product: "プロダクト",
+        company: "会社",
+        legal: "法的情報",
+        privacy: "プライバシーポリシー",
+        terms: "利用規約",
+        refund: "返金ポリシー",
+        rights: "全著作権所有。",
+        newsletter_badge: "最新情報をチェック",
+        newsletter_title: "開発者向けアップデートを購読",
+        newsletter_desc: "BabyAPI開発者向けの新しいエンドポイント、変更ログ、独占ヒント。",
+        subscribe: "購読する",
+        subscribed: "ご購読ありがとうございます！",
+        newsletter_email_invalid: "有効なメールアドレスを入力してください。",
+        newsletter_toast_desc: "BabyAPIのアップデートがメールボックスに届きます。"
+      },
+      home: {
+        trust_free: "永遠に無料プラン",
+        trust_start: "60秒で開始",
+        trust_no_cc: "クレジットカード不要",
+        trust_bar_label: "構築する開発者に信頼されています",
+        marquee_label: "対応言語",
+        how_it_works_eyebrow: "使い方",
+        how_it_works_title: "3ステップで何でもストリーム",
+        how_it_works_subtitle: "登録から最初のAPI呼び出しまで5分以内。",
+        step1_title: "APIキーを取得",
+        step1_desc: "無料で登録。即時APIキー — クレジットカード不要。",
+        step2_title: "リクエストを送る",
+        step2_desc: "キーでRESTエンドポイントにアクセス。",
+        step3_title: "メディアをストリーム",
+        step3_desc: "どのプレーヤーでもストリームURLを使用。",
+        features_eyebrow: "すべて含まれています",
+        feat1_title: "検索API",
+        feat1_desc: "YouTube検索と構造化JSON。",
+        feat2_title: "オーディオストリーミング",
+        feat2_desc: "シーク対応の高品質オーディオストリームURL。",
+        feat3_title: "ビデオストリーミング",
+        feat3_desc: "どのプレーヤーにも対応するビデオストリームURL。",
+        feat4_title: "30以上のEQプリセット",
+        feat4_desc: "バスブースト、ナイトコア、8D、ローファイ、シネマなど。",
+        feat5_title: "シーク＆ダウンロード",
+        feat5_desc: "任意のオフセットから開始。ダウンロードヘッダー。",
+        feat6_title: "プランベースの制限",
+        feat6_desc: "500から無制限リクエスト/日。",
+        stat1_label: "開発者",
+        stat2_label: "処理リクエスト",
+        stat3_label: "稼働率SLA",
+        stat4_label: "平均レスポンス",
+        waveform_eyebrow: "クリスタルクリアなストリーミング",
+        waveform_title: "スタジオ品質オーディオ、",
+        waveform_title2: "どんなプリセットも。",
+        wave_f1_label: "30以上のEQプリセット",
+        wave_f1_detail: "バス、ナイトコア、8D、ローファイ、シネマなど",
+        wave_f2_label: "任意の位置にシーク",
+        wave_f2_detail: "正確な時間オフセットでストリーム開始",
+        wave_f3_label: "ダウンロードまたはストリームを強制",
+        wave_f3_detail: "Content-Dispositionヘッダーをオンデマンドで",
+        wave_f4_label: "低レイテンシ配信",
+        wave_f4_detail: "レンジサポート付きチャンク転送",
+        testimonials_eyebrow: "開発者ストーリー",
+        testimonials_title: "世界中の開発者に信頼されています",
+        testimonials_subtitle: "BabyAPIで既に構築している30万人以上の開発者に参加。",
+        t1_role: "フルスタック開発者",
+        t1_quote: "BabyAPIはオーディオ統合時間を数週間から数時間に短縮しました。",
+        t2_role: "バックエンドエンジニア",
+        t2_quote: "BabyAPIで毎日5万人のユーザーにサービス提供。99.9%のSLAは本物。",
+        t3_role: "モバイルアプリ開発者",
+        t3_quote: "検索APIは驚くほど速い。平均15ms未満で結果が返ってきます。",
+        trust_badge1: "30日間返金保証",
+        trust_badge2: "即時アクティベーション",
+        trust_badge3: "クレジットカード不要",
+        trust_badge4: "99.9%稼働率SLA",
+        try_it_eyebrow: "ライブで試す",
+        try_it_badge: "登録不要",
+        try_it_title: "APIを実際に見る",
+        try_it_subtitle: "APIキーを入力してSendを押す — BabyAPIサーバーから即座に実際の応答を取得。",
+        try_it_docs_link: "完全なAPIドキュメントを見る",
+        pricing_eyebrow: "料金",
+        plan_feat_1key: "1 APIキー",
+        plan_feat_all_endpoints: "全エンドポイント",
+        plan_feat_community: "コミュニティサポート",
+        plan_feat_email_support: "メールサポート",
+        plan_feat_priority: "優先サポート",
+        plan_feat_seek: "シーク＆ダウンロード",
+        plan_learn_more: "詳細を見る",
+        see_full_pricing: "比較表付き完全な料金を見る",
+        cta_title: "ストリーミングを",
+        cta_title2: "始める準備はできましたか？",
+        cta_subtitle: "30秒で無料APIキーを取得 — クレジットカード不要。",
+        cta_contact: "営業に連絡"
       }
     }
   },
@@ -6038,16 +6783,6 @@ const resources = {
         get_started: "시작하기",
         upgrade: "지금 업그레이드",
         current_plan: "현재 플랜"
-      },
-      footer: {
-        tagline: "전 세계 개발자를 위한 가장 빠른 YouTube 스트리밍 API.",
-        product: "제품",
-        company: "회사",
-        legal: "법적 고지",
-        privacy: "개인정보 보호정책",
-        terms: "서비스 약관",
-        refund: "환불 정책",
-        rights: "모든 권리 보유."
       },
       auth: {
         email: "이메일 주소",
@@ -6151,34 +6886,6 @@ const resources = {
         could_not_reset: "재설정할 수 없었습니다. 다시 시도하세요.",
         could_not_set_pwd: "비밀번호를 설정할 수 없었습니다. 다시 시도하세요."
       },
-      dashboard: {
-        api_keys: "API 키",
-        usage: "사용량",
-        billing: "결제",
-        invoices: "청구서",
-        notifications: "알림",
-        welcome: "다시 오신 것을 환영합니다",
-        today_date: "오늘",
-        api_requests: "오늘 API 요청",
-        remaining: "남은 횟수",
-        daily_limit: "일일 한도",
-        current_plan: "현재 플랜",
-        your_key: "API 키",
-        generate_key: "새 키 생성",
-        revoke_key: "키 취소",
-        app_name: "애플리케이션 이름",
-        quick_actions: "빠른 작업",
-        get_api_key: "API 키 받기",
-        get_api_key_desc: "API 키 보기 및 관리",
-        upgrade_plan: "플랜 업그레이드",
-        upgrade_plan_desc: "더 높은 한도 잠금 해제",
-        view_docs: "문서 보기",
-        view_docs_desc: "엔드포인트 및 예제",
-        recent_activity: "최근 활동",
-        view_all: "모두 보기",
-        no_notifications: "아직 알림 없음",
-        unlimited: "무제한"
-      },
       api_keys: {
         title: "API 키",
         subtitle: "API 액세스 키 관리",
@@ -6238,29 +6945,6 @@ const resources = {
         status_safe: "상태: 안전",
         status_restricted: "상태: 제한됨",
         status_banned: "상태: 정지됨"
-      },
-      billing: {
-        title: "결제",
-        subtitle: "플랜 및 구독 관리",
-        current_plan: "현재 플랜",
-        api_calls_day: "API 호출/일",
-        active: "활성",
-        billing_period: "청구 기간:",
-        monthly: "월별",
-        yearly: "연별",
-        off: "할인",
-        duration: "기간:",
-        custom_pricing: "맞춤 가격",
-        contact_quote: "견적 문의",
-        most_popular: "가장 인기",
-        current_plan_btn: "현재 플랜",
-        contact_us: "문의하기",
-        per_mo: "/월",
-        billed_yearly: "연간 청구",
-        total_for: "합계",
-        months: "개월",
-        money_back: "7일 환불 보장.",
-        best: "최고"
       },
       invoices: {
         title: "청구서",
@@ -6332,7 +7016,154 @@ const resources = {
         delete: "삭제",
         close: "닫기",
         copy: "복사",
-        copied: "복사됨!"
+        copied: "복사됨!",
+        manage: "관리"
+      },
+      dashboard: {
+        api_keys: "API 키",
+        usage: "사용량",
+        billing: "결제",
+        invoices: "청구서",
+        notifications: "알림",
+        welcome: "다시 오신 것을 환영합니다",
+        today_date: "오늘",
+        api_requests: "오늘 API 요청",
+        remaining: "남은 횟수",
+        daily_limit: "일일 한도",
+        current_plan: "현재 플랜",
+        your_key: "API 키",
+        generate_key: "새 키 생성",
+        revoke_key: "키 취소",
+        app_name: "애플리케이션 이름",
+        quick_actions: "빠른 작업",
+        get_api_key: "API 키 받기",
+        get_api_key_desc: "API 키 보기 및 관리",
+        upgrade_plan: "플랜 업그레이드",
+        upgrade_plan_desc: "더 높은 한도 잠금 해제",
+        view_docs: "문서 보기",
+        view_docs_desc: "엔드포인트 및 예제",
+        recent_activity: "최근 활동",
+        view_all: "모두 보기",
+        no_notifications: "아직 알림 없음",
+        unlimited: "무제한",
+        upgrade_pro: "Pro로 업그레이드",
+        upgrade_desc: "월 ₹49에 하루 2,500 API 호출을 받으세요."
+      },
+      billing: {
+        title: "결제",
+        subtitle: "플랜 및 구독 관리",
+        current_plan: "현재 플랜",
+        api_calls_day: "API 호출/일",
+        active: "활성",
+        billing_period: "청구 기간:",
+        monthly: "월별",
+        yearly: "연별",
+        off: "할인",
+        duration: "기간:",
+        custom_pricing: "맞춤 가격",
+        contact_quote: "견적 문의",
+        most_popular: "가장 인기",
+        current_plan_btn: "현재 플랜",
+        contact_us: "문의하기",
+        per_mo: "/월",
+        billed_yearly: "연간 청구",
+        total_for: "합계",
+        months: "개월",
+        money_back: "7일 환불 보장.",
+        best: "최고",
+        upgrade_now: "지금 업그레이드"
+      },
+      footer: {
+        tagline: "전 세계 개발자를 위한 가장 빠른 YouTube 스트리밍 API.",
+        product: "제품",
+        company: "회사",
+        legal: "법적 고지",
+        privacy: "개인정보 보호정책",
+        terms: "서비스 약관",
+        refund: "환불 정책",
+        rights: "모든 권리 보유.",
+        newsletter_badge: "최신 소식 받기",
+        newsletter_title: "개발자 업데이트 구독",
+        newsletter_desc: "BabyAPI 개발자를 위한 새로운 엔드포인트, 변경 로그, 독점 팁.",
+        subscribe: "구독",
+        subscribed: "구독해 주셔서 감사합니다!",
+        newsletter_email_invalid: "유효한 이메일 주소를 입력하세요.",
+        newsletter_toast_desc: "BabyAPI 업데이트가 받은 편지함으로 전달됩니다."
+      },
+      home: {
+        trust_free: "영원히 무료 플랜",
+        trust_start: "60초 안에 시작",
+        trust_no_cc: "신용카드 불필요",
+        trust_bar_label: "다음으로 구축하는 개발자들이 신뢰",
+        marquee_label: "지원 언어",
+        how_it_works_eyebrow: "작동 방식",
+        how_it_works_title: "무엇이든 스트리밍하는 3단계",
+        how_it_works_subtitle: "가입부터 첫 API 호출까지 5분 이내.",
+        step1_title: "API 키 받기",
+        step1_desc: "무료 가입. 즉시 API 키 — 신용카드 불필요.",
+        step2_title: "요청 보내기",
+        step2_desc: "키로 REST 엔드포인트 호출.",
+        step3_title: "미디어 스트리밍",
+        step3_desc: "어떤 플레이어로도 스트림 URL 사용.",
+        features_eyebrow: "모든 것이 포함",
+        feat1_title: "검색 API",
+        feat1_desc: "구조화된 JSON으로 YouTube 검색.",
+        feat2_title: "오디오 스트리밍",
+        feat2_desc: "시크 지원의 고품질 오디오 스트림 URL.",
+        feat3_title: "비디오 스트리밍",
+        feat3_desc: "모든 플레이어에 바로 사용 가능한 비디오 스트림 URL.",
+        feat4_title: "30+ EQ 프리셋",
+        feat4_desc: "베이스 부스트, 나이트코어, 8D, 로파이, 시네마 등.",
+        feat5_title: "시크 & 다운로드",
+        feat5_desc: "모든 오프셋에서 시작. 주문형 다운로드 헤더.",
+        feat6_title: "플랜 기반 한도",
+        feat6_desc: "하루 500에서 무제한 요청.",
+        stat1_label: "개발자",
+        stat2_label: "처리된 요청",
+        stat3_label: "가동 시간 SLA",
+        stat4_label: "평균 응답",
+        waveform_eyebrow: "수정처럼 맑은 스트리밍",
+        waveform_title: "스튜디오 품질 오디오,",
+        waveform_title2: "어떤 프리셋이든.",
+        wave_f1_label: "30+ EQ 프리셋",
+        wave_f1_detail: "베이스, 나이트코어, 8D, 로파이, 시네마 등",
+        wave_f2_label: "어느 위치로든 시크",
+        wave_f2_detail: "정확한 시간 오프셋에서 스트림 시작",
+        wave_f3_label: "다운로드 또는 스트림 강제",
+        wave_f3_detail: "주문형 Content-Disposition 헤더",
+        wave_f4_label: "낮은 지연 시간 전달",
+        wave_f4_detail: "범위 지원 청크 전송",
+        testimonials_eyebrow: "개발자 이야기",
+        testimonials_title: "전 세계 개발자들이 신뢰",
+        testimonials_subtitle: "이미 BabyAPI로 구축 중인 30만+ 개발자와 함께하세요.",
+        t1_role: "풀스택 개발자",
+        t1_quote: "BabyAPI는 오디오 통합 시간을 몇 주에서 몇 시간으로 단축했습니다.",
+        t2_role: "백엔드 엔지니어",
+        t2_quote: "BabyAPI로 하루 5만 명의 활성 사용자를 서비스합니다. 99.9% SLA는 실제입니다.",
+        t3_role: "모바일 앱 개발자",
+        t3_quote: "검색 API는 믿을 수 없을 만큼 빠릅니다. 평균 15ms 미만에 결과가 옵니다.",
+        trust_badge1: "30일 환불",
+        trust_badge2: "즉시 활성화",
+        trust_badge3: "신용카드 불필요",
+        trust_badge4: "99.9% 가동 시간 SLA",
+        try_it_eyebrow: "라이브로 시도",
+        try_it_badge: "가입 불필요",
+        try_it_title: "API를 실제로 보세요",
+        try_it_subtitle: "API 키를 입력하고 Send를 누르세요 — BabyAPI 서버에서 즉시 실제 응답을 받으세요.",
+        try_it_docs_link: "전체 API 문서 보기",
+        pricing_eyebrow: "가격",
+        plan_feat_1key: "1 API 키",
+        plan_feat_all_endpoints: "모든 엔드포인트",
+        plan_feat_community: "커뮤니티 지원",
+        plan_feat_email_support: "이메일 지원",
+        plan_feat_priority: "우선 지원",
+        plan_feat_seek: "시크 & 다운로드",
+        plan_learn_more: "자세히 알아보기",
+        see_full_pricing: "비교 표가 있는 전체 가격 보기",
+        cta_title: "스트리밍을 시작할",
+        cta_title2: "준비가 되셨나요?",
+        cta_subtitle: "30초 안에 무료 API 키 받기 — 신용카드 불필요.",
+        cta_contact: "영업팀 문의"
       }
     }
   },
@@ -6383,16 +7214,6 @@ const resources = {
         get_started: "开始使用",
         upgrade: "立即升级",
         current_plan: "当前计划"
-      },
-      footer: {
-        tagline: "全球开发者最快的YouTube流媒体API。",
-        product: "产品",
-        company: "公司",
-        legal: "法律",
-        privacy: "隐私政策",
-        terms: "服务条款",
-        refund: "退款政策",
-        rights: "版权所有。"
       },
       auth: {
         email: "电子邮件地址",
@@ -6496,34 +7317,6 @@ const resources = {
         could_not_reset: "无法重置密码，请重试。",
         could_not_set_pwd: "无法设置密码，请重试。"
       },
-      dashboard: {
-        api_keys: "API密钥",
-        usage: "使用情况",
-        billing: "账单",
-        invoices: "发票",
-        notifications: "通知",
-        welcome: "欢迎回来",
-        today_date: "今天",
-        api_requests: "今日API请求",
-        remaining: "剩余",
-        daily_limit: "每日限制",
-        current_plan: "当前计划",
-        your_key: "您的API密钥",
-        generate_key: "生成新密钥",
-        revoke_key: "撤销密钥",
-        app_name: "应用程序名称",
-        quick_actions: "快速操作",
-        get_api_key: "获取API密钥",
-        get_api_key_desc: "查看和管理您的API密钥",
-        upgrade_plan: "升级计划",
-        upgrade_plan_desc: "解锁更高的速率限制",
-        view_docs: "查看文档",
-        view_docs_desc: "API端点和示例",
-        recent_activity: "最近活动",
-        view_all: "查看全部",
-        no_notifications: "暂无通知",
-        unlimited: "无限制"
-      },
       api_keys: {
         title: "API密钥",
         subtitle: "管理您的API访问密钥",
@@ -6583,29 +7376,6 @@ const resources = {
         status_safe: "状态：安全",
         status_restricted: "状态：受限",
         status_banned: "状态：已封禁"
-      },
-      billing: {
-        title: "账单",
-        subtitle: "管理您的计划和订阅",
-        current_plan: "当前计划",
-        api_calls_day: "API调用/天",
-        active: "有效",
-        billing_period: "计费周期：",
-        monthly: "每月",
-        yearly: "每年",
-        off: "折扣",
-        duration: "时长：",
-        custom_pricing: "定制价格",
-        contact_quote: "联系获取报价",
-        most_popular: "最受欢迎",
-        current_plan_btn: "当前计划",
-        contact_us: "联系我们",
-        per_mo: "/月",
-        billed_yearly: "按年计费",
-        total_for: "合计",
-        months: "个月",
-        money_back: "7天退款保证。",
-        best: "最佳"
       },
       invoices: {
         title: "发票",
@@ -6677,7 +7447,154 @@ const resources = {
         delete: "删除",
         close: "关闭",
         copy: "复制",
-        copied: "已复制！"
+        copied: "已复制！",
+        manage: "管理"
+      },
+      dashboard: {
+        api_keys: "API密钥",
+        usage: "使用情况",
+        billing: "账单",
+        invoices: "发票",
+        notifications: "通知",
+        welcome: "欢迎回来",
+        today_date: "今天",
+        api_requests: "今日API请求",
+        remaining: "剩余",
+        daily_limit: "每日限制",
+        current_plan: "当前计划",
+        your_key: "您的API密钥",
+        generate_key: "生成新密钥",
+        revoke_key: "撤销密钥",
+        app_name: "应用程序名称",
+        quick_actions: "快速操作",
+        get_api_key: "获取API密钥",
+        get_api_key_desc: "查看和管理您的API密钥",
+        upgrade_plan: "升级计划",
+        upgrade_plan_desc: "解锁更高的速率限制",
+        view_docs: "查看文档",
+        view_docs_desc: "API端点和示例",
+        recent_activity: "最近活动",
+        view_all: "查看全部",
+        no_notifications: "暂无通知",
+        unlimited: "无限制",
+        upgrade_pro: "升级到Pro",
+        upgrade_desc: "仅需₹49/月即可获得每天2,500次API调用。"
+      },
+      billing: {
+        title: "账单",
+        subtitle: "管理您的计划和订阅",
+        current_plan: "当前计划",
+        api_calls_day: "API调用/天",
+        active: "有效",
+        billing_period: "计费周期：",
+        monthly: "每月",
+        yearly: "每年",
+        off: "折扣",
+        duration: "时长：",
+        custom_pricing: "定制价格",
+        contact_quote: "联系获取报价",
+        most_popular: "最受欢迎",
+        current_plan_btn: "当前计划",
+        contact_us: "联系我们",
+        per_mo: "/月",
+        billed_yearly: "按年计费",
+        total_for: "合计",
+        months: "个月",
+        money_back: "7天退款保证。",
+        best: "最佳",
+        upgrade_now: "立即升级"
+      },
+      footer: {
+        tagline: "全球开发者最快的YouTube流媒体API。",
+        product: "产品",
+        company: "公司",
+        legal: "法律",
+        privacy: "隐私政策",
+        terms: "服务条款",
+        refund: "退款政策",
+        rights: "版权所有。",
+        newsletter_badge: "保持更新",
+        newsletter_title: "订阅开发者更新",
+        newsletter_desc: "BabyAPI开发者的新端点、更新日志和独家技巧。",
+        subscribe: "订阅",
+        subscribed: "感谢您的订阅！",
+        newsletter_email_invalid: "请输入有效的电子邮件地址。",
+        newsletter_toast_desc: "您将在收件箱中收到BabyAPI更新。"
+      },
+      home: {
+        trust_free: "永久免费计划",
+        trust_start: "60秒内开始",
+        trust_no_cc: "无需信用卡",
+        trust_bar_label: "受构建者信赖的开发者",
+        marquee_label: "支持的语言",
+        how_it_works_eyebrow: "工作原理",
+        how_it_works_title: "三步流式传输任意内容",
+        how_it_works_subtitle: "从注册到第一次API调用不到5分钟。",
+        step1_title: "获取API密钥",
+        step1_desc: "免费注册。即时API密钥 — 无需信用卡。",
+        step2_title: "发出请求",
+        step2_desc: "用您的密钥访问REST端点。",
+        step3_title: "流式传输媒体",
+        step3_desc: "在任何播放器中使用流URL。",
+        features_eyebrow: "一切都包含在内",
+        feat1_title: "搜索API",
+        feat1_desc: "YouTube搜索与结构化JSON。",
+        feat2_title: "音频流",
+        feat2_desc: "支持搜索的高质量音频流URL。",
+        feat3_title: "视频流",
+        feat3_desc: "任何播放器都可以使用的视频流URL。",
+        feat4_title: "30+个EQ预设",
+        feat4_desc: "低音增强、Nightcore、8D、Lofi、电影等。",
+        feat5_title: "Seek和下载",
+        feat5_desc: "从任意偏移开始。按需下载标头。",
+        feat6_title: "基于计划的限制",
+        feat6_desc: "每天500到无限请求。",
+        stat1_label: "开发者",
+        stat2_label: "处理的请求",
+        stat3_label: "正常运行时间SLA",
+        stat4_label: "平均响应",
+        waveform_eyebrow: "清晰的流媒体",
+        waveform_title: "录音室级音质，",
+        waveform_title2: "任意预设。",
+        wave_f1_label: "30+个EQ预设",
+        wave_f1_detail: "低音、Nightcore、8D、Lofi、电影等",
+        wave_f2_label: "搜索到任意位置",
+        wave_f2_detail: "从精确时间偏移开始流",
+        wave_f3_label: "强制下载或流",
+        wave_f3_detail: "按需Content-Disposition标头",
+        wave_f4_label: "低延迟传输",
+        wave_f4_detail: "支持范围的分块传输",
+        testimonials_eyebrow: "开发者故事",
+        testimonials_title: "受到全球开发者信赖",
+        testimonials_subtitle: "加入已在使用BabyAPI构建的30万+开发者。",
+        t1_role: "全栈开发者",
+        t1_quote: "BabyAPI将我们的音频集成时间从数周缩短到数小时。",
+        t2_role: "后端工程师",
+        t2_quote: "我们用BabyAPI服务每天5万活跃用户。99.9%的SLA是真实的。",
+        t3_role: "移动应用开发者",
+        t3_quote: "搜索API非常快。平均不到15ms返回结果。",
+        trust_badge1: "30天退款",
+        trust_badge2: "即时激活",
+        trust_badge3: "无需信用卡",
+        trust_badge4: "99.9%正常运行时间SLA",
+        try_it_eyebrow: "在线试用",
+        try_it_badge: "无需注册",
+        try_it_title: "看API在实战中",
+        try_it_subtitle: "输入您的API密钥并点击发送 — 立即从BabyAPI服务器获取真实响应。",
+        try_it_docs_link: "查看完整API文档",
+        pricing_eyebrow: "定价",
+        plan_feat_1key: "1个API密钥",
+        plan_feat_all_endpoints: "所有端点",
+        plan_feat_community: "社区支持",
+        plan_feat_email_support: "电子邮件支持",
+        plan_feat_priority: "优先支持",
+        plan_feat_seek: "Seek和下载",
+        plan_learn_more: "了解更多",
+        see_full_pricing: "查看带比较表的完整定价",
+        cta_title: "准备好开始",
+        cta_title2: "流媒体了吗？",
+        cta_subtitle: "30秒内获取您的免费API密钥 — 无需信用卡。",
+        cta_contact: "联系销售"
       }
     }
   }
@@ -37116,18 +38033,19 @@ function NewsletterStrip() {
   const [email2, setEmail] = reactExports.useState("");
   const [subscribed, setSubscribed] = reactExports.useState(false);
   const [loading, setLoading] = reactExports.useState(false);
+  const { t: t2 } = useTranslation();
   function handleSubscribe(e3) {
     e3.preventDefault();
     if (!email2.trim() || !email2.includes("@")) {
-      ue.error("Enter a valid email address.");
+      ue.error(t2("footer.newsletter_email_invalid"));
       return;
     }
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
       setSubscribed(true);
-      ue.success("Subscribed!", {
-        description: "You'll receive BabyAPI updates in your inbox."
+      ue.success(t2("footer.subscribed"), {
+        description: t2("footer.newsletter_toast_desc")
       });
     }, 800);
   }
@@ -37153,10 +38071,10 @@ function NewsletterStrip() {
               children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-4", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-primary" }),
-                  "Stay Updated"
+                  t2("footer.newsletter_badge")
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display font-bold text-xl text-foreground mb-2", children: "Subscribe to Developer Updates" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground font-body mb-6", children: "New endpoints, changelog, and exclusive tips for BabyAPI developers." })
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display font-bold text-xl text-foreground mb-2", children: t2("footer.newsletter_title") }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground font-body mb-6", children: t2("footer.newsletter_desc") })
               ]
             }
           ),
@@ -37171,7 +38089,7 @@ function NewsletterStrip() {
               "data-ocid": "footer.newsletter.success_state",
               children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-7 h-7 rounded-full bg-primary/15 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { className: "w-3.5 h-3.5" }) }),
-                "Thanks for subscribing!"
+                t2("footer.subscribed")
               ]
             },
             "success"
@@ -37204,7 +38122,7 @@ function NewsletterStrip() {
                     "data-ocid": "footer.newsletter.submit_button",
                     children: [
                       loading ? /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Send, { className: "w-3.5 h-3.5" }),
-                      "Subscribe"
+                      t2("footer.subscribe")
                     ]
                   }
                 )
@@ -45403,7 +46321,9 @@ function useThemeMode() {
     if (typeof document !== "undefined") applyThemeToDOM(saved);
     return saved;
   });
+  const isAnimatingRef = reactExports.useRef(false);
   const cycleTheme = reactExports.useCallback(() => {
+    if (isAnimatingRef.current) return;
     setThemeState((prev) => {
       const currentIdx = CYCLE_ORDER.indexOf(prev);
       const next = CYCLE_ORDER[(currentIdx + 1) % CYCLE_ORDER.length];
@@ -45420,6 +46340,7 @@ function useThemeMode() {
     cycleTheme,
     setTheme,
     toggleTheme: cycleTheme,
+    isAnimatingRef,
     mounted: true
   };
 }
@@ -45429,8 +46350,7 @@ const THEME_BG = {
   midnight: "#0b0b1a"
 };
 function ThemeSwitcher() {
-  const { theme } = useThemeMode();
-  const isAnimatingRef = reactExports.useRef(false);
+  const { theme, setTheme, isAnimatingRef } = useThemeMode();
   function handleClick(e3) {
     if (isAnimatingRef.current) return;
     isAnimatingRef.current = true;
@@ -45438,60 +46358,33 @@ function ThemeSwitcher() {
     const y2 = e3.clientY;
     const currentIdx = CYCLE_ORDER.indexOf(theme);
     const nextTheme = CYCLE_ORDER[(currentIdx + 1) % CYCLE_ORDER.length];
-    const goingToLight = nextTheme === "light";
+    setTheme(nextTheme);
     const overlay = document.createElement("div");
     overlay.style.cssText = [
       "position:fixed",
       "inset:0",
       "z-index:9998",
       "pointer-events:none",
-      `background:${THEME_BG[nextTheme]}`,
-      "will-change:clip-path"
+      `background:${THEME_BG[theme]}`,
+      "will-change:clip-path",
+      `clip-path:circle(200vmax at ${x2}px ${y2}px)`
     ].join(";");
-    if (goingToLight) {
-      overlay.style.clipPath = `circle(0px at ${x2}px ${y2}px)`;
-      document.body.appendChild(overlay);
+    document.body.appendChild(overlay);
+    requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          overlay.style.transition = "clip-path 520ms cubic-bezier(0.4,0,0.2,1)";
-          overlay.style.clipPath = `circle(200vmax at ${x2}px ${y2}px)`;
-        });
+        overlay.style.transition = "clip-path 500ms cubic-bezier(0.4,0,0.2,1)";
+        overlay.style.clipPath = `circle(0px at ${x2}px ${y2}px)`;
       });
-      let done = false;
-      const onExpanded = () => {
-        if (done) return;
-        done = true;
-        applyThemeToDOM(nextTheme);
-        overlay.style.transition = "opacity 180ms ease";
-        overlay.style.opacity = "0";
-        setTimeout(() => {
-          overlay.remove();
-          isAnimatingRef.current = false;
-        }, 200);
-      };
-      overlay.addEventListener("transitionend", onExpanded, { once: true });
-      setTimeout(onExpanded, 560);
-    } else {
-      applyThemeToDOM(nextTheme);
-      overlay.style.background = THEME_BG[theme];
-      overlay.style.clipPath = `circle(200vmax at ${x2}px ${y2}px)`;
-      document.body.appendChild(overlay);
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          overlay.style.transition = "clip-path 520ms cubic-bezier(0.4,0,0.2,1)";
-          overlay.style.clipPath = `circle(0px at ${x2}px ${y2}px)`;
-        });
-      });
-      let done = false;
-      const onContracted = () => {
-        if (done) return;
-        done = true;
-        overlay.remove();
-        isAnimatingRef.current = false;
-      };
-      overlay.addEventListener("transitionend", onContracted, { once: true });
-      setTimeout(onContracted, 560);
-    }
+    });
+    let cleaned = false;
+    const cleanup = () => {
+      if (cleaned) return;
+      cleaned = true;
+      overlay.remove();
+      isAnimatingRef.current = false;
+    };
+    overlay.addEventListener("transitionend", cleanup, { once: true });
+    setTimeout(cleanup, 560);
   }
   const ariaLabels = {
     dark: "Dark mode — click for Light",
@@ -45506,6 +46399,8 @@ function ThemeSwitcher() {
       "aria-label": ariaLabels[theme],
       title: ariaLabels[theme],
       "data-ocid": "theme_switcher.toggle",
+      disabled: false,
+      style: { pointerEvents: "auto" },
       className: "relative w-10 h-10 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground bg-transparent hover:bg-muted border border-transparent hover:border-border transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
       onMouseEnter: (e3) => {
         e3.currentTarget.style.boxShadow = "0 0 14px oklch(0.72 0.24 254 / 0.3)";
@@ -45715,7 +46610,75 @@ function Header() {
               className: "flex items-center gap-1 font-display font-bold text-xl text-foreground hover:opacity-90 transition-opacity duration-200 shrink-0",
               "data-ocid": "header.logo.link",
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-6 h-6 rounded-lg gradient-primary flex items-center justify-center shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "w-3.5 h-3.5 text-white" }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-6 h-6 rounded-lg gradient-primary flex items-center justify-center shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "svg",
+                  {
+                    width: "14",
+                    height: "14",
+                    viewBox: "0 0 14 14",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    className: "text-white",
+                    "aria-hidden": "true",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "0",
+                          y: "6",
+                          width: "2",
+                          height: "2",
+                          rx: "1",
+                          fill: "currentColor"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "3",
+                          y: "4",
+                          width: "2",
+                          height: "6",
+                          rx: "1",
+                          fill: "currentColor"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "6",
+                          y: "1",
+                          width: "2",
+                          height: "12",
+                          rx: "1",
+                          fill: "currentColor"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "9",
+                          y: "4",
+                          width: "2",
+                          height: "6",
+                          rx: "1",
+                          fill: "currentColor"
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "rect",
+                        {
+                          x: "12",
+                          y: "6",
+                          width: "2",
+                          height: "2",
+                          rx: "1",
+                          fill: "currentColor"
+                        }
+                      )
+                    ]
+                  }
+                ) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "Baby" }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "API" })
               ]
@@ -47704,15 +48667,6 @@ function ScrollBar({
     }
   );
 }
-const NAV_ITEMS = [
-  { id: "overview", label: "Overview", icon: BookOpen },
-  { id: "authentication", label: "Authentication", icon: Key },
-  { id: "endpoints", label: "Endpoints", icon: CodeXml },
-  { id: "rate-limits", label: "Rate Limits", icon: Gauge },
-  { id: "eq-presets", label: "EQ Presets", icon: SlidersVertical },
-  { id: "code-examples", label: "Code Examples", icon: Music2 },
-  { id: "try-it", label: "Try It Live", icon: CirclePlay }
-];
 const EQ_PRESETS = [
   "normal",
   "bass",
@@ -47839,6 +48793,8 @@ func main() {
   io.Copy(f, audioResp.Body)
 }`,
     Rust: `use reqwest;
+import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 use std::fs;
 use serde_json::Value;
 
@@ -48084,7 +49040,8 @@ function EndpointBlock({
 }
 function Sidebar({
   active,
-  onNavigate
+  onNavigate,
+  navItems
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "nav",
@@ -48094,7 +49051,7 @@ function Sidebar({
       "aria-label": "Documentation navigation",
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[10px] font-mono font-bold text-muted-foreground uppercase tracking-widest px-3 mb-2", children: "Documentation" }),
-        NAV_ITEMS.map(({ id: id2, label, icon: Icon2 }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        navItems.map(({ id: id2, label, icon: Icon2 }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "button",
           {
             type: "button",
@@ -48140,11 +49097,24 @@ function EqPresetBadge({ preset, delay: delay2 }) {
   );
 }
 function DocsPage() {
+  const { t: t2 } = useTranslation();
   const [active, setActive] = reactExports.useState("overview");
   const [codeLang, setCodeLang] = reactExports.useState("curl");
   const contentRef = reactExports.useRef(null);
   const base = getBackendUrl();
   const CODE_EXAMPLES = getCodeExamples(base);
+  const NAV_ITEMS = reactExports.useMemo(
+    () => [
+      { id: "overview", label: t2("docs.nav_overview"), icon: BookOpen },
+      { id: "authentication", label: t2("docs.nav_authentication"), icon: Key },
+      { id: "endpoints", label: t2("docs.nav_endpoints"), icon: CodeXml },
+      { id: "rate-limits", label: t2("docs.nav_rate_limits"), icon: Gauge },
+      { id: "eq-presets", label: t2("docs.nav_eq_presets"), icon: SlidersVertical },
+      { id: "code-examples", label: t2("docs.nav_code_examples"), icon: Music2 },
+      { id: "try-it", label: t2("docs.nav_try_it_live"), icon: CirclePlay }
+    ],
+    [t2]
+  );
   function scrollToSection(id2) {
     setActive(id2);
     const el = document.getElementById(id2);
@@ -48183,7 +49153,14 @@ function DocsPage() {
       id2
     )) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-6xl mx-auto px-4 py-8 flex gap-8", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("aside", { className: "hidden lg:block w-52 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "sticky top-24", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollArea, { className: "h-[calc(100vh-8rem)]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Sidebar, { active, onNavigate: scrollToSection }) }) }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("aside", { className: "hidden lg:block w-52 flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "sticky top-24", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollArea, { className: "h-[calc(100vh-8rem)]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        Sidebar,
+        {
+          active,
+          onNavigate: scrollToSection,
+          navItems: NAV_ITEMS
+        }
+      ) }) }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "div",
         {
@@ -48205,7 +49182,7 @@ function DocsPage() {
                     SectionHeading,
                     {
                       id: "overview",
-                      title: "Overview",
+                      title: t2("docs.section_overview"),
                       subtitle: "BabyAPI gives you programmatic access to YouTube audio & video streaming."
                     }
                   ),
@@ -48252,7 +49229,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
                     SectionHeading,
                     {
                       id: "authentication",
-                      title: "Authentication",
+                      title: t2("docs.section_auth"),
                       subtitle: "Every request requires your API key."
                     }
                   ),
@@ -48299,7 +49276,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
                 SectionHeading,
                 {
                   id: "endpoints",
-                  title: "Endpoints",
+                  title: t2("docs.section_endpoints"),
                   subtitle: "Click any endpoint to see parameters and examples."
                 }
               ),
@@ -48420,7 +49397,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
                 SectionHeading,
                 {
                   id: "rate-limits",
-                  title: "Rate Limits",
+                  title: t2("docs.section_rate_limits"),
                   subtitle: "Limits reset daily at midnight UTC."
                 }
               ),
@@ -48473,7 +49450,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
                 SectionHeading,
                 {
                   id: "eq-presets",
-                  title: "Equalizer Presets",
+                  title: t2("docs.section_eq_presets"),
                   subtitle: "Pass any preset name as the eq parameter in /api/stream."
                 }
               ),
@@ -48508,7 +49485,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
                 SectionHeading,
                 {
                   id: "code-examples",
-                  title: "Code Examples",
+                  title: t2("docs.section_code_examples"),
                   subtitle: "Full search → stream flow in your language."
                 }
               ),
@@ -48559,7 +49536,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
                 SectionHeading,
                 {
                   id: "try-it",
-                  title: "Try It Live",
+                  title: t2("docs.section_try_it"),
                   subtitle: "Make a real API request directly from the browser."
                 }
               ),
@@ -55416,111 +56393,119 @@ const MARQUEE_ITEMS = [
   "C#",
   "Elixir"
 ];
-const HOW_IT_WORKS = [
-  {
-    num: "01",
-    icon: Key,
-    title: "Get API Key",
-    desc: "Sign up free. Instant API key — no credit card needed."
-  },
-  {
-    num: "02",
-    icon: Settings2,
-    title: "Make a Request",
-    desc: "Hit REST endpoints with your key. Search, fetch audio/video URLs."
-  },
-  {
-    num: "03",
-    icon: Play,
-    title: "Stream Media",
-    desc: "Use the stream URL with any player. Apply EQ and seek support."
-  }
-];
-const FEATURES = [
-  {
-    icon: Search,
-    title: "Search API",
-    desc: "YouTube search with structured JSON — video IDs, titles, thumbnails.",
-    color: "from-blue-500/10 to-blue-500/5",
-    iconColor: "text-blue-400",
-    iconBg: "bg-blue-500/10 group-hover:bg-blue-500/20"
-  },
-  {
-    icon: Music2,
-    title: "Audio Streaming",
-    desc: "Extract high-quality audio stream URLs with full seek support.",
-    color: "from-primary/10 to-primary/5",
-    iconColor: "text-primary",
-    iconBg: "bg-primary/10 group-hover:bg-primary/20"
-  },
-  {
-    icon: Video,
-    title: "Video Streaming",
-    desc: "Direct video stream URLs ready for any player or embed.",
-    color: "from-purple-500/10 to-purple-500/5",
-    iconColor: "text-purple-400",
-    iconBg: "bg-purple-500/10 group-hover:bg-purple-500/20"
-  },
-  {
-    icon: SlidersVertical,
-    title: "30+ EQ Presets",
-    desc: "Bass boost, nightcore, 8D, lofi, cinema and many more.",
-    color: "from-emerald-500/10 to-emerald-500/5",
-    iconColor: "text-emerald-400",
-    iconBg: "bg-emerald-500/10 group-hover:bg-emerald-500/20"
-  },
-  {
-    icon: Download,
-    title: "Seek & Download",
-    desc: "Start at any time offset. Force download headers on demand.",
-    color: "from-orange-500/10 to-orange-500/5",
-    iconColor: "text-orange-400",
-    iconBg: "bg-orange-500/10 group-hover:bg-orange-500/20"
-  },
-  {
-    icon: Gauge,
-    title: "Plan-based Limits",
-    desc: "500 to unlimited requests/day. Upgrade instantly.",
-    color: "from-pink-500/10 to-pink-500/5",
-    iconColor: "text-pink-400",
-    iconBg: "bg-pink-500/10 group-hover:bg-pink-500/20"
-  }
-];
-const STATS = [
-  { value: 3e5, suffix: "+", label: "Developers" },
-  { value: 1e9, suffix: "+", label: "Requests Served" },
-  { value: 99, suffix: ".9%", label: "Uptime SLA" },
-  { value: 150, suffix: "ms", label: "Avg Response" }
-];
-const TESTIMONIALS = [
-  {
-    name: "Rajesh Kumar",
-    role: "Full Stack Developer",
-    company: "TechStartup India",
-    avatar: "RK",
-    color: "bg-primary/20 text-primary",
-    stars: 5,
-    quote: "BabyAPI cut our audio integration time from weeks to hours. The EQ presets alone saved us building a whole audio processing pipeline."
-  },
-  {
-    name: "Amir Hassan",
-    role: "Backend Engineer",
-    company: "StreamFlow Labs",
-    avatar: "AH",
-    color: "bg-accent/20 text-accent",
-    stars: 5,
-    quote: "We serve 50,000 daily active users with BabyAPI. The 99.9% uptime SLA is real — zero production incidents in 8 months."
-  },
-  {
-    name: "Priya Sharma",
-    role: "Mobile App Developer",
-    company: "MusicTech Co.",
-    avatar: "PS",
-    color: "bg-emerald-500/20 text-emerald-500",
-    stars: 5,
-    quote: "The search API is incredibly fast. Results come back in under 15ms on average. Our users noticed the difference immediately."
-  }
-];
+function getHowItWorks(t2) {
+  return [
+    {
+      num: "01",
+      icon: Key,
+      title: t2("home.step1_title"),
+      desc: t2("home.step1_desc")
+    },
+    {
+      num: "02",
+      icon: Settings2,
+      title: t2("home.step2_title"),
+      desc: t2("home.step2_desc")
+    },
+    {
+      num: "03",
+      icon: Play,
+      title: t2("home.step3_title"),
+      desc: t2("home.step3_desc")
+    }
+  ];
+}
+function getFeatures(t2) {
+  return [
+    {
+      icon: Search,
+      title: t2("home.feat1_title"),
+      desc: t2("home.feat1_desc"),
+      color: "from-blue-500/10 to-blue-500/5",
+      iconColor: "text-blue-400",
+      iconBg: "bg-blue-500/10 group-hover:bg-blue-500/20"
+    },
+    {
+      icon: Music2,
+      title: t2("home.feat2_title"),
+      desc: t2("home.feat2_desc"),
+      color: "from-primary/10 to-primary/5",
+      iconColor: "text-primary",
+      iconBg: "bg-primary/10 group-hover:bg-primary/20"
+    },
+    {
+      icon: Video,
+      title: t2("home.feat3_title"),
+      desc: t2("home.feat3_desc"),
+      color: "from-purple-500/10 to-purple-500/5",
+      iconColor: "text-purple-400",
+      iconBg: "bg-purple-500/10 group-hover:bg-purple-500/20"
+    },
+    {
+      icon: SlidersVertical,
+      title: t2("home.feat4_title"),
+      desc: t2("home.feat4_desc"),
+      color: "from-emerald-500/10 to-emerald-500/5",
+      iconColor: "text-emerald-400",
+      iconBg: "bg-emerald-500/10 group-hover:bg-emerald-500/20"
+    },
+    {
+      icon: Download,
+      title: t2("home.feat5_title"),
+      desc: t2("home.feat5_desc"),
+      color: "from-orange-500/10 to-orange-500/5",
+      iconColor: "text-orange-400",
+      iconBg: "bg-orange-500/10 group-hover:bg-orange-500/20"
+    },
+    {
+      icon: Gauge,
+      title: t2("home.feat6_title"),
+      desc: t2("home.feat6_desc"),
+      color: "from-pink-500/10 to-pink-500/5",
+      iconColor: "text-pink-400",
+      iconBg: "bg-pink-500/10 group-hover:bg-pink-500/20"
+    }
+  ];
+}
+function getStats(t2) {
+  return [
+    { value: 3e5, suffix: "+", label: t2("home.stat1_label") },
+    { value: 1e9, suffix: "+", label: t2("home.stat2_label") },
+    { value: 99, suffix: ".9%", label: t2("home.stat3_label") },
+    { value: 150, suffix: "ms", label: t2("home.stat4_label") }
+  ];
+}
+function getTestimonials(t2) {
+  return [
+    {
+      name: "Rajesh Kumar",
+      role: t2("home.t1_role"),
+      company: "TechStartup India",
+      avatar: "RK",
+      color: "bg-primary/20 text-primary",
+      stars: 5,
+      quote: t2("home.t1_quote")
+    },
+    {
+      name: "Amir Hassan",
+      role: t2("home.t2_role"),
+      company: "StreamFlow Labs",
+      avatar: "AH",
+      color: "bg-accent/20 text-accent",
+      stars: 5,
+      quote: t2("home.t2_quote")
+    },
+    {
+      name: "Priya Sharma",
+      role: t2("home.t3_role"),
+      company: "MusicTech Co.",
+      avatar: "PS",
+      color: "bg-emerald-500/20 text-emerald-500",
+      stars: 5,
+      quote: t2("home.t3_quote")
+    }
+  ];
+}
 const EQ_WAVE_HEIGHTS = [
   16,
   32,
@@ -55583,6 +56568,10 @@ function HomePage() {
   const ripple = useRipple$1();
   const doubled = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
   const { t: t2 } = useTranslation();
+  const HOW_IT_WORKS = getHowItWorks(t2);
+  const FEATURES = getFeatures(t2);
+  const STATS = getStats(t2);
+  const TESTIMONIALS = getTestimonials(t2);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(Layout, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollProgressBar, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -55742,9 +56731,9 @@ function HomePage() {
                     animate: { opacity: 1 },
                     transition: { duration: 0.5, delay: 1 },
                     children: [
-                      { icon: Check, text: "Free forever plan" },
-                      { icon: Zap, text: "Start in 60 seconds" },
-                      { icon: Shield, text: "No credit card" }
+                      { icon: Check, text: t2("home.trust_free") },
+                      { icon: Zap, text: t2("home.trust_start") },
+                      { icon: Shield, text: t2("home.trust_no_cc") }
                     ].map(({ icon: Icon2, text }) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "div",
                       {
@@ -55818,7 +56807,7 @@ function HomePage() {
         className: "bg-card/60 border-y border-border/60 py-10",
         "data-ocid": "home.trust_bar.section",
         children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 max-w-5xl", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(FadeUp, { className: "text-center mb-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-mono text-muted-foreground uppercase tracking-[0.2em]", children: "Trusted by developers building with" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(FadeUp, { className: "text-center mb-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-mono text-muted-foreground uppercase tracking-[0.2em]", children: t2("home.trust_bar_label") }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-3 sm:grid-cols-6 gap-6", children: TRUST_LOGOS.map((logo, i2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
             motion.div,
             {
@@ -55842,7 +56831,7 @@ function HomePage() {
       "section",
       {
         className: "border-b border-border bg-background py-4 overflow-hidden",
-        "aria-label": "Supported languages",
+        "aria-label": t2("home.marquee_label"),
         "data-ocid": "home.marquee.section",
         children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "marquee-track", children: doubled.map((item, i2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "div",
@@ -55865,9 +56854,9 @@ function HomePage() {
         "data-ocid": "home.how_it_works.section",
         children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 max-w-5xl", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeUp, { className: "text-center mb-16", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3", children: "How it works" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display font-bold text-3xl md:text-4xl text-foreground", children: "Three steps to stream anything" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm text-muted-foreground font-body max-w-md mx-auto", children: "From signup to your first API call in under 5 minutes." })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3", children: t2("home.how_it_works_eyebrow") }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display font-bold text-3xl md:text-4xl text-foreground", children: t2("home.how_it_works_title") }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm text-muted-foreground font-body max-w-md mx-auto", children: t2("home.how_it_works_subtitle") })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-10 relative", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden md:block absolute top-[2.2rem] left-[calc(16.5%+1.5rem)] right-[calc(16.5%+1.5rem)] h-px bg-gradient-to-r from-transparent via-border to-transparent" }),
@@ -55899,7 +56888,7 @@ function HomePage() {
         "data-ocid": "home.features.section",
         children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 max-w-5xl", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeUp, { className: "text-center mb-14", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3", children: "Everything included" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3", children: t2("home.features_eyebrow") }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display font-bold text-3xl md:text-4xl text-foreground", children: t2("features.title") }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm text-muted-foreground font-body max-w-lg mx-auto", children: t2("features.subtitle") })
           ] }),
@@ -55990,28 +56979,28 @@ function HomePage() {
               /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full opacity-30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(WaveformBars, {}) })
             ] }) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeUp, { delay: 0.15, children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-4", children: "Crystal Clear Streaming" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-4", children: t2("home.waveform_eyebrow") }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display font-bold text-3xl md:text-4xl text-foreground mb-6 leading-tight", children: [
-                "Studio-quality audio,",
+                t2("home.waveform_title"),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "any preset." })
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: t2("home.waveform_title2") })
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-4", children: [
                 {
-                  label: "30+ EQ Presets",
-                  detail: "bass, nightcore, 8D, lofi, cinema & more"
+                  label: t2("home.wave_f1_label"),
+                  detail: t2("home.wave_f1_detail")
                 },
                 {
-                  label: "Seek to any position",
-                  detail: "start streams at an exact time offset"
+                  label: t2("home.wave_f2_label"),
+                  detail: t2("home.wave_f2_detail")
                 },
                 {
-                  label: "Force download or stream",
-                  detail: "Content-Disposition header on demand"
+                  label: t2("home.wave_f3_label"),
+                  detail: t2("home.wave_f3_detail")
                 },
                 {
-                  label: "Low latency delivery",
-                  detail: "chunked transfer with range support"
+                  label: t2("home.wave_f4_label"),
+                  detail: t2("home.wave_f4_detail")
                 }
               ].map((item, i2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
                 motion.li,
@@ -56043,9 +57032,9 @@ function HomePage() {
         "data-ocid": "home.testimonials.section",
         children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 max-w-5xl", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeUp, { className: "text-center mb-14", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3", children: "Developer Stories" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display font-bold text-3xl md:text-4xl text-foreground", children: "Trusted by developers worldwide" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm text-muted-foreground font-body max-w-lg mx-auto", children: "Join 300,000+ developers already building with BabyAPI." })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3", children: t2("home.testimonials_eyebrow") }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display font-bold text-3xl md:text-4xl text-foreground", children: t2("home.testimonials_title") }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm text-muted-foreground font-body max-w-lg mx-auto", children: t2("home.testimonials_subtitle") })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6", children: TESTIMONIALS.map((testimonial, i2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
             motion.div,
@@ -56092,10 +57081,10 @@ function HomePage() {
             testimonial.name
           )) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx(FadeUp, { delay: 0.3, className: "mt-12", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-body", children: [
-            { icon: Shield, text: "30-day money back" },
-            { icon: Zap, text: "Instant activation" },
-            { icon: Key, text: "No credit card required" },
-            { icon: Gauge, text: "99.9% uptime SLA" }
+            { icon: Shield, text: t2("home.trust_badge1") },
+            { icon: Zap, text: t2("home.trust_badge2") },
+            { icon: Key, text: t2("home.trust_badge3") },
+            { icon: Gauge, text: t2("home.trust_badge4") }
           ].map(({ icon: Icon2, text }) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Icon2, { className: "w-3.5 h-3.5 text-primary" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: text })
@@ -56113,18 +57102,18 @@ function HomePage() {
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 max-w-5xl relative", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeUp, { className: "text-center mb-12", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-2 mb-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em]", children: "Try It Live" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em]", children: t2("home.try_it_eyebrow") }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Badge,
                   {
                     variant: "outline",
                     className: "text-[10px] border-primary/30 text-primary font-mono",
-                    children: "No signup required"
+                    children: t2("home.try_it_badge")
                   }
                 )
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display font-bold text-3xl md:text-4xl text-foreground", children: "See the API in action" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm text-muted-foreground font-body max-w-xl mx-auto", children: "Enter your API key and hit Send — get a real response from the BabyAPI servers instantly." })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display font-bold text-3xl md:text-4xl text-foreground", children: t2("home.try_it_title") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm text-muted-foreground font-body max-w-xl mx-auto", children: t2("home.try_it_subtitle") })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               motion.div,
@@ -56151,7 +57140,7 @@ function HomePage() {
                     variant: "ghost",
                     className: "font-body text-muted-foreground hover:text-primary gap-1.5",
                     children: [
-                      "View full API docs",
+                      t2("home.try_it_docs_link"),
                       /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
                     ]
                   }
@@ -56169,7 +57158,7 @@ function HomePage() {
         "data-ocid": "home.pricing_teaser.section",
         children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-6 max-w-4xl text-center", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(FadeUp, { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3", children: "Pricing" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3", children: t2("home.pricing_eyebrow") }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display font-bold text-3xl md:text-4xl text-foreground mb-3", children: t2("pricing.title") }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground font-body mb-10", children: t2("pricing.subtitle") })
           ] }),
@@ -56179,21 +57168,33 @@ function HomePage() {
               detail: "500 req/day",
               price: "₹0",
               highlight: false,
-              features: ["1 API key", "All endpoints", "Community support"]
+              features: [
+                t2("home.plan_feat_1key"),
+                t2("home.plan_feat_all_endpoints"),
+                t2("home.plan_feat_community")
+              ]
             },
             {
               name: "Pro",
               detail: "2,500 req/day",
               price: "₹49",
               highlight: true,
-              features: ["1 API key", "All endpoints", "Email support"]
+              features: [
+                t2("home.plan_feat_1key"),
+                t2("home.plan_feat_all_endpoints"),
+                t2("home.plan_feat_email_support")
+              ]
             },
             {
               name: "Pro Plus",
               detail: "5,000 req/day",
               price: "₹99",
               highlight: false,
-              features: ["1 API key", "Priority support", "Seek & download"]
+              features: [
+                t2("home.plan_feat_1key"),
+                t2("home.plan_feat_priority"),
+                t2("home.plan_feat_seek")
+              ]
             }
           ].map((plan, i2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
             motion.div,
@@ -56206,7 +57207,7 @@ function HomePage() {
               "data-ocid": `home.pricing_teaser.plan.${i2 + 1}`,
               className: `flex flex-col p-5 rounded-xl border text-left transition-smooth ${plan.highlight ? "border-primary bg-primary/5 shadow-lg shadow-primary/10 ring-1 ring-primary/20" : "border-border bg-background hover:border-primary/30"}`,
               children: [
-                plan.highlight && /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { className: "gradient-primary text-white text-[10px] font-display self-start mb-3", children: "Most Popular" }),
+                plan.highlight && /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { className: "gradient-primary text-white text-[10px] font-display self-start mb-3", children: t2("billing.most_popular") }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   "h3",
                   {
@@ -56216,7 +57217,7 @@ function HomePage() {
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-baseline gap-1 mb-1", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display font-extrabold text-2xl text-foreground", children: plan.price }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: "/mo" })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: t2("billing.per_mo") })
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground font-mono mb-4", children: plan.detail }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-1.5 mb-5", children: plan.features.map((f2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -56241,7 +57242,7 @@ function HomePage() {
                     size: "sm",
                     variant: plan.highlight ? "default" : "outline",
                     className: `w-full font-display font-semibold text-xs ${plan.highlight ? "gradient-primary text-white" : ""}`,
-                    children: plan.highlight ? "Get Started" : "Learn More"
+                    children: plan.highlight ? t2("pricing.get_started") : t2("home.plan_learn_more")
                   }
                 ) })
               ]
@@ -56254,7 +57255,7 @@ function HomePage() {
               variant: "ghost",
               className: "font-display font-semibold gap-2 text-muted-foreground hover:text-primary",
               children: [
-                "See full pricing with comparison table",
+                t2("home.see_full_pricing"),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-4 h-4" })
               ]
             }
@@ -56279,10 +57280,11 @@ function HomePage() {
               transition: { duration: 0.65 },
               children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display font-bold text-4xl md:text-5xl text-foreground leading-tight", children: [
-                  "Ready to start ",
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "streaming?" })
+                  t2("home.cta_title"),
+                  " ",
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: t2("home.cta_title2") })
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-muted-foreground font-body text-base leading-relaxed", children: "Get your free API key in 30 seconds — no credit card required." }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-muted-foreground font-body text-base leading-relaxed", children: t2("home.cta_subtitle") }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap justify-center gap-4 mt-2", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/signup", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
                     "button",
@@ -56304,7 +57306,7 @@ function HomePage() {
                       variant: "outline",
                       className: "font-display font-semibold border-border hover:border-primary hover:text-primary hover:scale-105 transition-smooth px-8 h-12",
                       "data-ocid": "home.footer_cta.contact.button",
-                      children: "Contact Sales"
+                      children: t2("home.cta_contact")
                     }
                   ) })
                 ] })
@@ -56458,7 +57460,7 @@ function LoginPage() {
                     {
                       id: "email",
                       type: "email",
-                      placeholder: "you@example.com",
+                      placeholder: t2("auth.email_placeholder"),
                       autoComplete: "email",
                       className: `h-11 pl-10 bg-background/60 border-border transition-colors ${errors.email ? "border-destructive focus-visible:ring-destructive/30" : ""}`,
                       "data-ocid": "login.email.input",
@@ -56665,7 +57667,7 @@ const PLANS = [
     business: true
   }
 ];
-const DURATIONS$1 = [1, 3, 6, 12];
+const DURATIONS = [1, 3, 6, 12];
 const COMPARISON_ROWS = [
   {
     feature: "Daily API requests",
@@ -56777,9 +57779,6 @@ const FAQS = [
     a: "We accept all major credit/debit cards, UPI, net banking, and wallets through Razorpay — India's leading payment gateway. All transactions are secured and encrypted."
   }
 ];
-function calcPrice(base, billing) {
-  return billing === "yearly" ? Math.round(base * 0.7 * 100) / 100 : base;
-}
 function formatRupees(v2) {
   return `₹${v2}`;
 }
@@ -56904,51 +57903,64 @@ function PricingPage() {
                 /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   motion.div,
                   {
-                    className: "flex items-center justify-center gap-3 mt-8",
+                    className: "flex flex-col items-center gap-3 mt-8",
                     initial: { opacity: 0, scale: 0.9 },
                     animate: { opacity: 1, scale: 1 },
                     transition: { duration: 0.4, delay: 0.2 },
                     "data-ocid": "pricing.billing_toggle",
                     children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx(
-                        "span",
-                        {
-                          className: `text-sm font-body transition-colors ${billing === "monthly" ? "text-foreground" : "text-muted-foreground"}`,
-                          children: "Monthly"
-                        }
-                      ),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx(
-                        "button",
-                        {
-                          type: "button",
-                          onClick: () => setBilling((b2) => b2 === "monthly" ? "yearly" : "monthly"),
-                          "data-ocid": "pricing.billing_toggle.switch",
-                          className: `relative w-12 h-6 rounded-full border transition-smooth ${billing === "yearly" ? "bg-primary border-primary" : "bg-muted border-border"}`,
-                          role: "switch",
-                          "aria-checked": billing === "yearly",
-                          children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                            "span",
-                            {
-                              className: `absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all duration-200 ${billing === "yearly" ? "left-7" : "left-1"}`
-                            }
-                          )
-                        }
-                      ),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx(
-                        "span",
-                        {
-                          className: `text-sm font-body transition-colors ${billing === "yearly" ? "text-foreground" : "text-muted-foreground"}`,
-                          children: "Yearly"
-                        }
-                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative inline-flex items-center p-1 rounded-full bg-muted/60 border border-border shadow-inner", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(
+                          motion.span,
+                          {
+                            layoutId: "billing-pill",
+                            className: "absolute inset-y-1 rounded-full gradient-primary shadow-md shadow-primary/30 pointer-events-none",
+                            style: {
+                              left: billing === "monthly" ? "4px" : "calc(50%)",
+                              width: "calc(50% - 4px)"
+                            },
+                            transition: { type: "spring", stiffness: 380, damping: 36 }
+                          }
+                        ),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(
+                          "button",
+                          {
+                            type: "button",
+                            onClick: () => setBilling("monthly"),
+                            "data-ocid": "pricing.billing_toggle.monthly",
+                            className: `relative z-10 px-6 py-2 rounded-full text-sm font-display font-semibold transition-colors duration-200 min-w-[110px] ${billing === "monthly" ? "text-white" : "text-muted-foreground hover:text-foreground"}`,
+                            children: "Monthly"
+                          }
+                        ),
+                        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                          "button",
+                          {
+                            type: "button",
+                            onClick: () => setBilling("yearly"),
+                            "data-ocid": "pricing.billing_toggle.yearly",
+                            className: `relative z-10 flex items-center justify-center gap-2 px-6 py-2 rounded-full text-sm font-display font-semibold transition-colors duration-200 min-w-[110px] ${billing === "yearly" ? "text-white" : "text-muted-foreground hover:text-foreground"}`,
+                            children: [
+                              "Yearly",
+                              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                                "span",
+                                {
+                                  className: `inline-flex items-center text-[10px] font-bold px-1.5 py-0.5 rounded-full transition-all duration-200 ${billing === "yearly" ? "bg-white/20 text-white" : "bg-emerald-500/15 text-emerald-500"}`,
+                                  children: "−30%"
+                                }
+                              )
+                            ]
+                          }
+                        )
+                      ] }),
                       /* @__PURE__ */ jsxRuntimeExports.jsx(AnimatePresence, { children: billing === "yearly" && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                        motion.div,
+                        motion.p,
                         {
-                          initial: { opacity: 0, scale: 0.7 },
-                          animate: { opacity: 1, scale: 1 },
-                          exit: { opacity: 0, scale: 0.7 },
+                          initial: { opacity: 0, y: -6 },
+                          animate: { opacity: 1, y: 0 },
+                          exit: { opacity: 0, y: -6 },
                           transition: { duration: 0.2 },
-                          children: /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { className: "gradient-primary text-white text-[10px] font-display", children: "Save 30%" })
+                          className: "text-xs text-emerald-500 font-body font-medium",
+                          children: "🎉 You save 30% with yearly billing"
                         }
                       ) })
                     ]
@@ -57139,7 +58151,9 @@ function PlanCard({
 }) {
   const ripple = useRipple();
   const { t: t2 } = useTranslation();
-  const calcedPrice = plan.monthlyPrice ? calcPrice(plan.monthlyPrice, billing) : null;
+  const monthlyEquiv = plan.monthlyPrice ? Math.round(plan.monthlyPrice * 0.7 * 100) / 100 : null;
+  const yearlyTotal = plan.monthlyPrice ? Math.round(plan.monthlyPrice * 12 * 0.7 * 100) / 100 : null;
+  const effectiveDuration = billing === "yearly" ? 12 : duration2;
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     motion.div,
     {
@@ -57175,17 +58189,46 @@ function PlanCard({
                 plan.business ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-baseline gap-1 mb-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display font-extrabold text-3xl text-foreground", children: "Custom" }) }) : plan.monthlyPrice === 0 ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-baseline gap-1 mb-1", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display font-extrabold text-3xl text-foreground", children: "₹0" }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: t2("pricing.per_month") })
-                ] }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-baseline gap-1", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display font-extrabold text-3xl text-foreground leading-none", children: formatRupees(calcedPrice) }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: t2("pricing.per_month") })
-                  ] }),
-                  billing === "yearly" && /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-[11px] text-muted-foreground font-body mt-0.5", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "line-through", children: formatRupees(plan.monthlyPrice) }),
-                    " ",
-                    "billed yearly"
-                  ] })
-                ] }),
+                ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx(AnimatePresence, { mode: "wait", children: billing === "monthly" ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  motion.div,
+                  {
+                    className: "mb-1",
+                    initial: { opacity: 0, y: -8 },
+                    animate: { opacity: 1, y: 0 },
+                    exit: { opacity: 0, y: 8 },
+                    transition: { duration: 0.2 },
+                    children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-baseline gap-1", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display font-extrabold text-3xl text-foreground leading-none", children: formatRupees(plan.monthlyPrice) }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: t2("pricing.per_month") })
+                    ] })
+                  },
+                  "monthly-price"
+                ) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  motion.div,
+                  {
+                    className: "mb-1",
+                    initial: { opacity: 0, y: -8 },
+                    animate: { opacity: 1, y: 0 },
+                    exit: { opacity: 0, y: 8 },
+                    transition: { duration: 0.2 },
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-baseline gap-1.5", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display font-extrabold text-3xl text-foreground leading-none", children: formatRupees(monthlyEquiv) }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-muted-foreground", children: t2("pricing.per_month") }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-muted-foreground/60 line-through font-body ml-0.5", children: formatRupees(plan.monthlyPrice) })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1.5 mt-1.5", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-[11px] font-body font-medium text-emerald-500", children: [
+                          "Billed ",
+                          formatRupees(yearlyTotal),
+                          "/year"
+                        ] }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-flex items-center text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20", children: "SAVE 30%" })
+                      ] })
+                    ]
+                  },
+                  "yearly-price"
+                ) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   Badge,
                   {
@@ -57213,30 +58256,63 @@ function PlanCard({
                 },
                 f2
               )) }),
-              !plan.business && plan.monthlyPrice !== 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[10px] text-muted-foreground font-mono uppercase tracking-wider mb-2", children: "Duration" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "div",
-                  {
-                    className: "grid grid-cols-4 gap-1",
-                    "data-ocid": `pricing.${plan.code}.duration_selector`,
-                    children: DURATIONS$1.map((d2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      "button",
+              !plan.business && plan.monthlyPrice !== 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4", children: /* @__PURE__ */ jsxRuntimeExports.jsx(AnimatePresence, { mode: "wait", children: billing === "monthly" ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                motion.div,
+                {
+                  initial: { opacity: 0, height: 0 },
+                  animate: { opacity: 1, height: "auto" },
+                  exit: { opacity: 0, height: 0 },
+                  transition: { duration: 0.2 },
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[10px] text-muted-foreground font-mono uppercase tracking-wider mb-2", children: "Duration" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      "div",
                       {
-                        type: "button",
-                        onClick: () => onDurationChange(d2),
-                        "data-ocid": `pricing.${plan.code}.duration.${d2}mo`,
-                        className: `py-1 text-[11px] font-mono rounded border transition-smooth ${duration2 === d2 ? "bg-primary/15 border-primary/50 text-primary" : "border-border text-muted-foreground hover:border-primary/30 hover:text-foreground"}`,
+                        className: "grid grid-cols-4 gap-1",
+                        "data-ocid": `pricing.${plan.code}.duration_selector`,
+                        children: DURATIONS.map((d2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                          "button",
+                          {
+                            type: "button",
+                            onClick: () => onDurationChange(d2),
+                            "data-ocid": `pricing.${plan.code}.duration.${d2}mo`,
+                            className: `py-1 text-[11px] font-mono rounded border transition-smooth ${duration2 === d2 ? "bg-primary/15 border-primary/50 text-primary" : "border-border text-muted-foreground hover:border-primary/30 hover:text-foreground"}`,
+                            children: [
+                              d2,
+                              "mo"
+                            ]
+                          },
+                          d2
+                        ))
+                      }
+                    )
+                  ]
+                },
+                "duration-selector"
+              ) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                motion.div,
+                {
+                  initial: { opacity: 0, height: 0 },
+                  animate: { opacity: 1, height: "auto" },
+                  exit: { opacity: 0, height: 0 },
+                  transition: { duration: 0.2 },
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[10px] text-muted-foreground font-mono uppercase tracking-wider mb-2", children: "Duration" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "div",
+                      {
+                        className: "flex items-center gap-2 px-3 py-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/5",
+                        "data-ocid": `pricing.${plan.code}.duration_selector`,
                         children: [
-                          d2,
-                          "mo"
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-mono text-emerald-500 font-semibold", children: "12 months" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] text-emerald-500/70 font-body", children: "· 30% off applied" })
                         ]
-                      },
-                      d2
-                    ))
-                  }
-                )
-              ] }),
+                      }
+                    )
+                  ]
+                },
+                "yearly-locked"
+              ) }) }),
               plan.href ? /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: plan.href, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                 Button,
                 {
@@ -57259,11 +58335,11 @@ function PlanCard({
                   "data-ocid": `pricing.plan.cta.${index2 + 1}`,
                   children: [
                     plan.cta,
-                    billing === "yearly" && plan.monthlyPrice && /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "ml-1 opacity-70", children: [
+                    billing === "yearly" && plan.monthlyPrice ? /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "ml-1 opacity-70", children: [
                       "(",
-                      duration2,
+                      effectiveDuration,
                       "mo)"
-                    ] })
+                    ] }) : null
                   ]
                 }
               ) })
@@ -58205,7 +59281,7 @@ function SignupPage() {
                       {
                         id: "firstName",
                         type: "text",
-                        placeholder: "John",
+                        placeholder: t2("auth.first_name_placeholder"),
                         autoComplete: "given-name",
                         className: `h-11 pl-10 bg-background/60 border-border transition-colors ${errors.firstName ? "border-destructive focus-visible:ring-destructive/30" : ""}`,
                         "data-ocid": "signup.first_name.input",
@@ -58238,7 +59314,7 @@ function SignupPage() {
                       {
                         id: "lastName",
                         type: "text",
-                        placeholder: "Doe",
+                        placeholder: t2("auth.last_name_placeholder"),
                         autoComplete: "family-name",
                         className: `h-11 pl-10 bg-background/60 border-border transition-colors ${errors.lastName ? "border-destructive focus-visible:ring-destructive/30" : ""}`,
                         "data-ocid": "signup.last_name.input",
@@ -58272,7 +59348,7 @@ function SignupPage() {
                     {
                       id: "email",
                       type: "email",
-                      placeholder: "you@example.com",
+                      placeholder: t2("auth.email_placeholder"),
                       autoComplete: "email",
                       className: `h-11 pl-10 bg-background/60 border-border transition-colors ${errors.email ? "border-destructive focus-visible:ring-destructive/30" : ""}`,
                       "data-ocid": "signup.email.input",
@@ -60903,12 +61979,6 @@ function ApiKeysPage() {
     ) })
   ] }) });
 }
-const DURATIONS = [
-  { value: 1, label: "1 Month" },
-  { value: 3, label: "3 Months" },
-  { value: 6, label: "6 Months" },
-  { value: 12, label: "12 Months", best: true }
-];
 const CURRENT_PLAN_FEATURES = {
   free: [
     "500 API calls per day",
@@ -61005,6 +62075,15 @@ function BillingPage() {
   const { user: authUser } = useAuth();
   const [period, setPeriod] = reactExports.useState("monthly");
   const [duration2, setDuration] = reactExports.useState(1);
+  const DURATIONS2 = reactExports.useMemo(
+    () => [
+      { value: 1, label: t2("billing.duration_1_month") },
+      { value: 3, label: t2("billing.duration_3_months") },
+      { value: 6, label: t2("billing.duration_6_months") },
+      { value: 12, label: t2("billing.duration_12_months"), best: true }
+    ],
+    [t2]
+  );
   const { data: meData } = useQuery({
     queryKey: ["me"],
     queryFn: getMe,
@@ -61016,17 +62095,17 @@ function BillingPage() {
     const params = new URLSearchParams(window.location.search);
     const payment = params.get("payment");
     if (payment === "success") {
-      ue.success("Payment successful! Your plan has been upgraded.");
+      ue.success(t2("billing.payment_success"));
       const url = new URL(window.location.href);
       url.searchParams.delete("payment");
       window.history.replaceState({}, "", url.toString());
     } else if (payment === "failed") {
-      ue.error("Payment failed. Please try again.");
+      ue.error(t2("billing.payment_failed"));
       const url = new URL(window.location.href);
       url.searchParams.delete("payment");
       window.history.replaceState({}, "", url.toString());
     }
-  }, []);
+  }, [t2]);
   const getDisplayPrice = (base) => {
     if (base === null) return null;
     const multiplier = period === "yearly" ? 0.7 : 1;
@@ -61169,7 +62248,7 @@ function BillingPage() {
     ),
     period === "monthly" && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row sm:items-center gap-3", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-medium text-muted-foreground", children: t2("billing.duration") }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2", children: DURATIONS.map((d2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2", children: DURATIONS2.map((d2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "button",
         {
           type: "button",
@@ -61502,12 +62581,13 @@ function StatCard({
   );
 }
 function ActiveKeyCard({ activeKey }) {
+  const { t: t2 } = useTranslation();
   const [copied, setCopied] = reactExports.useState(false);
   const handleCopy = async () => {
     if (!activeKey) return;
     await navigator.clipboard.writeText(activeKey.api_key);
     setCopied(true);
-    ue.success("API key copied!");
+    ue.success(t2("api_keys.copied"));
     setTimeout(() => setCopied(false), 2e3);
   };
   if (!activeKey) {
@@ -61518,7 +62598,7 @@ function ActiveKeyCard({ activeKey }) {
         "data-ocid": "dashboard.apikey.empty_state",
         children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-12 rounded-2xl bg-muted/40 flex items-center justify-center mx-auto mb-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Key, { className: "w-6 h-6 text-muted-foreground/50" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground mb-3", children: "No active API key" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground mb-3", children: t2("api_keys.no_key_title") }),
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             Button,
             {
@@ -61528,7 +62608,8 @@ function ActiveKeyCard({ activeKey }) {
               "data-ocid": "dashboard.apikey.generate.button",
               children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/panel/api-keys", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(Key, { className: "w-3.5 h-3.5" }),
-                " Generate your first key"
+                " ",
+                t2("api_keys.generate_first")
               ] })
             }
           )
@@ -61568,14 +62649,14 @@ function ActiveKeyCard({ activeKey }) {
           className: "text-xs text-emerald-400 border-emerald-500/30 bg-emerald-500/10 flex items-center gap-1",
           children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" }),
-            "Active"
+            t2("api_keys.active")
           ]
         }
       )
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "pt-2 border-t border-border/50 flex items-center justify-between", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs text-muted-foreground", children: [
-        "Created",
+        t2("api_keys.generated_on"),
         " ",
         new Date(activeKey.created_at).toLocaleDateString("en-IN", {
           day: "2-digit",
@@ -61592,7 +62673,8 @@ function ActiveKeyCard({ activeKey }) {
           className: "h-7 text-xs text-primary hover:text-primary gap-1",
           "data-ocid": "dashboard.apikeys.manage.link",
           children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/panel/api-keys", children: [
-            "Manage ",
+            t2("common.manage"),
+            " ",
             /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3 h-3" })
           ] })
         }
@@ -61783,7 +62865,7 @@ function DashboardPage() {
                 /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { className: "p-5", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mb-4", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Key, { className: "w-4 h-4 text-primary" }) }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display font-semibold text-sm text-foreground", children: "Active API Key" })
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display font-semibold text-sm text-foreground", children: t2("api_keys.active_key") })
                   ] }),
                   keysLoading ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-12 w-full rounded-xl" }),
@@ -61956,8 +63038,8 @@ function DashboardPage() {
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-10 h-10 rounded-xl gradient-primary flex items-center justify-center flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(TrendingUp, { className: "w-5 h-5 text-white" }) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-display font-semibold text-foreground", children: "Upgrade to Pro" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground mt-0.5", children: "Get 2,500 API calls/day for just ₹49/month." })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-display font-semibold text-foreground", children: t2("dashboard.upgrade_pro") }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground mt-0.5", children: t2("dashboard.upgrade_desc") })
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -61968,7 +63050,8 @@ function DashboardPage() {
               size: "sm",
               "data-ocid": "dashboard.upgrade.button",
               children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/panel/billing", children: [
-                "Upgrade Now ",
+                t2("billing.upgrade_now"),
+                " ",
                 /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "w-3.5 h-3.5 ml-1" })
               ] })
             }
@@ -62058,12 +63141,6 @@ const STATUS_STYLES = {
   paid: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
   pending: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
   failed: "bg-destructive/10 text-destructive border-destructive/20"
-};
-const PLAN_LABELS_MAP = {
-  free: "Free",
-  pro: "Pro",
-  pro_plus: "Pro Plus",
-  business: "Business"
 };
 const PAGE_SIZE = 10;
 function formatDate(dateStr) {
@@ -62202,7 +63279,7 @@ function InvoicesPage() {
             "data-ocid": `invoices.item.${(page - 1) * PAGE_SIZE + idx + 1}`,
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "font-mono text-xs text-muted-foreground py-4", children: inv.invoice_no }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "text-sm font-medium py-4", children: PLAN_LABELS_MAP[inv.plan] ?? inv.plan }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "text-sm font-medium py-4", children: PLAN_LABELS[inv.plan] ?? inv.plan }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs(TableCell, { className: "text-sm text-muted-foreground py-4", children: [
                 inv.months,
                 " ",
@@ -62270,7 +63347,7 @@ function InvoicesPage() {
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-foreground", children: PLAN_LABELS_MAP[inv.plan] ?? inv.plan }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-foreground", children: PLAN_LABELS[inv.plan] ?? inv.plan }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs text-muted-foreground mt-0.5", children: [
                 inv.months,
                 " ",
@@ -64575,24 +65652,18 @@ function NotificationsPage() {
   ] }) });
 }
 const profileSchema = object$1({
-  first_name: string$1().min(1, "First name is required"),
+  first_name: string$1().min(1, instance.t("profile.first_name_required")),
   last_name: string$1().optional(),
   country: _enum(["IN", "US", "UK", "OTHER"])
 });
 const passwordSchema = object$1({
-  current_password: string$1().min(6, "At least 6 characters"),
-  new_password: string$1().min(6, "At least 6 characters"),
-  confirm_password: string$1().min(6, "At least 6 characters")
+  current_password: string$1().min(6, instance.t("profile.min_6_chars")),
+  new_password: string$1().min(6, instance.t("profile.min_6_chars")),
+  confirm_password: string$1().min(6, instance.t("profile.min_6_chars"))
 }).refine((d2) => d2.new_password === d2.confirm_password, {
-  message: "Passwords do not match",
+  message: instance.t("profile.passwords_no_match"),
   path: ["confirm_password"]
 });
-const COUNTRIES = [
-  { value: "IN", label: "India" },
-  { value: "US", label: "United States" },
-  { value: "UK", label: "United Kingdom" },
-  { value: "OTHER", label: "Other" }
-];
 function countryCodeFromLabel(label) {
   const map2 = {
     India: "IN",
@@ -64673,6 +65744,17 @@ function ProfileSettingsPage() {
   var _a3, _b2, _c2, _d2, _e2, _f2, _g2, _h2, _i2, _j2;
   const { t: t2 } = useTranslation();
   const { user, isLoading, initialize } = useAuth();
+  const COUNTRIES = reactExports.useMemo(
+    () => [
+      { value: "IN", label: t2("profile.country_india") },
+      { value: "US", label: t2("profile.country_us") },
+      { value: "UK", label: t2("profile.country_uk") },
+      { value: "CA", label: t2("profile.country_canada") },
+      { value: "AU", label: t2("profile.country_australia") },
+      { value: "OTHER", label: t2("profile.country_other") }
+    ],
+    [t2]
+  );
   const queryClient2 = useQueryClient();
   const fileRef = reactExports.useRef(null);
   const [avatarPreview, setAvatarPreview] = reactExports.useState(null);
@@ -64746,12 +65828,12 @@ function ProfileSettingsPage() {
     const file = (_a4 = e3.target.files) == null ? void 0 : _a4[0];
     if (!file) return;
     if (file.size > 2 * 1024 * 1024) {
-      ue.error("Avatar must be under 2MB.");
+      ue.error(t2("profile.avatar_too_large"));
       return;
     }
     const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
     if (!allowedTypes.includes(file.type)) {
-      ue.error("Only JPG, PNG, or WEBP files are supported.");
+      ue.error(t2("profile.avatar_invalid_type"));
       return;
     }
     setAvatarFile(file);

@@ -135,13 +135,14 @@ function StatCard({
 }
 
 function ActiveKeyCard({ activeKey }: { activeKey: ApiKey | undefined }) {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
     if (!activeKey) return;
     await navigator.clipboard.writeText(activeKey.api_key);
     setCopied(true);
-    toast.success("API key copied!");
+    toast.success(t("api_keys.copied"));
     setTimeout(() => setCopied(false), 2000);
   };
 
@@ -154,7 +155,9 @@ function ActiveKeyCard({ activeKey }: { activeKey: ApiKey | undefined }) {
         <div className="w-12 h-12 rounded-2xl bg-muted/40 flex items-center justify-center mx-auto mb-3">
           <Key className="w-6 h-6 text-muted-foreground/50" />
         </div>
-        <p className="text-sm text-muted-foreground mb-3">No active API key</p>
+        <p className="text-sm text-muted-foreground mb-3">
+          {t("api_keys.no_key_title")}
+        </p>
         <Button
           asChild
           size="sm"
@@ -162,14 +165,14 @@ function ActiveKeyCard({ activeKey }: { activeKey: ApiKey | undefined }) {
           data-ocid="dashboard.apikey.generate.button"
         >
           <Link to="/panel/api-keys">
-            <Key className="w-3.5 h-3.5" /> Generate your first key
+            <Key className="w-3.5 h-3.5" /> {t("api_keys.generate_first")}
           </Link>
         </Button>
       </div>
     );
   }
 
-  const masked = `${activeKey.api_key.slice(0, 8)}••••••••${activeKey.api_key.slice(-4)}`;
+  const masked = `${activeKey.api_key.slice(0, 8)}\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022${activeKey.api_key.slice(-4)}`;
 
   return (
     <div className="space-y-3">
@@ -204,13 +207,13 @@ function ActiveKeyCard({ activeKey }: { activeKey: ApiKey | undefined }) {
             className="text-xs text-emerald-400 border-emerald-500/30 bg-emerald-500/10 flex items-center gap-1"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Active
+            {t("api_keys.active")}
           </Badge>
         </div>
       )}
       <div className="pt-2 border-t border-border/50 flex items-center justify-between">
         <span className="text-xs text-muted-foreground">
-          Created{" "}
+          {t("api_keys.generated_on")}{" "}
           {new Date(activeKey.created_at).toLocaleDateString("en-IN", {
             day: "2-digit",
             month: "short",
@@ -225,7 +228,7 @@ function ActiveKeyCard({ activeKey }: { activeKey: ApiKey | undefined }) {
           data-ocid="dashboard.apikeys.manage.link"
         >
           <Link to="/panel/api-keys">
-            Manage <ArrowRight className="w-3 h-3" />
+            {t("common.manage")} <ArrowRight className="w-3 h-3" />
           </Link>
         </Button>
       </div>
@@ -428,7 +431,7 @@ export function DashboardPage() {
                       <Key className="w-4 h-4 text-primary" />
                     </div>
                     <h3 className="font-display font-semibold text-sm text-foreground">
-                      Active API Key
+                      {t("api_keys.active_key")}
                     </h3>
                   </div>
                   {keysLoading ? (
@@ -643,10 +646,10 @@ export function DashboardPage() {
                     </div>
                     <div>
                       <p className="font-display font-semibold text-foreground">
-                        Upgrade to Pro
+                        {t("dashboard.upgrade_pro")}
                       </p>
                       <p className="text-xs text-muted-foreground mt-0.5">
-                        Get 2,500 API calls/day for just ₹49/month.
+                        {t("dashboard.upgrade_desc")}
                       </p>
                     </div>
                   </div>
@@ -657,7 +660,8 @@ export function DashboardPage() {
                     data-ocid="dashboard.upgrade.button"
                   >
                     <Link to="/panel/billing">
-                      Upgrade Now <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      {t("billing.upgrade_now")}{" "}
+                      <ArrowRight className="w-3.5 h-3.5 ml-1" />
                     </Link>
                   </Button>
                 </CardContent>

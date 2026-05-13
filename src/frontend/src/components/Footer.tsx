@@ -32,19 +32,20 @@ function NewsletterStrip() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   function handleSubscribe(e: React.FormEvent) {
     e.preventDefault();
     if (!email.trim() || !email.includes("@")) {
-      toast.error("Enter a valid email address.");
+      toast.error(t("footer.newsletter_email_invalid"));
       return;
     }
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
       setSubscribed(true);
-      toast.success("Subscribed!", {
-        description: "You'll receive BabyAPI updates in your inbox.",
+      toast.success(t("footer.subscribed"), {
+        description: t("footer.newsletter_toast_desc"),
       });
     }, 800);
   }
@@ -69,14 +70,13 @@ function NewsletterStrip() {
           >
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-              Stay Updated
+              {t("footer.newsletter_badge")}
             </div>
             <h3 className="font-display font-bold text-xl text-foreground mb-2">
-              Subscribe to Developer Updates
+              {t("footer.newsletter_title")}
             </h3>
             <p className="text-sm text-muted-foreground font-body mb-6">
-              New endpoints, changelog, and exclusive tips for BabyAPI
-              developers.
+              {t("footer.newsletter_desc")}
             </p>
           </motion.div>
 
@@ -94,7 +94,7 @@ function NewsletterStrip() {
                 <div className="w-7 h-7 rounded-full bg-primary/15 flex items-center justify-center">
                   <Check className="w-3.5 h-3.5" />
                 </div>
-                Thanks for subscribing!
+                {t("footer.subscribed")}
               </motion.div>
             ) : (
               <motion.form
@@ -124,7 +124,7 @@ function NewsletterStrip() {
                   ) : (
                     <Send className="w-3.5 h-3.5" />
                   )}
-                  Subscribe
+                  {t("footer.subscribe")}
                 </button>
               </motion.form>
             )}

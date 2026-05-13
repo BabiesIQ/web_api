@@ -21,7 +21,8 @@ import {
   Zap,
 } from "lucide-react";
 import { motion } from "motion/react";
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -40,16 +41,6 @@ interface NavItem {
   label: string;
   icon: React.ElementType;
 }
-
-const NAV_ITEMS: NavItem[] = [
-  { id: "overview", label: "Overview", icon: BookOpen },
-  { id: "authentication", label: "Authentication", icon: Key },
-  { id: "endpoints", label: "Endpoints", icon: Code2 },
-  { id: "rate-limits", label: "Rate Limits", icon: Gauge },
-  { id: "eq-presets", label: "EQ Presets", icon: Sliders },
-  { id: "code-examples", label: "Code Examples", icon: Music2 },
-  { id: "try-it", label: "Try It Live", icon: PlayCircle },
-];
 
 const EQ_PRESETS = [
   "normal",
@@ -184,6 +175,8 @@ func main() {
 }`,
 
     Rust: `use reqwest;
+import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 use std::fs;
 use serde_json::Value;
 
@@ -473,7 +466,12 @@ function EndpointBlock({
 function Sidebar({
   active,
   onNavigate,
-}: { active: SectionId; onNavigate: (id: SectionId) => void }) {
+  navItems,
+}: {
+  active: SectionId;
+  onNavigate: (id: SectionId) => void;
+  navItems: NavItem[];
+}) {
   return (
     <nav
       className="flex flex-col gap-0.5"
@@ -483,7 +481,7 @@ function Sidebar({
       <p className="text-[10px] font-mono font-bold text-muted-foreground uppercase tracking-widest px-3 mb-2">
         Documentation
       </p>
-      {NAV_ITEMS.map(({ id, label, icon: Icon }) => (
+      {navItems.map(({ id, label, icon: Icon }) => (
         <button
           key={id}
           type="button"
@@ -540,12 +538,26 @@ function EqPresetBadge({ preset, delay }: { preset: string; delay: number }) {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export function DocsPage() {
+  const { t } = useTranslation();
   const [active, setActive] = useState<SectionId>("overview");
   const [codeLang, setCodeLang] = useState<CodeLang>("curl");
   const contentRef = useRef<HTMLDivElement>(null);
 
   const base = getBackendUrl();
   const CODE_EXAMPLES = getCodeExamples(base);
+
+  const NAV_ITEMS = useMemo<NavItem[]>(
+    () => [
+      { id: "overview", label: t("docs.nav_overview"), icon: BookOpen },
+      { id: "authentication", label: t("docs.nav_authentication"), icon: Key },
+      { id: "endpoints", label: t("docs.nav_endpoints"), icon: Code2 },
+      { id: "rate-limits", label: t("docs.nav_rate_limits"), icon: Gauge },
+      { id: "eq-presets", label: t("docs.nav_eq_presets"), icon: Sliders },
+      { id: "code-examples", label: t("docs.nav_code_examples"), icon: Music2 },
+      { id: "try-it", label: t("docs.nav_try_it_live"), icon: PlayCircle },
+    ],
+    [t],
+  );
 
   function scrollToSection(id: SectionId) {
     setActive(id);
@@ -608,7 +620,11 @@ export function DocsPage() {
           <aside className="hidden lg:block w-52 flex-shrink-0">
             <div className="sticky top-24">
               <ScrollArea className="h-[calc(100vh-8rem)]">
-                <Sidebar active={active} onNavigate={scrollToSection} />
+                <Sidebar
+                  active={active}
+                  onNavigate={scrollToSection}
+                  navItems={NAV_ITEMS}
+                />
               </ScrollArea>
             </div>
           </aside>
@@ -630,7 +646,7 @@ export function DocsPage() {
             >
               <SectionHeading
                 id="overview"
-                title="Overview"
+                title={t("docs.section_overview")}
                 subtitle="BabyAPI gives you programmatic access to YouTube audio & video streaming."
               />
               <p className="text-sm text-muted-foreground font-body leading-relaxed mb-4">
@@ -670,7 +686,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
             >
               <SectionHeading
                 id="authentication"
-                title="Authentication"
+                title={t("docs.section_auth")}
                 subtitle="Every request requires your API key."
               />
               <p className="text-sm text-muted-foreground font-body leading-relaxed mb-4">
@@ -715,7 +731,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
             <section className="mb-14" data-ocid="docs.endpoints.section">
               <SectionHeading
                 id="endpoints"
-                title="Endpoints"
+                title={t("docs.section_endpoints")}
                 subtitle="Click any endpoint to see parameters and examples."
               />
               <EndpointBlock
@@ -823,7 +839,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
             <section className="mb-14" data-ocid="docs.rate_limits.section">
               <SectionHeading
                 id="rate-limits"
-                title="Rate Limits"
+                title={t("docs.section_rate_limits")}
                 subtitle="Limits reset daily at midnight UTC."
               />
 
@@ -883,7 +899,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
             <section className="mb-14" data-ocid="docs.eq_presets.section">
               <SectionHeading
                 id="eq-presets"
-                title="Equalizer Presets"
+                title={t("docs.section_eq_presets")}
                 subtitle="Pass any preset name as the eq parameter in /api/stream."
               />
               <p className="text-sm text-muted-foreground font-body leading-relaxed mb-5">
@@ -913,7 +929,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
             <section className="mb-14" data-ocid="docs.code_examples.section">
               <SectionHeading
                 id="code-examples"
-                title="Code Examples"
+                title={t("docs.section_code_examples")}
                 subtitle="Full search → stream flow in your language."
               />
 
@@ -962,7 +978,7 @@ curl "${base}/api/stream/audio_JGwWNGJdvx8?token=tok_xxx&eq=bass_boost&api=YOUR_
             <section className="mb-14" data-ocid="docs.try_it.section">
               <SectionHeading
                 id="try-it"
-                title="Try It Live"
+                title={t("docs.section_try_it")}
                 subtitle="Make a real API request directly from the browser."
               />
               <TryItWidget />

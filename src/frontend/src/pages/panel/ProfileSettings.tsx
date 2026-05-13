@@ -14,7 +14,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Camera, Eye, EyeOff, Lock, Save, Shield, User } from "lucide-react";
 import { motion } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
@@ -22,20 +22,22 @@ import { z } from "zod";
 
 // ── Schemas ────────────────────────────────────────────────────────────────────
 
+import i18n from "@/lib/i18n";
+
 const profileSchema = z.object({
-  first_name: z.string().min(1, "First name is required"),
+  first_name: z.string().min(1, i18n.t("profile.first_name_required")),
   last_name: z.string().optional(),
   country: z.enum(["IN", "US", "UK", "OTHER"]),
 });
 
 const passwordSchema = z
   .object({
-    current_password: z.string().min(6, "At least 6 characters"),
-    new_password: z.string().min(6, "At least 6 characters"),
-    confirm_password: z.string().min(6, "At least 6 characters"),
+    current_password: z.string().min(6, i18n.t("profile.min_6_chars")),
+    new_password: z.string().min(6, i18n.t("profile.min_6_chars")),
+    confirm_password: z.string().min(6, i18n.t("profile.min_6_chars")),
   })
   .refine((d) => d.new_password === d.confirm_password, {
-    message: "Passwords do not match",
+    message: i18n.t("profile.passwords_no_match"),
     path: ["confirm_password"],
   });
 
@@ -43,13 +45,6 @@ type ProfileFormValues = z.infer<typeof profileSchema>;
 type PasswordFormValues = z.infer<typeof passwordSchema>;
 
 // ── Country map ────────────────────────────────────────────────────────────────
-
-const COUNTRIES: { value: string; label: string }[] = [
-  { value: "IN", label: "India" },
-  { value: "US", label: "United States" },
-  { value: "UK", label: "United Kingdom" },
-  { value: "OTHER", label: "Other" },
-];
 
 function countryCodeFromLabel(
   label: string | undefined,
@@ -138,6 +133,18 @@ function Spinner() {
 export function ProfileSettingsPage() {
   const { t } = useTranslation();
   const { user, isLoading, initialize } = useAuth();
+
+  const COUNTRIES = useMemo<{ value: string; label: string }[]>(
+    () => [
+      { value: "IN", label: t("profile.country_india") },
+      { value: "US", label: t("profile.country_us") },
+      { value: "UK", label: t("profile.country_uk") },
+      { value: "CA", label: t("profile.country_canada") },
+      { value: "AU", label: t("profile.country_australia") },
+      { value: "OTHER", label: t("profile.country_other") },
+    ],
+    [t],
+  );
   const queryClient = useQueryClient();
   const fileRef = useRef<HTMLInputElement>(null);
   const [avatarPreview, setAvatarPreview] = useState<string | null>(null);
@@ -234,12 +241,12 @@ export function ProfileSettingsPage() {
     const file = e.target.files?.[0];
     if (!file) return;
     if (file.size > 2 * 1024 * 1024) {
-      toast.error("Avatar must be under 2MB.");
+      toast.error(t("profile.avatar_too_large"));
       return;
     }
     const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
     if (!allowedTypes.includes(file.type)) {
-      toast.error("Only JPG, PNG, or WEBP files are supported.");
+      toast.error(t("profile.avatar_invalid_type"));
       return;
     }
     setAvatarFile(file);

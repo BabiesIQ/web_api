@@ -19,7 +19,6 @@ import {
   Settings,
   User,
   X,
-  Zap,
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
@@ -177,7 +176,56 @@ export function Header() {
           data-ocid="header.logo.link"
         >
           <span className="w-6 h-6 rounded-lg gradient-primary flex items-center justify-center shrink-0">
-            <Zap className="w-3.5 h-3.5 text-white" />
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-white"
+              aria-hidden="true"
+            >
+              <rect
+                x="0"
+                y="6"
+                width="2"
+                height="2"
+                rx="1"
+                fill="currentColor"
+              />
+              <rect
+                x="3"
+                y="4"
+                width="2"
+                height="6"
+                rx="1"
+                fill="currentColor"
+              />
+              <rect
+                x="6"
+                y="1"
+                width="2"
+                height="12"
+                rx="1"
+                fill="currentColor"
+              />
+              <rect
+                x="9"
+                y="4"
+                width="2"
+                height="6"
+                rx="1"
+                fill="currentColor"
+              />
+              <rect
+                x="12"
+                y="6"
+                width="2"
+                height="2"
+                rx="1"
+                fill="currentColor"
+              />
+            </svg>
           </span>
           <span className="text-gradient">Baby</span>
           <span>API</span>

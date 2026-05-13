@@ -804,117 +804,122 @@ const MARQUEE_ITEMS = [
   "Elixir",
 ];
 
-const HOW_IT_WORKS = [
-  {
-    num: "01",
-    icon: Key,
-    title: "Get API Key",
-    desc: "Sign up free. Instant API key — no credit card needed.",
-  },
-  {
-    num: "02",
-    icon: Settings2,
-    title: "Make a Request",
-    desc: "Hit REST endpoints with your key. Search, fetch audio/video URLs.",
-  },
-  {
-    num: "03",
-    icon: Play,
-    title: "Stream Media",
-    desc: "Use the stream URL with any player. Apply EQ and seek support.",
-  },
-];
+function getHowItWorks(t: (k: string) => string) {
+  return [
+    {
+      num: "01",
+      icon: Key,
+      title: t("home.step1_title"),
+      desc: t("home.step1_desc"),
+    },
+    {
+      num: "02",
+      icon: Settings2,
+      title: t("home.step2_title"),
+      desc: t("home.step2_desc"),
+    },
+    {
+      num: "03",
+      icon: Play,
+      title: t("home.step3_title"),
+      desc: t("home.step3_desc"),
+    },
+  ];
+}
 
-const FEATURES = [
-  {
-    icon: Search,
-    title: "Search API",
-    desc: "YouTube search with structured JSON — video IDs, titles, thumbnails.",
-    color: "from-blue-500/10 to-blue-500/5",
-    iconColor: "text-blue-400",
-    iconBg: "bg-blue-500/10 group-hover:bg-blue-500/20",
-  },
-  {
-    icon: Music2,
-    title: "Audio Streaming",
-    desc: "Extract high-quality audio stream URLs with full seek support.",
-    color: "from-primary/10 to-primary/5",
-    iconColor: "text-primary",
-    iconBg: "bg-primary/10 group-hover:bg-primary/20",
-  },
-  {
-    icon: Video,
-    title: "Video Streaming",
-    desc: "Direct video stream URLs ready for any player or embed.",
-    color: "from-purple-500/10 to-purple-500/5",
-    iconColor: "text-purple-400",
-    iconBg: "bg-purple-500/10 group-hover:bg-purple-500/20",
-  },
-  {
-    icon: Sliders,
-    title: "30+ EQ Presets",
-    desc: "Bass boost, nightcore, 8D, lofi, cinema and many more.",
-    color: "from-emerald-500/10 to-emerald-500/5",
-    iconColor: "text-emerald-400",
-    iconBg: "bg-emerald-500/10 group-hover:bg-emerald-500/20",
-  },
-  {
-    icon: Download,
-    title: "Seek & Download",
-    desc: "Start at any time offset. Force download headers on demand.",
-    color: "from-orange-500/10 to-orange-500/5",
-    iconColor: "text-orange-400",
-    iconBg: "bg-orange-500/10 group-hover:bg-orange-500/20",
-  },
-  {
-    icon: Gauge,
-    title: "Plan-based Limits",
-    desc: "500 to unlimited requests/day. Upgrade instantly.",
-    color: "from-pink-500/10 to-pink-500/5",
-    iconColor: "text-pink-400",
-    iconBg: "bg-pink-500/10 group-hover:bg-pink-500/20",
-  },
-];
+function getFeatures(t: (k: string) => string) {
+  return [
+    {
+      icon: Search,
+      title: t("home.feat1_title"),
+      desc: t("home.feat1_desc"),
+      color: "from-blue-500/10 to-blue-500/5",
+      iconColor: "text-blue-400",
+      iconBg: "bg-blue-500/10 group-hover:bg-blue-500/20",
+    },
+    {
+      icon: Music2,
+      title: t("home.feat2_title"),
+      desc: t("home.feat2_desc"),
+      color: "from-primary/10 to-primary/5",
+      iconColor: "text-primary",
+      iconBg: "bg-primary/10 group-hover:bg-primary/20",
+    },
+    {
+      icon: Video,
+      title: t("home.feat3_title"),
+      desc: t("home.feat3_desc"),
+      color: "from-purple-500/10 to-purple-500/5",
+      iconColor: "text-purple-400",
+      iconBg: "bg-purple-500/10 group-hover:bg-purple-500/20",
+    },
+    {
+      icon: Sliders,
+      title: t("home.feat4_title"),
+      desc: t("home.feat4_desc"),
+      color: "from-emerald-500/10 to-emerald-500/5",
+      iconColor: "text-emerald-400",
+      iconBg: "bg-emerald-500/10 group-hover:bg-emerald-500/20",
+    },
+    {
+      icon: Download,
+      title: t("home.feat5_title"),
+      desc: t("home.feat5_desc"),
+      color: "from-orange-500/10 to-orange-500/5",
+      iconColor: "text-orange-400",
+      iconBg: "bg-orange-500/10 group-hover:bg-orange-500/20",
+    },
+    {
+      icon: Gauge,
+      title: t("home.feat6_title"),
+      desc: t("home.feat6_desc"),
+      color: "from-pink-500/10 to-pink-500/5",
+      iconColor: "text-pink-400",
+      iconBg: "bg-pink-500/10 group-hover:bg-pink-500/20",
+    },
+  ];
+}
 
-const STATS = [
-  { value: 300000, suffix: "+", label: "Developers" },
-  { value: 1000000000, suffix: "+", label: "Requests Served" },
-  { value: 99, suffix: ".9%", label: "Uptime SLA" },
-  { value: 150, suffix: "ms", label: "Avg Response" },
-];
+function getStats(t: (k: string) => string) {
+  return [
+    { value: 300000, suffix: "+", label: t("home.stat1_label") },
+    { value: 1000000000, suffix: "+", label: t("home.stat2_label") },
+    { value: 99, suffix: ".9%", label: t("home.stat3_label") },
+    { value: 150, suffix: "ms", label: t("home.stat4_label") },
+  ];
+}
 
-const TESTIMONIALS = [
-  {
-    name: "Rajesh Kumar",
-    role: "Full Stack Developer",
-    company: "TechStartup India",
-    avatar: "RK",
-    color: "bg-primary/20 text-primary",
-    stars: 5,
-    quote:
-      "BabyAPI cut our audio integration time from weeks to hours. The EQ presets alone saved us building a whole audio processing pipeline.",
-  },
-  {
-    name: "Amir Hassan",
-    role: "Backend Engineer",
-    company: "StreamFlow Labs",
-    avatar: "AH",
-    color: "bg-accent/20 text-accent",
-    stars: 5,
-    quote:
-      "We serve 50,000 daily active users with BabyAPI. The 99.9% uptime SLA is real — zero production incidents in 8 months.",
-  },
-  {
-    name: "Priya Sharma",
-    role: "Mobile App Developer",
-    company: "MusicTech Co.",
-    avatar: "PS",
-    color: "bg-emerald-500/20 text-emerald-500",
-    stars: 5,
-    quote:
-      "The search API is incredibly fast. Results come back in under 15ms on average. Our users noticed the difference immediately.",
-  },
-];
+function getTestimonials(t: (k: string) => string) {
+  return [
+    {
+      name: "Rajesh Kumar",
+      role: t("home.t1_role"),
+      company: "TechStartup India",
+      avatar: "RK",
+      color: "bg-primary/20 text-primary",
+      stars: 5,
+      quote: t("home.t1_quote"),
+    },
+    {
+      name: "Amir Hassan",
+      role: t("home.t2_role"),
+      company: "StreamFlow Labs",
+      avatar: "AH",
+      color: "bg-accent/20 text-accent",
+      stars: 5,
+      quote: t("home.t2_quote"),
+    },
+    {
+      name: "Priya Sharma",
+      role: t("home.t3_role"),
+      company: "MusicTech Co.",
+      avatar: "PS",
+      color: "bg-emerald-500/20 text-emerald-500",
+      stars: 5,
+      quote: t("home.t3_quote"),
+    },
+  ];
+}
 
 const EQ_WAVE_HEIGHTS = [
   16, 32, 24, 40, 20, 48, 28, 36, 18, 44, 30, 38, 22, 46, 26, 42, 20, 50, 24,
@@ -955,6 +960,11 @@ export function HomePage() {
   const ripple = useRipple();
   const doubled = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
   const { t } = useTranslation();
+
+  const HOW_IT_WORKS = getHowItWorks(t);
+  const FEATURES = getFeatures(t);
+  const STATS = getStats(t);
+  const TESTIMONIALS = getTestimonials(t);
 
   return (
     <Layout>
@@ -1103,9 +1113,9 @@ export function HomePage() {
                 transition={{ duration: 0.5, delay: 1.0 }}
               >
                 {[
-                  { icon: Check, text: "Free forever plan" },
-                  { icon: Zap, text: "Start in 60 seconds" },
-                  { icon: Shield, text: "No credit card" },
+                  { icon: Check, text: t("home.trust_free") },
+                  { icon: Zap, text: t("home.trust_start") },
+                  { icon: Shield, text: t("home.trust_no_cc") },
                 ].map(({ icon: Icon, text }) => (
                   <div
                     key={text}
@@ -1189,7 +1199,7 @@ export function HomePage() {
         <div className="container mx-auto px-6 max-w-5xl">
           <FadeUp className="text-center mb-8">
             <p className="text-xs font-mono text-muted-foreground uppercase tracking-[0.2em]">
-              Trusted by developers building with
+              {t("home.trust_bar_label")}
             </p>
           </FadeUp>
           <div className="grid grid-cols-3 sm:grid-cols-6 gap-6">
@@ -1218,7 +1228,7 @@ export function HomePage() {
       {/* ═══ MARQUEE ═══ */}
       <section
         className="border-b border-border bg-background py-4 overflow-hidden"
-        aria-label="Supported languages"
+        aria-label={t("home.marquee_label")}
         data-ocid="home.marquee.section"
       >
         <div className="marquee-track">
@@ -1243,13 +1253,13 @@ export function HomePage() {
         <div className="container mx-auto px-6 max-w-5xl">
           <FadeUp className="text-center mb-16">
             <p className="text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3">
-              How it works
+              {t("home.how_it_works_eyebrow")}
             </p>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground">
-              Three steps to stream anything
+              {t("home.how_it_works_title")}
             </h2>
             <p className="mt-3 text-sm text-muted-foreground font-body max-w-md mx-auto">
-              From signup to your first API call in under 5 minutes.
+              {t("home.how_it_works_subtitle")}
             </p>
           </FadeUp>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
@@ -1291,7 +1301,7 @@ export function HomePage() {
         <div className="container mx-auto px-6 max-w-5xl">
           <FadeUp className="text-center mb-14">
             <p className="text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3">
-              Everything included
+              {t("home.features_eyebrow")}
             </p>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground">
               {t("features.title")}
@@ -1392,30 +1402,32 @@ export function HomePage() {
             </FadeUp>
             <FadeUp delay={0.15}>
               <p className="text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-4">
-                Crystal Clear Streaming
+                {t("home.waveform_eyebrow")}
               </p>
               <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-6 leading-tight">
-                Studio-quality audio,
+                {t("home.waveform_title")}
                 <br />
-                <span className="text-gradient">any preset.</span>
+                <span className="text-gradient">
+                  {t("home.waveform_title2")}
+                </span>
               </h2>
               <ul className="space-y-4">
                 {[
                   {
-                    label: "30+ EQ Presets",
-                    detail: "bass, nightcore, 8D, lofi, cinema & more",
+                    label: t("home.wave_f1_label"),
+                    detail: t("home.wave_f1_detail"),
                   },
                   {
-                    label: "Seek to any position",
-                    detail: "start streams at an exact time offset",
+                    label: t("home.wave_f2_label"),
+                    detail: t("home.wave_f2_detail"),
                   },
                   {
-                    label: "Force download or stream",
-                    detail: "Content-Disposition header on demand",
+                    label: t("home.wave_f3_label"),
+                    detail: t("home.wave_f3_detail"),
                   },
                   {
-                    label: "Low latency delivery",
-                    detail: "chunked transfer with range support",
+                    label: t("home.wave_f4_label"),
+                    detail: t("home.wave_f4_detail"),
                   },
                 ].map((item, i) => (
                   <motion.li
@@ -1453,13 +1465,13 @@ export function HomePage() {
         <div className="container mx-auto px-6 max-w-5xl">
           <FadeUp className="text-center mb-14">
             <p className="text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3">
-              Developer Stories
+              {t("home.testimonials_eyebrow")}
             </p>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground">
-              Trusted by developers worldwide
+              {t("home.testimonials_title")}
             </h2>
             <p className="mt-3 text-sm text-muted-foreground font-body max-w-lg mx-auto">
-              Join 300,000+ developers already building with BabyAPI.
+              {t("home.testimonials_subtitle")}
             </p>
           </FadeUp>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1506,10 +1518,10 @@ export function HomePage() {
           <FadeUp delay={0.3} className="mt-12">
             <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground font-body">
               {[
-                { icon: Shield, text: "30-day money back" },
-                { icon: Zap, text: "Instant activation" },
-                { icon: Key, text: "No credit card required" },
-                { icon: Gauge, text: "99.9% uptime SLA" },
+                { icon: Shield, text: t("home.trust_badge1") },
+                { icon: Zap, text: t("home.trust_badge2") },
+                { icon: Key, text: t("home.trust_badge3") },
+                { icon: Gauge, text: t("home.trust_badge4") },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-2">
                   <Icon className="w-3.5 h-3.5 text-primary" />
@@ -1531,21 +1543,20 @@ export function HomePage() {
           <FadeUp className="text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-4">
               <p className="text-[11px] font-mono text-primary uppercase tracking-[0.18em]">
-                Try It Live
+                {t("home.try_it_eyebrow")}
               </p>
               <Badge
                 variant="outline"
                 className="text-[10px] border-primary/30 text-primary font-mono"
               >
-                No signup required
+                {t("home.try_it_badge")}
               </Badge>
             </div>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground">
-              See the API in action
+              {t("home.try_it_title")}
             </h2>
             <p className="mt-3 text-sm text-muted-foreground font-body max-w-xl mx-auto">
-              Enter your API key and hit Send — get a real response from the
-              BabyAPI servers instantly.
+              {t("home.try_it_subtitle")}
             </p>
           </FadeUp>
           <motion.div
@@ -1569,7 +1580,7 @@ export function HomePage() {
                 variant="ghost"
                 className="font-body text-muted-foreground hover:text-primary gap-1.5"
               >
-                View full API docs
+                {t("home.try_it_docs_link")}
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
@@ -1585,7 +1596,7 @@ export function HomePage() {
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <FadeUp>
             <p className="text-[11px] font-mono text-primary uppercase tracking-[0.18em] mb-3">
-              Pricing
+              {t("home.pricing_eyebrow")}
             </p>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground mb-3">
               {t("pricing.title")}
@@ -1599,23 +1610,35 @@ export function HomePage() {
               {
                 name: "Free",
                 detail: "500 req/day",
-                price: "₹0",
+                price: "\u20B90",
                 highlight: false,
-                features: ["1 API key", "All endpoints", "Community support"],
+                features: [
+                  t("home.plan_feat_1key"),
+                  t("home.plan_feat_all_endpoints"),
+                  t("home.plan_feat_community"),
+                ],
               },
               {
                 name: "Pro",
                 detail: "2,500 req/day",
-                price: "₹49",
+                price: "\u20B949",
                 highlight: true,
-                features: ["1 API key", "All endpoints", "Email support"],
+                features: [
+                  t("home.plan_feat_1key"),
+                  t("home.plan_feat_all_endpoints"),
+                  t("home.plan_feat_email_support"),
+                ],
               },
               {
                 name: "Pro Plus",
                 detail: "5,000 req/day",
-                price: "₹99",
+                price: "\u20B999",
                 highlight: false,
-                features: ["1 API key", "Priority support", "Seek & download"],
+                features: [
+                  t("home.plan_feat_1key"),
+                  t("home.plan_feat_priority"),
+                  t("home.plan_feat_seek"),
+                ],
               },
             ].map((plan, i) => (
               <motion.div
@@ -1634,11 +1657,13 @@ export function HomePage() {
               >
                 {plan.highlight && (
                   <Badge className="gradient-primary text-white text-[10px] font-display self-start mb-3">
-                    Most Popular
+                    {t("billing.most_popular")}
                   </Badge>
                 )}
                 <h3
-                  className={`font-display font-bold text-base mb-1 ${plan.highlight ? "text-primary" : "text-foreground"}`}
+                  className={`font-display font-bold text-base mb-1 ${
+                    plan.highlight ? "text-primary" : "text-foreground"
+                  }`}
                 >
                   {plan.name}
                 </h3>
@@ -1646,7 +1671,9 @@ export function HomePage() {
                   <span className="font-display font-extrabold text-2xl text-foreground">
                     {plan.price}
                   </span>
-                  <span className="text-xs text-muted-foreground">/mo</span>
+                  <span className="text-xs text-muted-foreground">
+                    {t("billing.per_mo")}
+                  </span>
                 </div>
                 <p className="text-xs text-muted-foreground font-mono mb-4">
                   {plan.detail}
@@ -1658,7 +1685,11 @@ export function HomePage() {
                       className="flex items-center gap-2 text-xs text-foreground font-body"
                     >
                       <Check
-                        className={`w-3.5 h-3.5 flex-shrink-0 ${plan.highlight ? "text-primary" : "text-muted-foreground"}`}
+                        className={`w-3.5 h-3.5 flex-shrink-0 ${
+                          plan.highlight
+                            ? "text-primary"
+                            : "text-muted-foreground"
+                        }`}
                       />
                       {f}
                     </li>
@@ -1668,9 +1699,13 @@ export function HomePage() {
                   <Button
                     size="sm"
                     variant={plan.highlight ? "default" : "outline"}
-                    className={`w-full font-display font-semibold text-xs ${plan.highlight ? "gradient-primary text-white" : ""}`}
+                    className={`w-full font-display font-semibold text-xs ${
+                      plan.highlight ? "gradient-primary text-white" : ""
+                    }`}
                   >
-                    {plan.highlight ? "Get Started" : "Learn More"}
+                    {plan.highlight
+                      ? t("pricing.get_started")
+                      : t("home.plan_learn_more")}
                   </Button>
                 </Link>
               </motion.div>
@@ -1682,7 +1717,7 @@ export function HomePage() {
                 variant="ghost"
                 className="font-display font-semibold gap-2 text-muted-foreground hover:text-primary"
               >
-                See full pricing with comparison table
+                {t("home.see_full_pricing")}
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
@@ -1707,10 +1742,11 @@ export function HomePage() {
             transition={{ duration: 0.65 }}
           >
             <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground leading-tight">
-              Ready to start <span className="text-gradient">streaming?</span>
+              {t("home.cta_title")}{" "}
+              <span className="text-gradient">{t("home.cta_title2")}</span>
             </h2>
             <p className="text-muted-foreground font-body text-base leading-relaxed">
-              Get your free API key in 30 seconds — no credit card required.
+              {t("home.cta_subtitle")}
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-2">
               <Link to="/signup">
@@ -1731,7 +1767,7 @@ export function HomePage() {
                   className="font-display font-semibold border-border hover:border-primary hover:text-primary hover:scale-105 transition-smooth px-8 h-12"
                   data-ocid="home.footer_cta.contact.button"
                 >
-                  Contact Sales
+                  {t("home.cta_contact")}
                 </Button>
               </Link>
             </div>

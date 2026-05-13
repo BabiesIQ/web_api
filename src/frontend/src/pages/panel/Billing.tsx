@@ -19,19 +19,12 @@ import {
   Zap,
 } from "lucide-react";
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 
 type BillingPeriod = "monthly" | "yearly";
 type Duration = 1 | 3 | 6 | 12;
-
-const DURATIONS: { value: Duration; label: string; best?: boolean }[] = [
-  { value: 1, label: "1 Month" },
-  { value: 3, label: "3 Months" },
-  { value: 6, label: "6 Months" },
-  { value: 12, label: "12 Months", best: true },
-];
 
 const CURRENT_PLAN_FEATURES: Record<PlanCode, string[]> = {
   free: [
@@ -133,6 +126,18 @@ export function BillingPage() {
   const [period, setPeriod] = useState<BillingPeriod>("monthly");
   const [duration, setDuration] = useState<Duration>(1);
 
+  const DURATIONS = useMemo<
+    { value: Duration; label: string; best?: boolean }[]
+  >(
+    () => [
+      { value: 1, label: t("billing.duration_1_month") },
+      { value: 3, label: t("billing.duration_3_months") },
+      { value: 6, label: t("billing.duration_6_months") },
+      { value: 12, label: t("billing.duration_12_months"), best: true },
+    ],
+    [t],
+  );
+
   const { data: meData } = useQuery({
     queryKey: ["me"],
     queryFn: getMe,
@@ -148,17 +153,17 @@ export function BillingPage() {
     const params = new URLSearchParams(window.location.search);
     const payment = params.get("payment");
     if (payment === "success") {
-      toast.success("Payment successful! Your plan has been upgraded.");
+      toast.success(t("billing.payment_success"));
       const url = new URL(window.location.href);
       url.searchParams.delete("payment");
       window.history.replaceState({}, "", url.toString());
     } else if (payment === "failed") {
-      toast.error("Payment failed. Please try again.");
+      toast.error(t("billing.payment_failed"));
       const url = new URL(window.location.href);
       url.searchParams.delete("payment");
       window.history.replaceState({}, "", url.toString());
     }
-  }, []);
+  }, [t]);
 
   const getDisplayPrice = (base: number | null) => {
     if (base === null) return null;

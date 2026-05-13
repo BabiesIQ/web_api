@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 export type ThemeMode = "dark" | "light" | "midnight";
 export const CYCLE_ORDER: ThemeMode[] = ["dark", "light", "midnight"];
@@ -34,7 +34,13 @@ export function useThemeMode() {
     return saved;
   });
 
+  // Exposed so ThemeSwitcher can lock the button during animation
+  const isAnimatingRef = useRef(false);
+
   const cycleTheme = useCallback(() => {
+    // Guard: if an animation is already in progress, ignore this call
+    if (isAnimatingRef.current) return;
+
     setThemeState((prev) => {
       const currentIdx = CYCLE_ORDER.indexOf(prev);
       const next = CYCLE_ORDER[(currentIdx + 1) % CYCLE_ORDER.length];
@@ -53,6 +59,7 @@ export function useThemeMode() {
     cycleTheme,
     setTheme,
     toggleTheme: cycleTheme,
+    isAnimatingRef,
     mounted: true,
   };
 }

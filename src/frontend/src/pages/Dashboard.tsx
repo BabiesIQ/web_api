@@ -10,6 +10,7 @@ import type { MeResponse, PlanCode } from "@/types/index";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import { Activity, ArrowUpRight, BarChart2, Key, User } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const PLAN_BADGE: Record<PlanCode, string> = {
   free: "bg-muted text-muted-foreground border-0",
@@ -64,6 +65,7 @@ function StatCard({
 
 function DashboardContent() {
   const { user: authUser } = useAuth();
+  const { t } = useTranslation();
 
   const { data: meData, isLoading: meLoading } = useQuery<MeResponse | null>({
     queryKey: ["me"],
@@ -114,7 +116,7 @@ function DashboardContent() {
                   {isLoading ? (
                     <Skeleton className="h-5 w-40 inline-block" />
                   ) : (
-                    `Welcome, ${displayName}!`
+                    `${t("dashboard.welcome")}, ${displayName}!`
                   )}
                 </h2>
                 <p className="text-xs text-muted-foreground mt-0.5 font-body">
@@ -144,23 +146,23 @@ function DashboardContent() {
       >
         <StatCard
           icon={Activity}
-          label="Today's Usage"
+          label={t("dashboard.api_requests")}
           value={usage?.today?.toLocaleString() ?? "0"}
-          sub="API calls today"
+          sub={t("dashboard.api_requests")}
           isLoading={isLoading}
         />
         <StatCard
           icon={BarChart2}
-          label="Remaining Today"
-          value={usage?.remaining?.toLocaleString() ?? "—"}
-          sub="Calls remaining"
+          label={t("dashboard.remaining")}
+          value={usage?.remaining?.toLocaleString() ?? "\u2014"}
+          sub={t("dashboard.remaining")}
           isLoading={isLoading}
         />
         <StatCard
           icon={Key}
-          label="Active Keys"
+          label={t("dashboard.api_keys")}
           value={keys?.filter((k) => k.status === "active").length ?? 0}
-          sub="API keys active"
+          sub={t("dashboard.api_keys")}
           isLoading={keysLoading}
         />
       </div>
@@ -177,17 +179,17 @@ function DashboardContent() {
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-display font-semibold text-sm text-foreground">
-                API Keys
+                {t("dashboard.api_keys")}
               </h3>
               <p className="text-xs text-muted-foreground mt-0.5 font-body">
-                Manage your API keys and access tokens.
+                {t("dashboard.get_api_key_desc")}
               </p>
               <Link
                 to="/panel/api-keys"
                 className="flex items-center gap-1 text-xs text-primary mt-2 font-body font-medium hover:underline"
                 data-ocid="dashboard.apikeys.quicklink.link"
               >
-                Manage keys <ArrowUpRight className="w-3 h-3" />
+                {t("common.manage")} <ArrowUpRight className="w-3 h-3" />
               </Link>
             </div>
           </CardContent>
@@ -203,17 +205,17 @@ function DashboardContent() {
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-display font-semibold text-sm text-foreground">
-                Usage Analytics
+                {t("dashboard.usage")}
               </h3>
               <p className="text-xs text-muted-foreground mt-0.5 font-body">
-                Track your API usage and daily stats.
+                {t("dashboard.view_docs_desc")}
               </p>
               <Link
                 to="/panel/usage"
                 className="flex items-center gap-1 text-xs text-primary mt-2 font-body font-medium hover:underline"
                 data-ocid="dashboard.usage.quicklink.link"
               >
-                View usage <ArrowUpRight className="w-3 h-3" />
+                {t("dashboard.view_all")} <ArrowUpRight className="w-3 h-3" />
               </Link>
             </div>
           </CardContent>
@@ -226,10 +228,10 @@ function DashboardContent() {
           <CardContent className="p-5 flex items-center justify-between gap-4 flex-wrap">
             <div>
               <p className="font-display font-semibold text-foreground">
-                Upgrade to Pro
+                {t("dashboard.upgrade_pro")}
               </p>
               <p className="text-xs text-muted-foreground mt-0.5">
-                Get 2,500 API calls/day for just ₹49/month.
+                {t("dashboard.upgrade_desc")}
               </p>
             </div>
             <Button
@@ -238,7 +240,7 @@ function DashboardContent() {
               size="sm"
               data-ocid="dashboard.upgrade.button"
             >
-              <Link to="/panel/billing">Upgrade Now</Link>
+              <Link to="/panel/billing">{t("billing.upgrade_now")}</Link>
             </Button>
           </CardContent>
         </Card>

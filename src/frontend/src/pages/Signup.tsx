@@ -106,7 +106,7 @@ export function SignupPage() {
                 <Input
                   id="firstName"
                   type="text"
-                  placeholder="John"
+                  placeholder={t("auth.first_name_placeholder")}
                   autoComplete="given-name"
                   className={`h-11 pl-10 bg-background/60 border-border transition-colors ${
                     errors.firstName
@@ -139,7 +139,7 @@ export function SignupPage() {
                 <Input
                   id="lastName"
                   type="text"
-                  placeholder="Doe"
+                  placeholder={t("auth.last_name_placeholder")}
                   autoComplete="family-name"
                   className={`h-11 pl-10 bg-background/60 border-border transition-colors ${
                     errors.lastName
@@ -174,7 +174,7 @@ export function SignupPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="you@example.com"
+                placeholder={t("auth.email_placeholder")}
                 autoComplete="email"
                 className={`h-11 pl-10 bg-background/60 border-border transition-colors ${
                   errors.email

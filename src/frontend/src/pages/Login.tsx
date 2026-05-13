@@ -133,7 +133,7 @@ export function LoginPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="you@example.com"
+                placeholder={t("auth.email_placeholder")}
                 autoComplete="email"
                 className={`h-11 pl-10 bg-background/60 border-border transition-colors ${
                   errors.email

@@ -205,9 +205,6 @@ const FAQS = [
   },
 ];
 
-function calcPrice(base: number, billing: BillingCycle): number {
-  return billing === "yearly" ? Math.round(base * 0.7 * 100) / 100 : base;
-}
 function formatRupees(v: number): string {
   return `₹${v}`;
 }
@@ -336,50 +333,70 @@ export function PricingPage() {
               Start free, upgrade when you need more. All plans include all
               endpoints and 30+ equalizer presets.
             </p>
-            {/* Billing toggle */}
+            {/* Billing toggle — segmented pill control */}
             <motion.div
-              className="flex items-center justify-center gap-3 mt-8"
+              className="flex flex-col items-center gap-3 mt-8"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
               data-ocid="pricing.billing_toggle"
             >
-              <span
-                className={`text-sm font-body transition-colors ${billing === "monthly" ? "text-foreground" : "text-muted-foreground"}`}
-              >
-                Monthly
-              </span>
-              <button
-                type="button"
-                onClick={() =>
-                  setBilling((b) => (b === "monthly" ? "yearly" : "monthly"))
-                }
-                data-ocid="pricing.billing_toggle.switch"
-                className={`relative w-12 h-6 rounded-full border transition-smooth ${billing === "yearly" ? "bg-primary border-primary" : "bg-muted border-border"}`}
-                role="switch"
-                aria-checked={billing === "yearly"}
-              >
-                <span
-                  className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all duration-200 ${billing === "yearly" ? "left-7" : "left-1"}`}
+              <div className="relative inline-flex items-center p-1 rounded-full bg-muted/60 border border-border shadow-inner">
+                {/* Sliding active pill */}
+                <motion.span
+                  layoutId="billing-pill"
+                  className="absolute inset-y-1 rounded-full gradient-primary shadow-md shadow-primary/30 pointer-events-none"
+                  style={{
+                    left: billing === "monthly" ? "4px" : "calc(50%)",
+                    width: "calc(50% - 4px)",
+                  }}
+                  transition={{ type: "spring", stiffness: 380, damping: 36 }}
                 />
-              </button>
-              <span
-                className={`text-sm font-body transition-colors ${billing === "yearly" ? "text-foreground" : "text-muted-foreground"}`}
-              >
-                Yearly
-              </span>
+                <button
+                  type="button"
+                  onClick={() => setBilling("monthly")}
+                  data-ocid="pricing.billing_toggle.monthly"
+                  className={`relative z-10 px-6 py-2 rounded-full text-sm font-display font-semibold transition-colors duration-200 min-w-[110px] ${
+                    billing === "monthly"
+                      ? "text-white"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  Monthly
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setBilling("yearly")}
+                  data-ocid="pricing.billing_toggle.yearly"
+                  className={`relative z-10 flex items-center justify-center gap-2 px-6 py-2 rounded-full text-sm font-display font-semibold transition-colors duration-200 min-w-[110px] ${
+                    billing === "yearly"
+                      ? "text-white"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  Yearly
+                  <span
+                    className={`inline-flex items-center text-[10px] font-bold px-1.5 py-0.5 rounded-full transition-all duration-200 ${
+                      billing === "yearly"
+                        ? "bg-white/20 text-white"
+                        : "bg-emerald-500/15 text-emerald-500"
+                    }`}
+                  >
+                    −30%
+                  </span>
+                </button>
+              </div>
               <AnimatePresence>
                 {billing === "yearly" && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.7 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.7 }}
+                  <motion.p
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
                     transition={{ duration: 0.2 }}
+                    className="text-xs text-emerald-500 font-body font-medium"
                   >
-                    <Badge className="gradient-primary text-white text-[10px] font-display">
-                      Save 30%
-                    </Badge>
-                  </motion.div>
+                    🎉 You save 30% with yearly billing
+                  </motion.p>
                 )}
               </AnimatePresence>
             </motion.div>
@@ -622,9 +639,17 @@ function PlanCard({
 }) {
   const ripple = useRipple();
   const { t } = useTranslation();
-  const calcedPrice = plan.monthlyPrice
-    ? calcPrice(plan.monthlyPrice, billing)
+
+  // Yearly price calculations
+  const monthlyEquiv = plan.monthlyPrice
+    ? Math.round(plan.monthlyPrice * 0.7 * 100) / 100
     : null;
+  const yearlyTotal = plan.monthlyPrice
+    ? Math.round(plan.monthlyPrice * 12 * 0.7 * 100) / 100
+    : null;
+
+  // For monthly, duration selector controls months; for yearly, always 12mo
+  const effectiveDuration = billing === "yearly" ? 12 : duration;
 
   return (
     <motion.div
@@ -657,7 +682,9 @@ function PlanCard({
       >
         <div className="mb-4">
           <h3
-            className={`font-display font-bold text-base mb-1 ${plan.highlight ? "text-primary" : "text-foreground"}`}
+            className={`font-display font-bold text-base mb-1 ${
+              plan.highlight ? "text-primary" : "text-foreground"
+            }`}
           >
             {plan.name}
           </h3>
@@ -677,24 +704,59 @@ function PlanCard({
               </span>
             </div>
           ) : (
-            <div className="mb-1">
-              <div className="flex items-baseline gap-1">
-                <span className="font-display font-extrabold text-3xl text-foreground leading-none">
-                  {formatRupees(calcedPrice!)}
-                </span>
-                <span className="text-xs text-muted-foreground">
-                  {t("pricing.per_month")}
-                </span>
-              </div>
-              {billing === "yearly" && (
-                <p className="text-[11px] text-muted-foreground font-body mt-0.5">
-                  <span className="line-through">
-                    {formatRupees(plan.monthlyPrice!)}
-                  </span>{" "}
-                  billed yearly
-                </p>
+            <AnimatePresence mode="wait">
+              {billing === "monthly" ? (
+                <motion.div
+                  key="monthly-price"
+                  className="mb-1"
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="flex items-baseline gap-1">
+                    <span className="font-display font-extrabold text-3xl text-foreground leading-none">
+                      {formatRupees(plan.monthlyPrice!)}
+                    </span>
+                    <span className="text-xs text-muted-foreground">
+                      {t("pricing.per_month")}
+                    </span>
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="yearly-price"
+                  className="mb-1"
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {/* Discounted per-month price */}
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="font-display font-extrabold text-3xl text-foreground leading-none">
+                      {formatRupees(monthlyEquiv!)}
+                    </span>
+                    <span className="text-xs text-muted-foreground">
+                      {t("pricing.per_month")}
+                    </span>
+                    {/* Strikethrough original */}
+                    <span className="text-sm text-muted-foreground/60 line-through font-body ml-0.5">
+                      {formatRupees(plan.monthlyPrice!)}
+                    </span>
+                  </div>
+                  {/* Total yearly payment */}
+                  <div className="flex items-center gap-1.5 mt-1.5">
+                    <span className="text-[11px] font-body font-medium text-emerald-500">
+                      Billed {formatRupees(yearlyTotal!)}/year
+                    </span>
+                    <span className="inline-flex items-center text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                      SAVE 30%
+                    </span>
+                  </div>
+                </motion.div>
               )}
-            </div>
+            </AnimatePresence>
           )}
           <Badge
             variant="outline"
@@ -714,37 +776,75 @@ function PlanCard({
               className="flex items-start gap-2 text-xs text-foreground font-body"
             >
               <Check
-                className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${plan.highlight ? "text-primary" : "text-muted-foreground"}`}
+                className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${
+                  plan.highlight ? "text-primary" : "text-muted-foreground"
+                }`}
               />
               <span>{f}</span>
             </li>
           ))}
         </ul>
+        {/* Duration selector: show for monthly only; yearly is always 12mo */}
         {!plan.business && plan.monthlyPrice !== 0 && (
           <div className="mb-4">
-            <p className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider mb-2">
-              Duration
-            </p>
-            <div
-              className="grid grid-cols-4 gap-1"
-              data-ocid={`pricing.${plan.code}.duration_selector`}
-            >
-              {DURATIONS.map((d) => (
-                <button
-                  key={d}
-                  type="button"
-                  onClick={() => onDurationChange(d)}
-                  data-ocid={`pricing.${plan.code}.duration.${d}mo`}
-                  className={`py-1 text-[11px] font-mono rounded border transition-smooth ${
-                    duration === d
-                      ? "bg-primary/15 border-primary/50 text-primary"
-                      : "border-border text-muted-foreground hover:border-primary/30 hover:text-foreground"
-                  }`}
+            <AnimatePresence mode="wait">
+              {billing === "monthly" ? (
+                <motion.div
+                  key="duration-selector"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  {d}mo
-                </button>
-              ))}
-            </div>
+                  <p className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider mb-2">
+                    Duration
+                  </p>
+                  <div
+                    className="grid grid-cols-4 gap-1"
+                    data-ocid={`pricing.${plan.code}.duration_selector`}
+                  >
+                    {DURATIONS.map((d) => (
+                      <button
+                        key={d}
+                        type="button"
+                        onClick={() => onDurationChange(d)}
+                        data-ocid={`pricing.${plan.code}.duration.${d}mo`}
+                        className={`py-1 text-[11px] font-mono rounded border transition-smooth ${
+                          duration === d
+                            ? "bg-primary/15 border-primary/50 text-primary"
+                            : "border-border text-muted-foreground hover:border-primary/30 hover:text-foreground"
+                        }`}
+                      >
+                        {d}mo
+                      </button>
+                    ))}
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="yearly-locked"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <p className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider mb-2">
+                    Duration
+                  </p>
+                  <div
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/5"
+                    data-ocid={`pricing.${plan.code}.duration_selector`}
+                  >
+                    <span className="text-[11px] font-mono text-emerald-500 font-semibold">
+                      12 months
+                    </span>
+                    <span className="text-[10px] text-emerald-500/70 font-body">
+                      · 30% off applied
+                    </span>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         )}
         {plan.href ? (
@@ -781,9 +881,9 @@ function PlanCard({
               data-ocid={`pricing.plan.cta.${index + 1}`}
             >
               {plan.cta}
-              {billing === "yearly" && plan.monthlyPrice && (
-                <span className="ml-1 opacity-70">({duration}mo)</span>
-              )}
+              {billing === "yearly" && plan.monthlyPrice ? (
+                <span className="ml-1 opacity-70">({effectiveDuration}mo)</span>
+              ) : null}
             </Button>
           </a>
         )}

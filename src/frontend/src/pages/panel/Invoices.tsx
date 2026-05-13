@@ -13,7 +13,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { getInvoicePdfUrl, getInvoices } from "@/lib/api";
-import type { Invoice, InvoiceStatus } from "@/types/index";
+import { PLAN_LABELS } from "@/types/index";
+import type { Invoice, InvoiceStatus, PlanCode } from "@/types/index";
 import { useQuery } from "@tanstack/react-query";
 import {
   ChevronLeft,
@@ -30,13 +31,6 @@ const STATUS_STYLES: Record<InvoiceStatus, string> = {
   paid: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
   pending: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
   failed: "bg-destructive/10 text-destructive border-destructive/20",
-};
-
-const PLAN_LABELS_MAP: Record<string, string> = {
-  free: "Free",
-  pro: "Pro",
-  pro_plus: "Pro Plus",
-  business: "Business",
 };
 
 const PAGE_SIZE = 10;
@@ -235,7 +229,7 @@ export function InvoicesPage() {
                         {inv.invoice_no}
                       </TableCell>
                       <TableCell className="text-sm font-medium py-4">
-                        {PLAN_LABELS_MAP[inv.plan] ?? inv.plan}
+                        {PLAN_LABELS[inv.plan as PlanCode] ?? inv.plan}
                       </TableCell>
                       <TableCell className="text-sm text-muted-foreground py-4">
                         {inv.months}&nbsp;
@@ -319,7 +313,7 @@ export function InvoicesPage() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-sm font-semibold text-foreground">
-                        {PLAN_LABELS_MAP[inv.plan] ?? inv.plan}
+                        {PLAN_LABELS[inv.plan as PlanCode] ?? inv.plan}
                       </p>
                       <p className="text-xs text-muted-foreground mt-0.5">
                         {inv.months}&nbsp;

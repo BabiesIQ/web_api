@@ -1,10 +1,5 @@
-import {
-  CYCLE_ORDER,
-  applyThemeToDOM,
-  useThemeMode,
-} from "@/hooks/useThemeMode";
+import { CYCLE_ORDER, useThemeMode } from "@/hooks/useThemeMode";
 import type { ThemeMode } from "@/hooks/useThemeMode";
-import { useRef } from "react";
 
 const THEME_BG: Record<ThemeMode, string> = {
   light: "#f8f8fc",
@@ -13,8 +8,7 @@ const THEME_BG: Record<ThemeMode, string> = {
 };
 
 export function ThemeSwitcher() {
-  const { theme } = useThemeMode();
-  const isAnimatingRef = useRef(false);
+  const { theme, setTheme, isAnimatingRef } = useThemeMode();
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
     if (isAnimatingRef.current) return;
@@ -24,74 +18,44 @@ export function ThemeSwitcher() {
     const y = e.clientY;
     const currentIdx = CYCLE_ORDER.indexOf(theme);
     const nextTheme = CYCLE_ORDER[(currentIdx + 1) % CYCLE_ORDER.length];
-    const goingToLight = nextTheme === "light";
 
+    // Apply the new theme immediately — it sits underneath the overlay
+    setTheme(nextTheme);
+
+    // Overlay = OLD theme's bg color. It starts covering the full viewport
+    // and contracts toward the click point, revealing the new theme beneath.
     const overlay = document.createElement("div");
     overlay.style.cssText = [
       "position:fixed",
       "inset:0",
       "z-index:9998",
       "pointer-events:none",
-      `background:${THEME_BG[nextTheme]}`,
+      `background:${THEME_BG[theme]}`,
       "will-change:clip-path",
+      `clip-path:circle(200vmax at ${x}px ${y}px)`,
     ].join(";");
+    document.body.appendChild(overlay);
 
-    if (goingToLight) {
-      // Light circle EXPANDS from click point: start small, grow to cover screen
-      overlay.style.clipPath = `circle(0px at ${x}px ${y}px)`;
-      document.body.appendChild(overlay);
-
-      // Trigger expansion on next paint
+    // Double rAF ensures the browser has painted the start state before
+    // the transition begins — prevents the "no animation" flash.
+    requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          overlay.style.transition =
-            "clip-path 520ms cubic-bezier(0.4,0,0.2,1)";
-          overlay.style.clipPath = `circle(200vmax at ${x}px ${y}px)`;
-        });
+        overlay.style.transition = "clip-path 500ms cubic-bezier(0.4,0,0.2,1)";
+        overlay.style.clipPath = `circle(0px at ${x}px ${y}px)`;
       });
+    });
 
-      // Once expanded, switch theme and fade overlay out
-      let done = false;
-      const onExpanded = () => {
-        if (done) return;
-        done = true;
-        applyThemeToDOM(nextTheme);
-        overlay.style.transition = "opacity 180ms ease";
-        overlay.style.opacity = "0";
-        setTimeout(() => {
-          overlay.remove();
-          isAnimatingRef.current = false;
-        }, 200);
-      };
-      overlay.addEventListener("transitionend", onExpanded, { once: true });
-      setTimeout(onExpanded, 560);
-    } else {
-      // Dark/Midnight: apply new theme FIRST (shows behind overlay)
-      applyThemeToDOM(nextTheme);
-
-      // Overlay shows the OLD (light) color, then CONTRACTS to click point
-      overlay.style.background = THEME_BG[theme];
-      overlay.style.clipPath = `circle(200vmax at ${x}px ${y}px)`;
-      document.body.appendChild(overlay);
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          overlay.style.transition =
-            "clip-path 520ms cubic-bezier(0.4,0,0.2,1)";
-          overlay.style.clipPath = `circle(0px at ${x}px ${y}px)`;
-        });
-      });
-
-      let done = false;
-      const onContracted = () => {
-        if (done) return;
-        done = true;
-        overlay.remove();
-        isAnimatingRef.current = false;
-      };
-      overlay.addEventListener("transitionend", onContracted, { once: true });
-      setTimeout(onContracted, 560);
-    }
+    let cleaned = false;
+    const cleanup = () => {
+      if (cleaned) return;
+      cleaned = true;
+      overlay.remove();
+      isAnimatingRef.current = false;
+    };
+    // transitionend fires when clip-path finishes
+    overlay.addEventListener("transitionend", cleanup, { once: true });
+    // Fallback: ensure cleanup even if transitionend misfires
+    setTimeout(cleanup, 560);
   }
 
   const ariaLabels: Record<ThemeMode, string> = {
@@ -107,6 +71,8 @@ export function ThemeSwitcher() {
       aria-label={ariaLabels[theme]}
       title={ariaLabels[theme]}
       data-ocid="theme_switcher.toggle"
+      disabled={false}
+      style={{ pointerEvents: "auto" }}
       className="relative w-10 h-10 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground bg-transparent hover:bg-muted border border-transparent hover:border-border transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLButtonElement).style.boxShadow =
@@ -197,5 +163,3 @@ function SparklesIcon() {
     </svg>
   );
 }
-
-export { applyThemeToDOM };
