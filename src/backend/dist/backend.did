@@ -1,0 +1,84 @@
+type UserProfilePublic = 
+ record {
+   createdAt: Timestamp;
+   email: opt text;
+   id: UserId;
+   organizationName: opt text;
+   subscriptionTier: SubscriptionTier;
+ };
+type UserId = principal;
+type UsageStats = 
+ record {
+   dailyBreakdown: vec record {
+                         text;
+                         nat;
+                       };
+   modelBreakdown: vec record {
+                         text;
+                         nat;
+                       };
+   totalRequests: nat;
+ };
+type UpdateUserInput = 
+ record {
+   email: opt text;
+   organizationName: opt text;
+   subscriptionTier: opt SubscriptionTier;
+ };
+type Timestamp = int;
+type SubscriptionTier = 
+ variant {
+   enterprise;
+   free;
+   pro;
+   starter;
+ };
+type RecordUsageInput = record {modelName: text;};
+type CreateUserInput = 
+ record {
+   email: opt text;
+   organizationName: opt text;
+ };
+type CreateApiKeyResult = 
+ record {
+   key: ApiKeyPublic;
+   rawKey: text;
+ };
+type CreateApiKeyInput = record {name: text;};
+type ContactSubmission = 
+ record {
+   email: text;
+   id: nat;
+   message: text;
+   name: text;
+   subject: text;
+   submittedAt: Timestamp;
+ };
+type ContactInput = 
+ record {
+   email: text;
+   message: text;
+   name: text;
+   subject: text;
+ };
+type ApiKeyPublic = 
+ record {
+   createdAt: Timestamp;
+   id: nat;
+   isActive: bool;
+   keyHash: text;
+   lastUsedAt: opt Timestamp;
+   name: text;
+   owner: UserId;
+ };
+service : {
+  createApiKey: (input: CreateApiKeyInput) -> (CreateApiKeyResult);
+  createUser: (input: CreateUserInput) -> (UserProfilePublic);
+  deleteApiKey: (keyId: nat) -> (bool);
+  getUsageStats: () -> (UsageStats) query;
+  getUser: () -> (opt UserProfilePublic) query;
+  listApiKeys: () -> (vec ApiKeyPublic) query;
+  recordUsage: (input: RecordUsageInput) -> ();
+  submitContact: (input: ContactInput) -> (ContactSubmission);
+  updateUser: (input: UpdateUserInput) -> (opt UserProfilePublic);
+}

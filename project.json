@@ -1,0 +1,27 @@
+{
+  "overview": "BabyAPI is a modern React frontend for a live YouTube-based audio/video streaming API SaaS. It connects to an existing PHP backend at babyapi.pro for all data, authentication, and payments — with a premium dark-mode dashboard for API key management, usage tracking, billing, and notifications.",
+  "features": [
+    "API key generation and management",
+    "7-day usage chart with status tracking",
+    "Razorpay billing with plan upgrade flow",
+    "Invoice history with PDF download",
+    "Notification center with timeline view",
+    "Profile settings with avatar upload",
+    "OTP-based email verification",
+    "Google OAuth login",
+    "Dark/light mode toggle",
+    "Interactive API docs with Try-It widget"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "api",
+    "saas",
+    "dashboard",
+    "react",
+    "youtube",
+    "streaming",
+    "billing",
+    "razorpay"
+  ],
+  "last_updated": "2026-04-28T03:10:38.549Z"
+}

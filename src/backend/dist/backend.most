@@ -1,0 +1,79 @@
+// Version: 1.0.0
+type ApiKey__654816196 =
+  {
+    createdAt : Timestamp__346424759;
+    id : Nat;
+    var isActive : Bool;
+    keyHash : Text;
+    var lastUsedAt : ?Timestamp__346424759;
+    var name : Text;
+    owner : UserId__575046295
+  };
+type ContactSubmission__93684224 =
+  {
+    email : Text;
+    id : Nat;
+    message : Text;
+    name : Text;
+    subject : Text;
+    submittedAt : Timestamp__306786231
+  };
+type Int__270357528 = Int__616954475;
+type Int__616954475 = Int;
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type SubscriptionTier__1002661542 = SubscriptionTier__75232000;
+type SubscriptionTier__75232000 = {#enterprise; #free; #pro; #starter};
+type Time__796480547 = Int__270357528;
+type Time__900049286 = Time__796480547;
+type Timestamp__301639476 = Time__900049286;
+type Timestamp__306786231 = Timestamp__301639476;
+type Timestamp__346424759 = Timestamp__301639476;
+type Timestamp__778030842 = Timestamp__301639476;
+type UsageRecord__217514976 =
+  {
+    date : Text;
+    modelName : Text;
+    var requestCount : Nat;
+    userId : UserId__327550946
+  };
+type UserId__1043627770 = UserId__158757552;
+type UserId__158757552 = Principal;
+type UserId__327550946 = UserId__158757552;
+type UserId__575046295 = UserId__158757552;
+type UserProfile__277265826 =
+  {
+    createdAt : Timestamp__778030842;
+    var email : ?Text;
+    id : UserId__1043627770;
+    var organizationName : ?Text;
+    var subscriptionTier : SubscriptionTier__1002661542
+  };
+actor {
+  stable apiKeys :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ApiKey__654816196]];
+      var elementIndex : Nat__490723111
+    };
+  stable contactSubmissions :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?ContactSubmission__93684224]];
+      var elementIndex : Nat__490723111
+    };
+  stable var nextContactId : Nat;
+  stable var nextKeyId : Nat;
+  stable usageRecords :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?UsageRecord__217514976]];
+      var elementIndex : Nat__490723111
+    };
+  stable users :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?UserProfile__277265826]];
+      var elementIndex : Nat__490723111
+    }
+};
