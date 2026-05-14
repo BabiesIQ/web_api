@@ -320,7 +320,7 @@ function DashboardKeysContent() {
             <DialogDescription className="font-body">
               {activeKey
                 ? "Generating a new key will permanently revoke your current key. Any services using the old key will stop working immediately."
-                : "Generate a new API key to start making requests to BabyAPI."}
+                : "Generate a new API key to start making requests to BabiesIQ."}
             </DialogDescription>
           </DialogHeader>
 

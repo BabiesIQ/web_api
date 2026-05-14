@@ -1,13 +1,14 @@
 import { Layout } from "@/components/Layout";
 import { Link } from "@tanstack/react-router";
 import { RefreshCw } from "lucide-react";
+import { motion } from "motion/react";
 
 const SECTIONS = [
   {
     id: "overview",
     title: "1. Refund Policy Overview",
     content: [
-      "BabyAPI offers a 7-day refund policy for paid plan purchases (Pro and Pro Plus).",
+      "BabiesIQ offers a 7-day refund policy for paid plan purchases (Pro and Pro Plus).",
       "Business plan purchases are subject to custom terms agreed upon at the time of purchase.",
       "Refunds are processed back to the original payment method used during purchase.",
       "We do not offer refunds for the Free plan (as it is free).",
@@ -37,7 +38,7 @@ const SECTIONS = [
     id: "how-to-request",
     title: "4. How to Request a Refund",
     content: [
-      "Step 1: Email contact@babyapi.pro with the subject 'Refund Request'.",
+      "Step 1: Email support@babiesiq.com with the subject 'Refund Request'.",
       "Step 2: Include your registered email address and invoice number (found in Panel → Invoices).",
       "Step 3: Briefly describe the reason for your refund request.",
       "Step 4: Our team will review your request within 2 business days.",
@@ -69,7 +70,7 @@ const SECTIONS = [
     id: "contact",
     title: "7. Contact for Refunds",
     content: [
-      "Email: contact@babyapi.pro",
+      "Email: support@babiesiq.com",
       "Subject: Refund Request",
       "Include: Your account email and invoice number",
       "Response time: Within 2 business days",
@@ -110,7 +111,13 @@ function PolicySection({
 export function RefundPage() {
   return (
     <Layout>
-      <div className="bg-background min-h-screen" data-ocid="refund.page">
+      <motion.div
+        className="bg-background min-h-screen"
+        data-ocid="refund.page"
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.38, ease: "easeOut" }}
+      >
         <div className="bg-card border-b border-border px-4 py-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-3">
@@ -163,7 +170,7 @@ export function RefundPage() {
               <PolicySection key={s.id} {...s} />
             ))}
             <p className="text-xs text-muted-foreground font-body mt-8 pt-6 border-t border-border">
-              For refund requests, email contact@babyapi.pro or visit our{" "}
+              For refund requests, email support@babiesiq.com or visit our{" "}
               <Link to="/contact" className="text-primary hover:underline">
                 contact page
               </Link>
@@ -171,7 +178,7 @@ export function RefundPage() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Layout>
   );
 }

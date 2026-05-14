@@ -1,13 +1,14 @@
 import { Layout } from "@/components/Layout";
 import { Link } from "@tanstack/react-router";
 import { Shield } from "lucide-react";
+import { motion } from "motion/react";
 
 const SECTIONS = [
   {
     id: "data-collection",
     title: "1. Data We Collect",
     content: [
-      "When you register and use BabyAPI, we collect:",
+      "When you register and use BabiesIQ, we collect:",
       "Account Information: Email address, hashed password, and display name provided during signup.",
       "Profile Data: Optional fields including first name, last name, and country.",
       "Usage Data: API call counts per day and associated status for rate limit enforcement.",
@@ -71,7 +72,7 @@ const SECTIONS = [
     id: "contact",
     title: "7. Contact & Your Rights",
     content: [
-      "For privacy questions, data access, correction, or deletion requests: contact@babyapi.pro",
+      "For privacy questions, data access, correction, or deletion requests: support@babiesiq.com",
       "You have the right to request a copy of your data, correction of inaccurate data, and deletion of your data.",
       "We will respond to all legitimate requests within 30 days.",
     ],
@@ -111,7 +112,13 @@ function PolicySection({
 export function PrivacyPage() {
   return (
     <Layout>
-      <div className="bg-background min-h-screen" data-ocid="privacy.page">
+      <motion.div
+        className="bg-background min-h-screen"
+        data-ocid="privacy.page"
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.38, ease: "easeOut" }}
+      >
         <div className="bg-card border-b border-border px-4 py-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-3">
@@ -151,15 +158,15 @@ export function PrivacyPage() {
 
           <div className="flex-1 min-w-0">
             <p className="text-sm text-muted-foreground font-body leading-relaxed mb-8 p-4 rounded-lg bg-card border border-border">
-              This Privacy Policy describes how BabyAPI collects, uses, and
+              This Privacy Policy describes how BabiesIQ collects, uses, and
               protects information when you use our API service at{" "}
               <a
-                href="https://babyapi.pro"
+                href="https://babiesiq.com"
                 className="text-primary hover:underline"
               >
-                babyapi.pro
+                babiesiq.com
               </a>
-              . By using BabyAPI, you agree to the practices described in this
+              . By using BabiesIQ, you agree to the practices described in this
               policy.
             </p>
             {SECTIONS.map((s) => (
@@ -174,7 +181,7 @@ export function PrivacyPage() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Layout>
   );
 }

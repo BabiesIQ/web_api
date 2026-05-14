@@ -392,7 +392,7 @@ function DeveloperGirlScene() {
             fill="oklch(0.5 0.01 260)"
             fontFamily="monospace"
           >
-            BabyAPI Console
+            BabiesIQ Console
           </text>
           <text
             x="97"
@@ -725,7 +725,7 @@ function DeveloperGirlScene() {
             <div className="w-3 h-3 rounded-full bg-emerald-500/70" />
           </div>
           <span className="text-[10px] font-mono text-muted-foreground ml-2">
-            BabyAPI Console
+            BabiesIQ Console
           </span>
           <div className="ml-auto flex items-center gap-1">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -1173,7 +1173,7 @@ export function HomePage() {
                   <div className="w-3 h-3 rounded-full bg-emerald-500/70" />
                 </div>
                 <span className="text-[10px] font-mono text-muted-foreground ml-2">
-                  BabyAPI Console
+                  BabiesIQ Console
                 </span>
                 <div className="ml-auto flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />

@@ -7,7 +7,7 @@ const TEST_MOCK_USER: MeResponse = {
   user: {
     id: 1,
     uuid: "test-uuid",
-    email: "demo@babyapi.pro",
+    email: "demo@babiesiq.com",
     role: "pro",
     status: "active",
     avatar: null,

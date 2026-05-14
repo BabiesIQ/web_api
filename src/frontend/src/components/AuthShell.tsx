@@ -84,7 +84,7 @@ export function AuthShell({ children }: AuthShellProps) {
               <Activity className="w-5 h-5 text-white" />
             </div>
             <span className="font-display font-bold text-xl tracking-tight text-white">
-              Baby<span className="opacity-60">API</span>
+              Babies<span className="opacity-60">IQ</span>
             </span>
           </Link>
 
@@ -237,8 +237,8 @@ export function AuthShell({ children }: AuthShellProps) {
               <Activity className="w-4 h-4 text-white" />
             </div>
             <span className="font-display font-bold text-lg tracking-tight">
-              <span className="text-primary">Baby</span>
-              <span className="text-foreground">API</span>
+              <span className="text-primary">Babies</span>
+              <span className="text-foreground">IQ</span>
             </span>
           </Link>
         </div>

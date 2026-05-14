@@ -175,8 +175,7 @@ func main() {
 }`,
 
     Rust: `use reqwest;
-import { useTranslation } from "react-i18next";
-import { useTranslation } from "react-i18next";
+use std::fs;
 use std::fs;
 use serde_json::Value;
 
@@ -586,7 +585,7 @@ export function DocsPage() {
               API Documentation
             </h1>
             <p className="text-sm text-muted-foreground font-body">
-              Complete guide to BabyAPI — YouTube audio/video streaming made
+              Complete guide to BabiesIQ — YouTube audio/video streaming made
               simple.
             </p>
           </div>
@@ -647,10 +646,10 @@ export function DocsPage() {
               <SectionHeading
                 id="overview"
                 title={t("docs.section_overview")}
-                subtitle="BabyAPI gives you programmatic access to YouTube audio & video streaming."
+                subtitle="BabiesIQ gives you programmatic access to YouTube audio & video streaming."
               />
               <p className="text-sm text-muted-foreground font-body leading-relaxed mb-4">
-                BabyAPI is a REST API service that lets you search YouTube,
+                BabiesIQ is a REST API service that lets you search YouTube,
                 extract audio and video stream URLs, apply 30+ equalizer
                 presets, and stream with seek support. All via simple GET
                 requests to{" "}

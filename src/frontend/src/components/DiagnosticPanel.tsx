@@ -273,7 +273,7 @@ export function DiagnosticPanel() {
           >
             <div>
               <p className="text-sm font-semibold text-white">
-                BabyAPI Backend Diagnostics
+                BabiesIQ Backend Diagnostics
               </p>
               <p
                 className="text-xs mt-0.5"

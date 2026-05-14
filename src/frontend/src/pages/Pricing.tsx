@@ -197,7 +197,7 @@ const FAQS = [
   },
   {
     q: "How does the 30-day refund policy work?",
-    a: "If you're not happy with BabyAPI within 30 days of your first purchase, email us at contact@babyapi.pro and we'll process a full refund immediately. We believe in earning your trust, not locking you in.",
+    a: "If you're not happy with BabiesIQ within 30 days of your first purchase, email us at support@babiesiq.com and we'll process a full refund immediately. We believe in earning your trust, not locking you in.",
   },
   {
     q: "What payment methods do you accept?",
@@ -552,7 +552,7 @@ export function PricingPage() {
               Frequently asked questions
             </h2>
             <p className="text-sm text-muted-foreground font-body">
-              Everything you need to know about BabyAPI pricing.
+              Everything you need to know about BabiesIQ pricing.
             </p>
           </motion.div>
           <div className="space-y-3">
@@ -592,7 +592,7 @@ export function PricingPage() {
                 30-Day Satisfaction Guarantee
               </h2>
               <p className="text-sm text-muted-foreground font-body leading-relaxed">
-                Not happy with BabyAPI? Contact us within 30 days of your
+                Not happy with BabiesIQ? Contact us within 30 days of your
                 purchase for a full refund — no questions asked. We stand behind
                 the quality of our service.
               </p>

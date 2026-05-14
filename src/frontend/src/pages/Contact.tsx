@@ -256,8 +256,8 @@ export function ContactPage() {
                 {
                   icon: Mail,
                   title: "Email",
-                  value: "contact@babyapi.pro",
-                  href: "mailto:contact@babyapi.pro",
+                  value: "support@babiesiq.com",
+                  href: "mailto:support@babiesiq.com",
                 },
                 {
                   icon: MessageSquare,
@@ -304,8 +304,8 @@ export function ContactPage() {
               ))}
               <div className="bg-card border border-border rounded-xl p-5 text-center">
                 <p className="font-display font-bold text-2xl mb-1">
-                  <span className="text-primary">Baby</span>
-                  <span className="text-foreground">API</span>
+                  <span className="text-primary">Babies</span>
+                  <span className="text-foreground">IQ</span>
                 </p>
                 <p className="text-xs text-muted-foreground font-body">
                   YouTube Audio and Video Streaming API

@@ -1,13 +1,14 @@
 import { Layout } from "@/components/Layout";
 import { Link } from "@tanstack/react-router";
 import { FileText } from "lucide-react";
+import { motion } from "motion/react";
 
 const SECTIONS = [
   {
     id: "acceptance",
     title: "1. Acceptance of Terms",
     content: [
-      "By accessing or using BabyAPI at babyapi.pro, you agree to be bound by these Terms of Service.",
+      "By accessing or using BabiesIQ at babiesiq.com, you agree to be bound by these Terms of Service.",
       "If you do not agree to these terms, you must not use the service.",
       "We reserve the right to update these terms at any time. Continued use after changes constitutes acceptance.",
       "You must be at least 18 years old or have parental consent to use this service.",
@@ -17,7 +18,7 @@ const SECTIONS = [
     id: "service",
     title: "2. Service Description",
     content: [
-      "BabyAPI provides a REST API for accessing YouTube-based audio and video streaming capabilities.",
+      "BabiesIQ provides a REST API for accessing YouTube-based audio and video streaming capabilities.",
       "The service includes search, audio extraction, video extraction, streaming with equalizer presets, and seek functionality.",
       "Access is provided through API keys, which are tied to your account and subscription plan.",
       "We reserve the right to modify, suspend, or discontinue any part of the service at any time with reasonable notice.",
@@ -28,7 +29,7 @@ const SECTIONS = [
     title: "3. User Obligations",
     content: [
       "You are responsible for maintaining the confidentiality of your API key. Do not share it publicly.",
-      "You must not use BabyAPI for any unlawful purpose or in violation of any regulations.",
+      "You must not use BabiesIQ for any unlawful purpose or in violation of any regulations.",
       "You must not attempt to circumvent rate limits, access controls, or security measures.",
       "You must not use the service to stream copyrighted content in violation of applicable copyright law.",
       "You must not use automated scripts to exceed your plan's daily request limits.",
@@ -71,9 +72,9 @@ const SECTIONS = [
     id: "liability",
     title: "7. Limitation of Liability",
     content: [
-      "BabyAPI is provided on an 'as is' and 'as available' basis without any warranties of any kind.",
+      "BabiesIQ is provided on an 'as is' and 'as available' basis without any warranties of any kind.",
       "We do not guarantee 100% uptime, though we target 99.9% availability.",
-      "BabyAPI is not liable for any indirect, incidental, or consequential damages arising from service use.",
+      "BabiesIQ is not liable for any indirect, incidental, or consequential damages arising from service use.",
       "Our total liability is limited to the amount paid by you in the 3 months preceding any claim.",
       "We are not responsible for YouTube's availability or content policy changes that may affect API results.",
     ],
@@ -82,9 +83,9 @@ const SECTIONS = [
     id: "contact",
     title: "8. Contact",
     content: [
-      "For questions about these Terms: contact@babyapi.pro",
-      "For billing disputes: contact@babyapi.pro with your invoice number.",
-      "For abuse reports: contact@babyapi.pro",
+      "For questions about these Terms: support@babiesiq.com",
+      "For billing disputes: support@babiesiq.com with your invoice number.",
+      "For abuse reports: support@babiesiq.com",
     ],
   },
 ];
@@ -122,7 +123,13 @@ function PolicySection({
 export function TermsPage() {
   return (
     <Layout>
-      <div className="bg-background min-h-screen" data-ocid="terms.page">
+      <motion.div
+        className="bg-background min-h-screen"
+        data-ocid="terms.page"
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.38, ease: "easeOut" }}
+      >
         <div className="bg-card border-b border-border px-4 py-10">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-2 mb-3">
@@ -162,12 +169,12 @@ export function TermsPage() {
 
           <div className="flex-1 min-w-0">
             <p className="text-sm text-muted-foreground font-body leading-relaxed mb-8 p-4 rounded-lg bg-card border border-border">
-              These Terms of Service govern your use of the BabyAPI platform at{" "}
+              These Terms of Service govern your use of the BabiesIQ platform at{" "}
               <a
-                href="https://babyapi.pro"
+                href="https://babiesiq.com"
                 className="text-primary hover:underline"
               >
-                babyapi.pro
+                babiesiq.com
               </a>
               . Please read them carefully before using the service.
             </p>
@@ -175,7 +182,7 @@ export function TermsPage() {
               <PolicySection key={s.id} {...s} />
             ))}
             <p className="text-xs text-muted-foreground font-body mt-8 pt-6 border-t border-border">
-              By using BabyAPI you acknowledge that you have read and agree to
+              By using BabiesIQ you acknowledge that you have read and agree to
               these Terms.{" "}
               <Link to="/contact" className="text-primary hover:underline">
                 Contact us
@@ -184,7 +191,7 @@ export function TermsPage() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Layout>
   );
 }

@@ -38,6 +38,7 @@ import { InvoicesPage } from "@/pages/panel/Invoices";
 import { NotificationsPage } from "@/pages/panel/Notifications";
 import { ProfileSettingsPage } from "@/pages/panel/ProfileSettings";
 import { UsagePage } from "@/pages/panel/Usage";
+import { AnimatePresence } from "motion/react";
 import { applyDocumentDir } from "./lib/i18n";
 
 // ── Root ──────────────────────────────────────────────────────────────────────
@@ -52,7 +53,9 @@ function RootComponent() {
 
   return (
     <>
-      <Outlet />
+      <AnimatePresence mode="wait">
+        <Outlet />
+      </AnimatePresence>
       <Toaster position="top-right" richColors />
       <CookieConsent />
     </>

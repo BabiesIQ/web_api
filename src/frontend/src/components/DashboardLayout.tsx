@@ -158,7 +158,7 @@ function SidebarContent({
             to="/"
             className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center"
             onClick={onNavigate}
-            aria-label="BabyAPI Home"
+            aria-label="BabiesIQ Home"
           >
             <span className="text-xs font-bold text-white">B</span>
           </Link>
@@ -168,8 +168,8 @@ function SidebarContent({
             className="font-display font-bold text-xl tracking-tight flex items-center gap-0.5"
             onClick={onNavigate}
           >
-            <span className="text-gradient">Baby</span>
-            <span className="text-foreground">API</span>
+            <span className="text-gradient">Babies</span>
+            <span className="text-foreground">IQ</span>
           </Link>
         )}
       </div>
@@ -464,7 +464,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           {/* Breadcrumb / page title */}
           <div className="flex-1 min-w-0 flex items-center gap-2">
             <span className="text-xs text-muted-foreground hidden sm:inline">
-              BabyAPI
+              BabiesIQ
             </span>
             <ChevronRight className="w-3 h-3 text-muted-foreground/50 hidden sm:inline" />
             <h1
