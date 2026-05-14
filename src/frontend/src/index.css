@@ -468,6 +468,31 @@
   }
 }
 
+/* Live indicator pulse — BabiesIQ header brand dot */
+@keyframes live-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7), 0 0 8px 2px
+      rgba(168, 85, 247, 0.5);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0), 0 0 16px 4px
+      rgba(168, 85, 247, 0.3);
+  }
+}
+.live-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a855f7;
+  animation: live-pulse 2s ease-in-out infinite;
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: center;
+}
+
 [dir="rtl"] {
   direction: rtl;
   text-align: right;

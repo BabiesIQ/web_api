@@ -29,6 +29,7 @@ import { CreatePasswordPage } from "@/pages/auth/CreatePassword";
 import { PasswordSuccessPage } from "@/pages/auth/PasswordSuccess";
 import { VerifyOtpPage } from "@/pages/auth/VerifyOtp";
 
+import { CookieConsent } from "@/components/CookieConsent";
 import { ApiKeysPage } from "@/pages/panel/ApiKeys";
 import { BillingPage } from "@/pages/panel/Billing";
 // Panel pages
@@ -46,13 +47,14 @@ function RootComponent() {
 
   useEffect(() => {
     initialize();
-    applyDocumentDir(localStorage.getItem("babyapi-lang") || "en");
+    applyDocumentDir(localStorage.getItem("babiesiq-lang") || "en");
   }, [initialize]);
 
   return (
     <>
       <Outlet />
       <Toaster position="top-right" richColors />
+      <CookieConsent />
     </>
   );
 }

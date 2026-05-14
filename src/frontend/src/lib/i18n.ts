@@ -50,7 +50,7 @@ export function applyDocumentDir(langCode: string) {
   document.documentElement.setAttribute("dir", dir);
   document.documentElement.setAttribute("lang", langCode);
   try {
-    localStorage.setItem("babyapi-lang", langCode);
+    localStorage.setItem("babiesiq-lang", langCode);
   } catch {}
 }
 
@@ -118,17 +118,17 @@ const resources = {
         newsletter_badge: "Stay Updated",
         newsletter_title: "Subscribe to Developer Updates",
         newsletter_desc:
-          "New endpoints, changelog, and exclusive tips for BabyAPI developers.",
+          "New endpoints, changelog, and exclusive tips for BabiesIQ developers.",
         subscribe: "Subscribe",
         subscribed: "Thanks for subscribing!",
         newsletter_email_invalid: "Enter a valid email address.",
-        newsletter_toast_desc: "You'll receive BabyAPI updates in your inbox.",
+        newsletter_toast_desc: "You'll receive BabiesIQ updates in your inbox.",
       },
       auth: {
         email: "Email address",
         password: "Password",
         login_title: "Welcome back",
-        login_subtitle: "Sign in to your BabyAPI account",
+        login_subtitle: "Sign in to your BabiesIQ account",
         signup_title: "Create your account",
         signup_subtitle: "Get started free — no credit card required",
         forgot_password: "Forgot password?",
@@ -221,7 +221,7 @@ const resources = {
         network_error: "Network error. Please try again.",
         invalid_code: "Invalid code.",
         account_locked: "Account temporarily locked — try again in 5 minutes.",
-        verified_welcome: "Email verified! Welcome to BabyAPI.",
+        verified_welcome: "Email verified! Welcome to BabiesIQ.",
         pwd_reset_success: "Password reset successfully!",
         missing_email_err: "Missing email — please go back and try again.",
         max_resend_reached: "Maximum resend attempts reached",
@@ -474,13 +474,13 @@ const resources = {
         testimonials_eyebrow: "Developer Stories",
         testimonials_title: "Trusted by developers worldwide",
         testimonials_subtitle:
-          "Join 300,000+ developers already building with BabyAPI.",
+          "Join 300,000+ developers already building with BabiesIQ.",
         t1_role: "Full Stack Developer",
         t1_quote:
-          "BabyAPI cut our audio integration time from weeks to hours. The EQ presets alone saved us building a whole audio processing pipeline.",
+          "BabiesIQ cut our audio integration time from weeks to hours. The EQ presets alone saved us building a whole audio processing pipeline.",
         t2_role: "Backend Engineer",
         t2_quote:
-          "We serve 50,000 daily active users with BabyAPI. The 99.9% uptime SLA is real — zero production incidents in 8 months.",
+          "We serve 50,000 daily active users with BabiesIQ. The 99.9% uptime SLA is real — zero production incidents in 8 months.",
         t3_role: "Mobile App Developer",
         t3_quote:
           "The search API is incredibly fast. Results come back in under 15ms on average. Our users noticed the difference immediately.",
@@ -492,7 +492,7 @@ const resources = {
         try_it_badge: "No signup required",
         try_it_title: "See the API in action",
         try_it_subtitle:
-          "Enter your API key and hit Send — get a real response from the BabyAPI servers instantly.",
+          "Enter your API key and hit Send — get a real response from the BabiesIQ servers instantly.",
         try_it_docs_link: "View full API docs",
         pricing_eyebrow: "Pricing",
         plan_feat_1key: "1 API key",
@@ -508,6 +508,14 @@ const resources = {
         cta_subtitle:
           "Get your free API key in 30 seconds — no credit card required.",
         cta_contact: "Contact Sales",
+      },
+      cookie: {
+        title: "Cookie Notice",
+        message:
+          "We use cookies to enhance your experience. By continuing, you consent to our use of cookies.",
+        acceptAll: "Accept All",
+        decline: "Decline",
+        learnMore: "Learn More",
       },
     },
   },
@@ -564,7 +572,7 @@ const resources = {
         email: "ईमेल पता",
         password: "पासवर्ड",
         login_title: "वापस स्वागत है",
-        login_subtitle: "अपने BabyAPI खाते में साइन इन करें",
+        login_subtitle: "अपने BabiesIQ खाते में साइन इन करें",
         signup_title: "अपना खाता बनाएं",
         signup_subtitle: "मुफ्त शुरू करें — क्रेडिट कार्ड की जरूरत नहीं",
         forgot_password: "पासवर्ड भूल गए?",
@@ -654,7 +662,7 @@ const resources = {
         network_error: "नेटवर्क त्रुटि। कृपया पुनः प्रयास करें।",
         invalid_code: "अमान्य कोड।",
         account_locked: "खाता अस्थायी रूप से बंद — 5 मिनट बाद पुनः प्रयास करें।",
-        verified_welcome: "ईमेल वेरीफाई हुआ! BabyAPI में आपका स्वागत है।",
+        verified_welcome: "ईमेल वेरीफाई हुआ! BabiesIQ में आपका स्वागत है।",
         pwd_reset_success: "पासवर्ड सफलतापूर्वक रीसेट हुआ!",
         missing_email_err: "ईमेल गायब है — कृपया वापस जाएं।",
         max_resend_reached: "अधिकतम पुनः भेजने के प्रयास हो गए",
@@ -841,12 +849,12 @@ const resources = {
         testimonials_eyebrow: "डेवलपर स्टोरीज",
         testimonials_title: "दुनियाभर के डेवलपर्स का भरोसा",
         testimonials_subtitle:
-          "3 लाख+ डेवलपर्स के साथ जुड़ें जो पहले से BabyAPI के साथ बना रहे हैं।",
+          "3 लाख+ डेवलपर्स के साथ जुड़ें जो पहले से BabiesIQ के साथ बना रहे हैं।",
         t1_role: "फुल स्टैक डेवलपर",
-        t1_quote: "BabyAPI ने हमारा ऑडियो इंटीग्रेशन समय हफ्तों से घंटों में लाया।",
+        t1_quote: "BabiesIQ ने हमारा ऑडियो इंटीग्रेशन समय हफ्तों से घंटों में लाया।",
         t2_role: "बैकएंड इंजीनियर",
         t2_quote:
-          "हम BabyAPI के साथ 50,000 दैनिक सक्रिय उपयोगकर्ताओं को सेवा देते हैं। 99.9% अपटाइम SLA असली है।",
+          "हम BabiesIQ के साथ 50,000 दैनिक सक्रिय उपयोगकर्ताओं को सेवा देते हैं। 99.9% अपटाइम SLA असली है।",
         t3_role: "मोबाइल ऐप डेवलपर",
         t3_quote:
           "सर्च API अविश्वसनीय रूप से तेज़ है। औसतन 15ms से कम में परिणाम मिलते हैं।",
@@ -858,7 +866,7 @@ const resources = {
         try_it_badge: "साइनअप की जरूरत नहीं",
         try_it_title: "API को action में देखें",
         try_it_subtitle:
-          "अपनी API key डालें और Send दबाएं — BabyAPI सर्वर से तुरंत असली response पाएं।",
+          "अपनी API key डालें और Send दबाएं — BabiesIQ सर्वर से तुरंत असली response पाएं।",
         try_it_docs_link: "पूरी API docs देखें",
         pricing_eyebrow: "मूल्य निर्धारण",
         plan_feat_1key: "1 API key",
@@ -930,7 +938,7 @@ const resources = {
         email: "Correo electrónico",
         password: "Contraseña",
         login_title: "Bienvenido de nuevo",
-        login_subtitle: "Inicia sesión en tu cuenta de BabyAPI",
+        login_subtitle: "Inicia sesión en tu cuenta de BabiesIQ",
         signup_title: "Crea tu cuenta",
         signup_subtitle: "Comienza gratis — sin tarjeta de crédito",
         forgot_password: "¿Olvidaste tu contraseña?",
@@ -1029,7 +1037,7 @@ const resources = {
         invalid_code: "Código inválido.",
         account_locked:
           "Cuenta bloqueada temporalmente — inténtalo en 5 minutos.",
-        verified_welcome: "¡Email verificado! Bienvenido a BabyAPI.",
+        verified_welcome: "¡Email verificado! Bienvenido a BabiesIQ.",
         pwd_reset_success: "¡Contraseña restablecida con éxito!",
         missing_email_err:
           "Email faltante — por favor regresa e intenta de nuevo.",
@@ -1251,12 +1259,12 @@ const resources = {
         newsletter_badge: "Mantente actualizado",
         newsletter_title: "Suscríbete a actualizaciones para desarrolladores",
         newsletter_desc:
-          "Nuevos endpoints, changelog y consejos exclusivos para desarrolladores de BabyAPI.",
+          "Nuevos endpoints, changelog y consejos exclusivos para desarrolladores de BabiesIQ.",
         subscribe: "Suscribirse",
         subscribed: "¡Gracias por suscribirte!",
         newsletter_email_invalid: "Introduce una dirección de correo válida.",
         newsletter_toast_desc:
-          "Recibirás actualizaciones de BabyAPI en tu bandeja de entrada.",
+          "Recibirás actualizaciones de BabiesIQ en tu bandeja de entrada.",
       },
       home: {
         trust_free: "Plan gratuito para siempre",
@@ -1309,13 +1317,13 @@ const resources = {
         testimonials_eyebrow: "Historias de desarrolladores",
         testimonials_title: "Confiado por desarrolladores en todo el mundo",
         testimonials_subtitle:
-          "Únete a 300,000+ desarrolladores construyendo con BabyAPI.",
+          "Únete a 300,000+ desarrolladores construyendo con BabiesIQ.",
         t1_role: "Desarrollador Full Stack",
         t1_quote:
-          "BabyAPI redujo nuestro tiempo de integración de audio de semanas a horas.",
+          "BabiesIQ redujo nuestro tiempo de integración de audio de semanas a horas.",
         t2_role: "Ingeniero Backend",
         t2_quote:
-          "Servimos a 50,000 usuarios diarios con BabyAPI. El SLA de 99.9% es real.",
+          "Servimos a 50,000 usuarios diarios con BabiesIQ. El SLA de 99.9% es real.",
         t3_role: "Desarrollador de apps móviles",
         t3_quote:
           "La API de búsqueda es increíblemente rápida. Los resultados vuelven en menos de 15ms.",
@@ -1327,7 +1335,7 @@ const resources = {
         try_it_badge: "Sin registro requerido",
         try_it_title: "Ve la API en acción",
         try_it_subtitle:
-          "Introduce tu clave API y pulsa Enviar — obtén una respuesta real de los servidores de BabyAPI al instante.",
+          "Introduce tu clave API y pulsa Enviar — obtén una respuesta real de los servidores de BabiesIQ al instante.",
         try_it_docs_link: "Ver documentación completa",
         pricing_eyebrow: "Precios",
         plan_feat_1key: "1 clave API",
@@ -1345,7 +1353,7 @@ const resources = {
         cta_contact: "Contactar ventas",
         docs: {
           title: "Documentación",
-          subtitle: "Todo lo que necesitas para integrar BabyAPI",
+          subtitle: "Todo lo que necesitas para integrar BabiesIQ",
           nav_overview: "Descripción general",
           nav_authentication: "Autenticación",
           nav_endpoints: "Endpoints",
@@ -1418,7 +1426,7 @@ const resources = {
         email: "Adresse e-mail",
         password: "Mot de passe",
         login_title: "Bon retour",
-        login_subtitle: "Connectez-vous à votre compte BabyAPI",
+        login_subtitle: "Connectez-vous à votre compte BabiesIQ",
         signup_title: "Créez votre compte",
         signup_subtitle: "Commencez gratuitement — sans carte bancaire",
         forgot_password: "Mot de passe oublié?",
@@ -1517,7 +1525,7 @@ const resources = {
         invalid_code: "Code invalide.",
         account_locked:
           "Compte temporairement bloqué — réessayez dans 5 minutes.",
-        verified_welcome: "E-mail vérifié! Bienvenue sur BabyAPI.",
+        verified_welcome: "E-mail vérifié! Bienvenue sur BabiesIQ.",
         pwd_reset_success: "Mot de passe réinitialisé avec succès!",
         missing_email_err: "E-mail manquant — veuillez revenir en arrière.",
         max_resend_reached: "Nombre maximum d'envois atteint",
@@ -1736,12 +1744,12 @@ const resources = {
         newsletter_badge: "Restez informé",
         newsletter_title: "Abonnez-vous aux mises à jour développeur",
         newsletter_desc:
-          "Nouveaux endpoints, changelog et conseils exclusifs pour les développeurs BabyAPI.",
+          "Nouveaux endpoints, changelog et conseils exclusifs pour les développeurs BabiesIQ.",
         subscribe: "S'abonner",
         subscribed: "Merci pour votre abonnement!",
         newsletter_email_invalid: "Entrez une adresse e-mail valide.",
         newsletter_toast_desc:
-          "Vous recevrez les mises à jour BabyAPI dans votre boîte de réception.",
+          "Vous recevrez les mises à jour BabiesIQ dans votre boîte de réception.",
       },
       home: {
         trust_free: "Plan gratuit pour toujours",
@@ -1792,13 +1800,13 @@ const resources = {
         testimonials_eyebrow: "Témoignages de développeurs",
         testimonials_title: "Approuvé par les développeurs du monde entier",
         testimonials_subtitle:
-          "Rejoignez 300 000+ développeurs construisant avec BabyAPI.",
+          "Rejoignez 300 000+ développeurs construisant avec BabiesIQ.",
         t1_role: "Développeur Full Stack",
         t1_quote:
-          "BabyAPI a réduit notre temps d'intégration audio de semaines à heures.",
+          "BabiesIQ a réduit notre temps d'intégration audio de semaines à heures.",
         t2_role: "Ingénieur Backend",
         t2_quote:
-          "Nous servons 50 000 utilisateurs quotidiens avec BabyAPI. Le SLA de 99,9% est réel.",
+          "Nous servons 50 000 utilisateurs quotidiens avec BabiesIQ. Le SLA de 99,9% est réel.",
         t3_role: "Développeur d'apps mobiles",
         t3_quote:
           "L'API de recherche est incroyablement rapide. Les résultats arrivent en moins de 15ms.",
@@ -1810,7 +1818,7 @@ const resources = {
         try_it_badge: "Sans inscription",
         try_it_title: "Voyez l'API en action",
         try_it_subtitle:
-          "Entrez votre clé API et cliquez Envoyer — obtenez une vraie réponse des serveurs BabyAPI instantanément.",
+          "Entrez votre clé API et cliquez Envoyer — obtenez une vraie réponse des serveurs BabiesIQ instantanément.",
         try_it_docs_link: "Voir la documentation complète",
         pricing_eyebrow: "Tarifs",
         plan_feat_1key: "1 clé API",
@@ -1828,7 +1836,7 @@ const resources = {
         cta_contact: "Contacter les ventes",
         docs: {
           title: "Documentation",
-          subtitle: "Tout ce dont vous avez besoin pour intégrer BabyAPI",
+          subtitle: "Tout ce dont vous avez besoin pour intégrer BabiesIQ",
           nav_overview: "Aperçu",
           nav_authentication: "Authentification",
           nav_endpoints: "Points de terminaison",
@@ -1899,7 +1907,7 @@ const resources = {
         email: "عنوان البريد الإلكتروني",
         password: "كلمة المرور",
         login_title: "مرحباً بعودتك",
-        login_subtitle: "سجل دخولك إلى حساب BabyAPI",
+        login_subtitle: "سجل دخولك إلى حساب BabiesIQ",
         signup_title: "أنشئ حسابك",
         signup_subtitle: "ابدأ مجاناً — لا بطاقة ائتمانية",
         forgot_password: "نسيت كلمة المرور؟",
@@ -1992,7 +2000,7 @@ const resources = {
         network_error: "خطأ في الشبكة. حاول مجدداً.",
         invalid_code: "رمز غير صالح.",
         account_locked: "الحساب مقفل مؤقتاً — حاول بعد 5 دقائق.",
-        verified_welcome: "تم التحقق! مرحباً بك في BabyAPI.",
+        verified_welcome: "تم التحقق! مرحباً بك في BabiesIQ.",
         pwd_reset_success: "تمت إعادة تعيين كلمة المرور بنجاح!",
         missing_email_err: "البريد مفقود — يرجى العودة والمحاولة مجدداً.",
         max_resend_reached: "تم الوصول لحد إعادة الإرسال",
@@ -2210,11 +2218,11 @@ const resources = {
         newsletter_badge: "ابق على اطلاع",
         newsletter_title: "اشترك في تحديثات المطورين",
         newsletter_desc:
-          "نقاط نهاية جديدة، وسجل التغييرات، ونصائح حصرية لمطوري BabyAPI.",
+          "نقاط نهاية جديدة، وسجل التغييرات، ونصائح حصرية لمطوري BabiesIQ.",
         subscribe: "اشتراك",
         subscribed: "شكراً لاشتراكك!",
         newsletter_email_invalid: "أدخل عنوان بريد إلكتروني صالح.",
-        newsletter_toast_desc: "ستتلقى تحديثات BabyAPI في بريدك الوارد.",
+        newsletter_toast_desc: "ستتلقى تحديثات BabiesIQ في بريدك الوارد.",
       },
       home: {
         trust_free: "خطة مجانية للأبد",
@@ -2263,11 +2271,11 @@ const resources = {
         testimonials_eyebrow: "قصص المطورين",
         testimonials_title: "موثوق به من مطورين حول العالم",
         testimonials_subtitle:
-          "انضم إلى 300,000+ مطور يبنون بالفعل مع BabyAPI.",
+          "انضم إلى 300,000+ مطور يبنون بالفعل مع BabiesIQ.",
         t1_role: "مطور Full Stack",
-        t1_quote: "قلّص BabyAPI وقت تكاملنا الصوتي من أسابيع إلى ساعات.",
+        t1_quote: "قلّص BabiesIQ وقت تكاملنا الصوتي من أسابيع إلى ساعات.",
         t2_role: "مهندس Backend",
-        t2_quote: "نخدم 50,000 مستخدم يومي مع BabyAPI. اتفاقية 99.9% حقيقية.",
+        t2_quote: "نخدم 50,000 مستخدم يومي مع BabiesIQ. اتفاقية 99.9% حقيقية.",
         t3_role: "مطور تطبيقات موبايل",
         t3_quote:
           "واجهة البحث سريعة بشكل لا يُصدق. النتائج تأتي في أقل من 15ms.",
@@ -2297,7 +2305,7 @@ const resources = {
         cta_contact: "تواصل مع المبيعات",
         docs: {
           title: "التوثيق",
-          subtitle: "كل ما تحتاجه لدمج BabyAPI",
+          subtitle: "كل ما تحتاجه لدمج BabiesIQ",
           nav_overview: "نظرة عامة",
           nav_authentication: "المصادقة",
           nav_endpoints: "نقاط النهاية",
@@ -2370,7 +2378,7 @@ const resources = {
         email: "Endereço de e-mail",
         password: "Senha",
         login_title: "Bem-vindo de volta",
-        login_subtitle: "Entre na sua conta BabyAPI",
+        login_subtitle: "Entre na sua conta BabiesIQ",
         signup_title: "Crie sua conta",
         signup_subtitle: "Comece grátis — sem cartão de crédito",
         forgot_password: "Esqueceu a senha?",
@@ -2466,7 +2474,7 @@ const resources = {
         network_error: "Erro de rede. Por favor tente novamente.",
         invalid_code: "Código inválido.",
         account_locked: "Conta temporariamente bloqueada — tente em 5 minutos.",
-        verified_welcome: "E-mail verificado! Bem-vindo ao BabyAPI.",
+        verified_welcome: "E-mail verificado! Bem-vindo ao BabiesIQ.",
         pwd_reset_success: "Senha redefinida com sucesso!",
         missing_email_err:
           "E-mail ausente — por favor volte e tente novamente.",
@@ -2686,12 +2694,12 @@ const resources = {
         newsletter_badge: "Fique atualizado",
         newsletter_title: "Assine as atualizações para desenvolvedores",
         newsletter_desc:
-          "Novos endpoints, changelog e dicas exclusivas para desenvolvedores BabyAPI.",
+          "Novos endpoints, changelog e dicas exclusivas para desenvolvedores BabiesIQ.",
         subscribe: "Assinar",
         subscribed: "Obrigado por assinar!",
         newsletter_email_invalid: "Digite um endereço de e-mail válido.",
         newsletter_toast_desc:
-          "Você receberá atualizações do BabyAPI na sua caixa de entrada.",
+          "Você receberá atualizações do BabiesIQ na sua caixa de entrada.",
       },
       home: {
         trust_free: "Plano gratuito para sempre",
@@ -2742,13 +2750,13 @@ const resources = {
         testimonials_eyebrow: "Histórias de desenvolvedores",
         testimonials_title: "Confiado por desenvolvedores no mundo todo",
         testimonials_subtitle:
-          "Junte-se a 300.000+ desenvolvedores já construindo com BabyAPI.",
+          "Junte-se a 300.000+ desenvolvedores já construindo com BabiesIQ.",
         t1_role: "Desenvolvedor Full Stack",
         t1_quote:
-          "BabyAPI reduziu nosso tempo de integração de áudio de semanas para horas.",
+          "BabiesIQ reduziu nosso tempo de integração de áudio de semanas para horas.",
         t2_role: "Engenheiro Backend",
         t2_quote:
-          "Servimos 50.000 usuários diários com BabyAPI. O SLA de 99,9% é real.",
+          "Servimos 50.000 usuários diários com BabiesIQ. O SLA de 99,9% é real.",
         t3_role: "Desenvolvedor de apps mobile",
         t3_quote:
           "A API de busca é incrivelmente rápida. Resultados em menos de 15ms em média.",
@@ -2760,7 +2768,7 @@ const resources = {
         try_it_badge: "Sem cadastro necessário",
         try_it_title: "Veja a API em ação",
         try_it_subtitle:
-          "Digite sua chave API e clique em Enviar — obtenha uma resposta real dos servidores BabyAPI instantaneamente.",
+          "Digite sua chave API e clique em Enviar — obtenha uma resposta real dos servidores BabiesIQ instantaneamente.",
         try_it_docs_link: "Ver documentação completa",
         pricing_eyebrow: "Preços",
         plan_feat_1key: "1 chave API",
@@ -2778,7 +2786,7 @@ const resources = {
         cta_contact: "Falar com vendas",
         docs: {
           title: "Documentação",
-          subtitle: "Tudo que você precisa para integrar o BabyAPI",
+          subtitle: "Tudo que você precisa para integrar o BabiesIQ",
           nav_overview: "Visão geral",
           nav_authentication: "Autenticação",
           nav_endpoints: "Endpoints",
@@ -2850,7 +2858,7 @@ const resources = {
         email: "E-Mail-Adresse",
         password: "Passwort",
         login_title: "Willkommen zurück",
-        login_subtitle: "Melde dich bei deinem BabyAPI-Konto an",
+        login_subtitle: "Melde dich bei deinem BabiesIQ-Konto an",
         signup_title: "Konto erstellen",
         signup_subtitle: "Kostenlos starten — keine Kreditkarte nötig",
         forgot_password: "Passwort vergessen?",
@@ -2947,7 +2955,7 @@ const resources = {
         invalid_code: "Ungültiger Code.",
         account_locked:
           "Konto vorübergehend gesperrt — in 5 Minuten erneut versuchen.",
-        verified_welcome: "E-Mail verifiziert! Willkommen bei BabyAPI.",
+        verified_welcome: "E-Mail verifiziert! Willkommen bei BabiesIQ.",
         pwd_reset_success: "Passwort erfolgreich zurückgesetzt!",
         missing_email_err:
           "E-Mail fehlt — bitte gehe zurück und versuche es erneut.",
@@ -3157,12 +3165,12 @@ const resources = {
         newsletter_badge: "Bleib auf dem Laufenden",
         newsletter_title: "Entwickler-Updates abonnieren",
         newsletter_desc:
-          "Neue Endpoints, Changelog und exklusive Tipps für BabyAPI-Entwickler.",
+          "Neue Endpoints, Changelog und exklusive Tipps für BabiesIQ-Entwickler.",
         subscribe: "Abonnieren",
         subscribed: "Danke für dein Abonnement!",
         newsletter_email_invalid: "Gib eine gültige E-Mail-Adresse ein.",
         newsletter_toast_desc:
-          "Du erhältst BabyAPI-Updates in deinem Posteingang.",
+          "Du erhältst BabiesIQ-Updates in deinem Posteingang.",
       },
       home: {
         trust_free: "Kostenloser Plan für immer",
@@ -3213,13 +3221,13 @@ const resources = {
         testimonials_eyebrow: "Entwicklergeschichten",
         testimonials_title: "Vertrauen von Entwicklern weltweit",
         testimonials_subtitle:
-          "Schließe dich 300.000+ Entwicklern an, die bereits mit BabyAPI bauen.",
+          "Schließe dich 300.000+ Entwicklern an, die bereits mit BabiesIQ bauen.",
         t1_role: "Full-Stack-Entwickler",
         t1_quote:
-          "BabyAPI hat unsere Audio-Integrationszeit von Wochen auf Stunden reduziert.",
+          "BabiesIQ hat unsere Audio-Integrationszeit von Wochen auf Stunden reduziert.",
         t2_role: "Backend-Ingenieur",
         t2_quote:
-          "Wir bedienen 50.000 tägliche Nutzer mit BabyAPI. Das 99,9% SLA ist real.",
+          "Wir bedienen 50.000 tägliche Nutzer mit BabiesIQ. Das 99,9% SLA ist real.",
         t3_role: "Mobile-App-Entwickler",
         t3_quote:
           "Die Such-API ist unglaublich schnell. Ergebnisse kommen in unter 15ms.",
@@ -3302,7 +3310,7 @@ const resources = {
         email: "メールアドレス",
         password: "パスワード",
         login_title: "おかえりなさい",
-        login_subtitle: "BabyAPIアカウントにサインイン",
+        login_subtitle: "BabiesIQアカウントにサインイン",
         signup_title: "アカウントを作成",
         signup_subtitle: "無料で始める — クレジットカード不要",
         forgot_password: "パスワードをお忘れですか？",
@@ -3399,7 +3407,7 @@ const resources = {
         invalid_code: "無効なコードです。",
         account_locked:
           "アカウントが一時的にロックされました — 5分後に再試行してください。",
-        verified_welcome: "メール確認完了！BabyAPIへようこそ。",
+        verified_welcome: "メール確認完了！BabiesIQへようこそ。",
         pwd_reset_success: "パスワードが正常にリセットされました！",
         missing_email_err: "メールがありません — 戻って再試行してください。",
         max_resend_reached: "最大再送信回数に達しました",
@@ -3607,12 +3615,12 @@ const resources = {
         newsletter_badge: "最新情報をチェック",
         newsletter_title: "開発者向けアップデートを購読",
         newsletter_desc:
-          "BabyAPI開発者向けの新しいエンドポイント、変更ログ、独占ヒント。",
+          "BabiesIQ開発者向けの新しいエンドポイント、変更ログ、独占ヒント。",
         subscribe: "購読する",
         subscribed: "ご購読ありがとうございます！",
         newsletter_email_invalid: "有効なメールアドレスを入力してください。",
         newsletter_toast_desc:
-          "BabyAPIのアップデートがメールボックスに届きます。",
+          "BabiesIQのアップデートがメールボックスに届きます。",
       },
       home: {
         trust_free: "永遠に無料プラン",
@@ -3660,13 +3668,13 @@ const resources = {
         testimonials_eyebrow: "開発者ストーリー",
         testimonials_title: "世界中の開発者に信頼されています",
         testimonials_subtitle:
-          "BabyAPIで既に構築している30万人以上の開発者に参加。",
+          "BabiesIQで既に構築している30万人以上の開発者に参加。",
         t1_role: "フルスタック開発者",
         t1_quote:
-          "BabyAPIはオーディオ統合時間を数週間から数時間に短縮しました。",
+          "BabiesIQはオーディオ統合時間を数週間から数時間に短縮しました。",
         t2_role: "バックエンドエンジニア",
         t2_quote:
-          "BabyAPIで毎日5万人のユーザーにサービス提供。99.9%のSLAは本物。",
+          "BabiesIQで毎日5万人のユーザーにサービス提供。99.9%のSLAは本物。",
         t3_role: "モバイルアプリ開発者",
         t3_quote: "検索APIは驚くほど速い。平均15ms未満で結果が返ってきます。",
         trust_badge1: "30日間返金保証",
@@ -3677,7 +3685,7 @@ const resources = {
         try_it_badge: "登録不要",
         try_it_title: "APIを実際に見る",
         try_it_subtitle:
-          "APIキーを入力してSendを押す — BabyAPIサーバーから即座に実際の応答を取得。",
+          "APIキーを入力してSendを押す — BabiesIQサーバーから即座に実際の応答を取得。",
         try_it_docs_link: "完全なAPIドキュメントを見る",
         pricing_eyebrow: "料金",
         plan_feat_1key: "1 APIキー",
@@ -3748,7 +3756,7 @@ const resources = {
         email: "이메일 주소",
         password: "비밀번호",
         login_title: "다시 오신 것을 환영합니다",
-        login_subtitle: "BabyAPI 계정에 로그인",
+        login_subtitle: "BabiesIQ 계정에 로그인",
         signup_title: "계정 만들기",
         signup_subtitle: "무료로 시작 — 신용카드 불필요",
         forgot_password: "비밀번호를 잊으셨나요?",
@@ -3843,7 +3851,7 @@ const resources = {
         account_locked:
           "계정이 일시적으로 잠겼습니다 — 5분 후에 다시 시도하세요.",
         verified_welcome:
-          "이메일이 인증되었습니다! BabyAPI에 오신 것을 환영합니다.",
+          "이메일이 인증되었습니다! BabiesIQ에 오신 것을 환영합니다.",
         pwd_reset_success: "비밀번호가 성공적으로 재설정되었습니다!",
         missing_email_err: "이메일이 없습니다 — 뒤로 가서 다시 시도하세요.",
         max_resend_reached: "최대 재전송 횟수 초과",
@@ -4050,11 +4058,12 @@ const resources = {
         newsletter_badge: "최신 소식 받기",
         newsletter_title: "개발자 업데이트 구독",
         newsletter_desc:
-          "BabyAPI 개발자를 위한 새로운 엔드포인트, 변경 로그, 독점 팁.",
+          "BabiesIQ 개발자를 위한 새로운 엔드포인트, 변경 로그, 독점 팁.",
         subscribe: "구독",
         subscribed: "구독해 주셔서 감사합니다!",
         newsletter_email_invalid: "유효한 이메일 주소를 입력하세요.",
-        newsletter_toast_desc: "BabyAPI 업데이트가 받은 편지함으로 전달됩니다.",
+        newsletter_toast_desc:
+          "BabiesIQ 업데이트가 받은 편지함으로 전달됩니다.",
       },
       home: {
         trust_free: "영원히 무료 플랜",
@@ -4102,13 +4111,13 @@ const resources = {
         testimonials_eyebrow: "개발자 이야기",
         testimonials_title: "전 세계 개발자들이 신뢰",
         testimonials_subtitle:
-          "이미 BabyAPI로 구축 중인 30만+ 개발자와 함께하세요.",
+          "이미 BabiesIQ로 구축 중인 30만+ 개발자와 함께하세요.",
         t1_role: "풀스택 개발자",
         t1_quote:
-          "BabyAPI는 오디오 통합 시간을 몇 주에서 몇 시간으로 단축했습니다.",
+          "BabiesIQ는 오디오 통합 시간을 몇 주에서 몇 시간으로 단축했습니다.",
         t2_role: "백엔드 엔지니어",
         t2_quote:
-          "BabyAPI로 하루 5만 명의 활성 사용자를 서비스합니다. 99.9% SLA는 실제입니다.",
+          "BabiesIQ로 하루 5만 명의 활성 사용자를 서비스합니다. 99.9% SLA는 실제입니다.",
         t3_role: "모바일 앱 개발자",
         t3_quote:
           "검색 API는 믿을 수 없을 만큼 빠릅니다. 평균 15ms 미만에 결과가 옵니다.",
@@ -4120,7 +4129,7 @@ const resources = {
         try_it_badge: "가입 불필요",
         try_it_title: "API를 실제로 보세요",
         try_it_subtitle:
-          "API 키를 입력하고 Send를 누르세요 — BabyAPI 서버에서 즉시 실제 응답을 받으세요.",
+          "API 키를 입력하고 Send를 누르세요 — BabiesIQ 서버에서 즉시 실제 응답을 받으세요.",
         try_it_docs_link: "전체 API 문서 보기",
         pricing_eyebrow: "가격",
         plan_feat_1key: "1 API 키",
@@ -4190,7 +4199,7 @@ const resources = {
         email: "电子邮件地址",
         password: "密码",
         login_title: "欢迎回来",
-        login_subtitle: "登录您的BabyAPI账户",
+        login_subtitle: "登录您的BabiesIQ账户",
         signup_title: "创建您的账户",
         signup_subtitle: "免费开始 — 无需信用卡",
         forgot_password: "忘记密码？",
@@ -4280,7 +4289,7 @@ const resources = {
         network_error: "网络错误，请重试。",
         invalid_code: "验证码无效。",
         account_locked: "账户已被临时锁定 — 请5分钟后再试。",
-        verified_welcome: "邮箱已验证！欢迎使用BabyAPI。",
+        verified_welcome: "邮箱已验证！欢迎使用BabiesIQ。",
         pwd_reset_success: "密码重置成功！",
         missing_email_err: "缺少邮箱 — 请返回重试。",
         max_resend_reached: "已达最大重发次数",
@@ -4486,11 +4495,11 @@ const resources = {
         rights: "版权所有。",
         newsletter_badge: "保持更新",
         newsletter_title: "订阅开发者更新",
-        newsletter_desc: "BabyAPI开发者的新端点、更新日志和独家技巧。",
+        newsletter_desc: "BabiesIQ开发者的新端点、更新日志和独家技巧。",
         subscribe: "订阅",
         subscribed: "感谢您的订阅！",
         newsletter_email_invalid: "请输入有效的电子邮件地址。",
-        newsletter_toast_desc: "您将在收件箱中收到BabyAPI更新。",
+        newsletter_toast_desc: "您将在收件箱中收到BabiesIQ更新。",
       },
       home: {
         trust_free: "永久免费计划",
@@ -4537,11 +4546,11 @@ const resources = {
         wave_f4_detail: "支持范围的分块传输",
         testimonials_eyebrow: "开发者故事",
         testimonials_title: "受到全球开发者信赖",
-        testimonials_subtitle: "加入已在使用BabyAPI构建的30万+开发者。",
+        testimonials_subtitle: "加入已在使用BabiesIQ构建的30万+开发者。",
         t1_role: "全栈开发者",
-        t1_quote: "BabyAPI将我们的音频集成时间从数周缩短到数小时。",
+        t1_quote: "BabiesIQ将我们的音频集成时间从数周缩短到数小时。",
         t2_role: "后端工程师",
-        t2_quote: "我们用BabyAPI服务每天5万活跃用户。99.9%的SLA是真实的。",
+        t2_quote: "我们用BabiesIQ服务每天5万活跃用户。99.9%的SLA是真实的。",
         t3_role: "移动应用开发者",
         t3_quote: "搜索API非常快。平均不到15ms返回结果。",
         trust_badge1: "30天退款",
@@ -4552,7 +4561,7 @@ const resources = {
         try_it_badge: "无需注册",
         try_it_title: "看API在实战中",
         try_it_subtitle:
-          "输入您的API密钥并点击发送 — 立即从BabyAPI服务器获取真实响应。",
+          "输入您的API密钥并点击发送 — 立即从BabiesIQ服务器获取真实响应。",
         try_it_docs_link: "查看完整API文档",
         pricing_eyebrow: "定价",
         plan_feat_1key: "1个API密钥",
@@ -4574,7 +4583,7 @@ const resources = {
 
 const savedLang = (() => {
   try {
-    return localStorage.getItem("babyapi-lang") || "en";
+    return localStorage.getItem("babiesiq-lang") || "en";
   } catch {
     return "en";
   }

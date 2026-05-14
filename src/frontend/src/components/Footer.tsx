@@ -228,7 +228,7 @@ export function Footer() {
                 <span className="w-5 h-5 rounded-md gradient-primary flex items-center justify-center shrink-0">
                   <span className="text-white font-bold text-[9px]">B</span>
                 </span>
-                <span className="text-gradient">Baby</span>API
+                <span className="text-gradient">Babies</span>IQ
               </Link>
               <p className="text-sm text-muted-foreground leading-relaxed font-body mb-5">
                 {t("footer.tagline")}
@@ -307,7 +307,7 @@ export function Footer() {
             transition={{ duration: 0.4, delay: 0.3 }}
           >
             <div className="flex items-center gap-1.5">
-              <span>© {year} BabyAPI.</span>
+              <span>© {year} BabiesIQ.</span>
               <span>Made with ❤️ for developers. Built with</span>
               <a
                 href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${hostname}`}

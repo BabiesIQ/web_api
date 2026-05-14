@@ -63,7 +63,7 @@ function LanguageSwitcher() {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="group flex items-center gap-1.5 h-8 px-2.5 rounded-lg hover:bg-muted transition-colors duration-200 text-muted-foreground hover:text-foreground"
+        className="group flex items-center gap-1.5 h-8 px-2.5 rounded-lg hover:bg-white/10 transition-all duration-200 text-white/60 hover:text-white"
         aria-label="Change language"
         aria-expanded={open}
         data-ocid="header.lang_switcher.button"
@@ -89,7 +89,7 @@ function LanguageSwitcher() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -4 }}
             transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute right-0 top-full mt-2 w-52 rounded-xl border border-border bg-card shadow-elevated z-50 overflow-hidden"
+            className="absolute right-0 top-full mt-2 w-52 rounded-xl border border-white/10 backdrop-blur-xl bg-black/70 shadow-[0_8px_32px_rgba(0,0,0,0.5)] z-50 overflow-hidden"
             data-ocid="header.lang_dropdown.popover"
           >
             <div className="p-1.5 max-h-72 overflow-y-auto">
@@ -106,8 +106,8 @@ function LanguageSwitcher() {
                     }}
                     className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm transition-all duration-150 text-left ${
                       isActive
-                        ? "bg-primary/10 text-primary font-semibold"
-                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                        ? "bg-purple-500/20 text-purple-300 font-semibold"
+                        : "text-white/60 hover:bg-white/10 hover:text-white"
                     }`}
                     data-ocid={`header.lang.${lang.code}.button`}
                   >
@@ -116,7 +116,7 @@ function LanguageSwitcher() {
                     </span>
                     <span className="flex-1 truncate">{lang.nativeName}</span>
                     {isActive && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-purple-400 shrink-0" />
                     )}
                   </button>
                 );
@@ -140,14 +140,12 @@ export function Header() {
     user?.user?.first_name || user?.user?.email?.split("@")[0] || "Account";
   const avatarUrl = user?.user?.avatar ?? null;
 
-  // Scroll state for elevated header
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile nav on resize
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth >= 768) setMobileOpen(false);
@@ -158,10 +156,10 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
+      className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-border/60 bg-card/95 backdrop-blur-xl shadow-[0_2px_20px_rgba(0,0,0,0.08)]"
-          : "border-border/40 bg-card/80 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.04)]"
+          ? "border-b border-white/10 bg-black/50 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.35)]"
+          : "border-b border-white/5 bg-white/5 backdrop-blur-md"
       }`}
       data-ocid="header"
     >
@@ -169,16 +167,25 @@ export function Header() {
       <div className="scroll-progress" id="scroll-progress" />
 
       <div className="container mx-auto flex items-center justify-between h-16 px-4 md:px-6">
-        {/* Logo */}
+        {/* ── Logo & brand ─────────────────────────────────────────────── */}
         <Link
           to="/"
-          className="flex items-center gap-1 font-display font-bold text-xl text-foreground hover:opacity-90 transition-opacity duration-200 shrink-0"
+          className="flex items-center gap-2 shrink-0 group"
           data-ocid="header.logo.link"
         >
-          <span className="w-6 h-6 rounded-lg gradient-primary flex items-center justify-center shrink-0">
+          {/* Music waveform icon in gradient circle */}
+          <div
+            className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-105"
+            style={{
+              background:
+                "linear-gradient(135deg, #a855f7 0%, #ec4899 60%, #3b82f6 100%)",
+              boxShadow:
+                "0 0 18px rgba(168,85,247,0.55), 0 0 6px rgba(168,85,247,0.3)",
+            }}
+          >
             <svg
-              width="14"
-              height="14"
+              width="16"
+              height="16"
               viewBox="0 0 14 14"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -226,28 +233,46 @@ export function Header() {
                 fill="currentColor"
               />
             </svg>
-          </span>
-          <span className="text-gradient">Baby</span>
-          <span>API</span>
+          </div>
+
+          {/* Brand name + live dot */}
+          <div className="flex items-center gap-1.5">
+            <span
+              className="font-display font-bold text-xl bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, #c084fc 0%, #f472b6 50%, #60a5fa 100%)",
+              }}
+            >
+              BabiesIQ
+            </span>
+            <span className="live-indicator" aria-hidden="true" />
+          </div>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-0.5 mx-8">
+        {/* ── Desktop nav ──────────────────────────────────────────────── */}
+        <nav className="hidden md:flex items-center gap-1 mx-8">
           {NAV_KEYS.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className="relative px-3.5 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 rounded-md hover:bg-muted/70 group"
-              activeProps={{ className: "text-foreground bg-muted/50" }}
+              className="relative px-3.5 py-1.5 text-sm font-medium text-white/65 hover:text-white transition-colors duration-200 rounded-md group"
+              activeProps={{ className: "text-white" }}
               data-ocid={`nav.${link.key}.link`}
             >
               {t(`nav.${link.key}`)}
-              <span className="absolute inset-x-3 -bottom-px h-[1.5px] bg-gradient-to-r from-primary to-accent opacity-0 group-[.active]:opacity-100 transition-opacity duration-200 rounded-full" />
+              {/* Animated underline */}
+              <span
+                className="absolute inset-x-3 -bottom-px h-[1.5px] rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-250 origin-left"
+                style={{
+                  background: "linear-gradient(90deg, #a855f7, #ec4899)",
+                }}
+              />
             </Link>
           ))}
         </nav>
 
-        {/* Right side — desktop */}
+        {/* ── Desktop right controls ────────────────────────────────── */}
         <div className="hidden md:flex items-center gap-2 shrink-0">
           <LanguageSwitcher />
           <ThemeSwitcher />
@@ -257,7 +282,7 @@ export function Header() {
               {/* Notification bell */}
               <Link
                 to="/panel/notifications"
-                className="relative flex items-center justify-center w-8 h-8 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors duration-200"
+                className="relative flex items-center justify-center w-8 h-8 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200"
                 aria-label="Notifications"
                 data-ocid="header.notifications.link"
               >
@@ -269,7 +294,7 @@ export function Header() {
                 <DropdownMenuTrigger asChild>
                   <button
                     type="button"
-                    className="flex items-center gap-2 h-8 pl-2 pr-3 rounded-lg border border-border hover:border-primary/40 hover:bg-muted transition-all duration-200 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    className="flex items-center gap-2 h-8 pl-2 pr-3 rounded-lg border border-white/10 hover:border-purple-400/40 hover:bg-white/10 transition-all duration-200 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500/50"
                     data-ocid="header.user_menu.button"
                   >
                     {avatarUrl ? (
@@ -279,22 +304,37 @@ export function Header() {
                         className="w-5 h-5 rounded-full object-cover"
                       />
                     ) : (
-                      <div className="w-5 h-5 rounded-full gradient-primary flex items-center justify-center">
+                      <div
+                        className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, #a855f7, #ec4899)",
+                        }}
+                      >
                         <span className="text-[9px] font-bold text-white">
                           {displayName.slice(0, 1).toUpperCase()}
                         </span>
                       </div>
                     )}
-                    <span className="text-xs font-medium max-w-[100px] truncate text-foreground">
+                    <span className="text-xs font-medium max-w-[100px] truncate text-white/80">
                       {displayName}
                     </span>
-                    <ChevronDown className="w-3 h-3 opacity-50" />
+                    <ChevronDown className="w-3 h-3 opacity-50 text-white" />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-52">
+                <DropdownMenuContent
+                  align="end"
+                  className="w-52 border-white/10 bg-black/80 backdrop-blur-xl"
+                >
                   <DropdownMenuLabel className="pb-1">
                     <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-full gradient-primary flex items-center justify-center shrink-0">
+                      <div
+                        className="w-7 h-7 rounded-full flex items-center justify-center shrink-0"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, #a855f7, #ec4899)",
+                        }}
+                      >
                         <span className="text-[10px] font-bold text-white">
                           {displayName.slice(0, 1).toUpperCase()}
                         </span>
@@ -344,34 +384,36 @@ export function Header() {
             </div>
           ) : (
             <div className="flex items-center gap-2 pl-1">
-              <Button
-                variant="ghost"
-                size="sm"
-                asChild
-                className="h-8 text-sm font-medium hover:text-foreground"
+              <Link
+                to="/login"
+                className="h-8 px-4 flex items-center text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10"
                 data-ocid="header.login.button"
               >
-                <Link to="/login">{t("nav.login")}</Link>
-              </Button>
-              <Button
-                size="sm"
-                asChild
-                className="h-8 gradient-primary text-white font-semibold text-sm px-4 shadow-sm hover:opacity-90 transition-opacity"
+                {t("nav.login")}
+              </Link>
+              <Link
+                to="/signup"
+                className="h-8 px-4 flex items-center text-sm font-semibold text-white rounded-lg transition-all duration-200 hover:scale-105"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #7c3aed 0%, #db2777 100%)",
+                  boxShadow: "0 4px 14px rgba(124,58,237,0.4)",
+                }}
                 data-ocid="header.signup.button"
               >
-                <Link to="/signup">{t("nav.signup")}</Link>
-              </Button>
+                {t("nav.signup")}
+              </Link>
             </div>
           )}
         </div>
 
-        {/* Mobile controls */}
+        {/* ── Mobile controls ───────────────────────────────────────── */}
         <div className="md:hidden flex items-center gap-1.5">
           <LanguageSwitcher />
           <ThemeSwitcher />
           <button
             type="button"
-            className="flex items-center justify-center w-8 h-8 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors duration-200"
+            className="flex items-center justify-center w-8 h-8 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors duration-200"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
@@ -404,7 +446,7 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile nav drawer */}
+      {/* ── Mobile nav drawer ─────────────────────────────────────────── */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -415,7 +457,13 @@ export function Header() {
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="md:hidden overflow-hidden"
           >
-            <div className="border-t border-border bg-card px-4 pb-5 pt-3">
+            <div
+              className="border-t border-white/10 px-4 pb-5 pt-3"
+              style={{
+                background: "rgba(0,0,0,0.6)",
+                backdropFilter: "blur(20px)",
+              }}
+            >
               {/* Nav links */}
               <nav className="flex flex-col gap-0.5 mb-4">
                 {NAV_KEYS.map((link, i) => (
@@ -427,9 +475,9 @@ export function Header() {
                   >
                     <Link
                       to={link.to}
-                      className="flex items-center text-sm font-medium py-2.5 px-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors duration-200"
+                      className="flex items-center text-sm font-medium py-2.5 px-3 rounded-lg text-white/65 hover:text-white hover:bg-white/10 transition-colors duration-200"
                       onClick={() => setMobileOpen(false)}
-                      activeProps={{ className: "text-foreground bg-muted" }}
+                      activeProps={{ className: "text-white bg-white/10" }}
                       data-ocid={`nav.mobile.${link.key}.link`}
                     >
                       {t(`nav.${link.key}`)}
@@ -439,12 +487,12 @@ export function Header() {
               </nav>
 
               {/* Auth section */}
-              <div className="pt-3 border-t border-border">
+              <div className="pt-3 border-t border-white/10">
                 {isAuthenticated ? (
                   <div className="flex flex-col gap-1">
                     <Link
                       to="/panel/dashboard"
-                      className="flex items-center gap-2 text-sm font-medium py-2.5 px-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors duration-200"
+                      className="flex items-center gap-2 text-sm font-medium py-2.5 px-3 rounded-lg text-white/65 hover:text-white hover:bg-white/10 transition-colors duration-200"
                       onClick={() => setMobileOpen(false)}
                       data-ocid="header.mobile_dashboard.link"
                     >
@@ -453,7 +501,7 @@ export function Header() {
                     </Link>
                     <Link
                       to="/panel/profile-settings"
-                      className="flex items-center gap-2 text-sm font-medium py-2.5 px-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors duration-200"
+                      className="flex items-center gap-2 text-sm font-medium py-2.5 px-3 rounded-lg text-white/65 hover:text-white hover:bg-white/10 transition-colors duration-200"
                       onClick={() => setMobileOpen(false)}
                       data-ocid="header.mobile_profile.link"
                     >
@@ -466,7 +514,7 @@ export function Header() {
                         setMobileOpen(false);
                         logout();
                       }}
-                      className="flex items-center gap-2 text-sm font-medium py-2.5 px-3 rounded-lg text-destructive hover:bg-destructive/10 transition-colors duration-200 w-full text-left"
+                      className="flex items-center gap-2 text-sm font-medium py-2.5 px-3 rounded-lg text-red-400 hover:bg-red-500/10 transition-colors duration-200 w-full text-left"
                       data-ocid="header.mobile_logout.button"
                     >
                       <LogOut className="w-4 h-4" />
@@ -475,27 +523,27 @@ export function Header() {
                   </div>
                 ) : (
                   <div className="flex flex-col gap-2">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      asChild
-                      className="w-full justify-center"
+                    <Link
+                      to="/login"
+                      onClick={() => setMobileOpen(false)}
+                      className="w-full flex items-center justify-center h-9 rounded-lg border border-white/15 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white transition-all duration-200"
                       data-ocid="header.mobile_login.button"
                     >
-                      <Link to="/login" onClick={() => setMobileOpen(false)}>
-                        {t("nav.login")}
-                      </Link>
-                    </Button>
-                    <Button
-                      size="sm"
-                      asChild
-                      className="w-full justify-center gradient-primary text-white font-semibold"
+                      {t("nav.login")}
+                    </Link>
+                    <Link
+                      to="/signup"
+                      onClick={() => setMobileOpen(false)}
+                      className="w-full flex items-center justify-center h-9 rounded-lg text-sm font-semibold text-white transition-all duration-200"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, #7c3aed 0%, #db2777 100%)",
+                        boxShadow: "0 4px 14px rgba(124,58,237,0.4)",
+                      }}
                       data-ocid="header.mobile_signup.button"
                     >
-                      <Link to="/signup" onClick={() => setMobileOpen(false)}>
-                        {t("nav.signup")}
-                      </Link>
-                    </Button>
+                      {t("nav.signup")}
+                    </Link>
                   </div>
                 )}
               </div>

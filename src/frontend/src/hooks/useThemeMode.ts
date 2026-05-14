@@ -2,7 +2,7 @@ import { useCallback, useRef, useState } from "react";
 
 export type ThemeMode = "dark" | "light" | "midnight";
 export const CYCLE_ORDER: ThemeMode[] = ["dark", "light", "midnight"];
-const STORAGE_KEY = "babyapi-theme";
+const STORAGE_KEY = "babiesiq-theme";
 
 function getSavedTheme(): ThemeMode {
   try {
